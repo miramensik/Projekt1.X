@@ -1,45 +1,34 @@
 /* 
  * Soubor:      preambleInitialization.c
- * Autor:       VLOZTE_AUTORA 
+ * Autor:       VLOZTE_AUTORA
  * Spolecnost:  CVUT-FEL-K13114
  *
- * Kompilator:  C18-V3.47
+ * Kompilator:  XC8-v2.36
  * Procesor:    PIC18F87J11
  */
 
-// Systemove hlavickove soubory:
-#include <p18f87j11.h> // Header soubor procesoru
 
 // Je treba pro include pouzit VLASTNI CESTU k souboru
 // Linter a a LSP (Language Server Protocol)
 #include "./../header/preambleInitialization.h"
 
-//----------------------------------------------------------------------------
-#pragma code
-// Volba oscilatoru
-#pragma config FOSC = HSPLL
-// Dva oscilatory jsou pouzity
-#pragma config IESO = OFF
-// Monitor hodin
-#pragma config FCMEN = OFF
-// Zakladni mod procesoru, pouze vnitrni pamet
-#pragma config MODE = MM
-// Rozsirena instrukcni sada a indexove adresovani
-#pragma config XINST = OFF
-// Pri preteceni nebo podteceni zasobniku generovat RESET
-#pragma config STVREN = OFF
-// Watchdog timer
-#pragma config WDTEN = OFF
-// Preddelicka pro Watchdog timer
-#pragma config WDTPS = 32768
-// Zamek na pomet programu
-#pragma config CP0 = OFF
-
-
 // Definice funkce pro automatickou inicializaci potrebnych registru aby fungovaly zakladni funkce a periferie procesoru
 void preambleInitialization(void)
 {
-
+    T0CON = 0b10001000;
+    T0CONbits.PSA = 1; //preddelicka vypnuta
+    T0CONbits.TMR0ON = 1;
+    
+    TMR0H = 0xB1;
+    TMR0L = 0xDF;
+    
+    INTCON2bits.TMR0IP = 0;
+    INTCONbits.TMR0IE = 1;
+    
+    INTCONbits.GIEH = 1;
+    INTCONbits.GIEL = 1;
+    
+    
     /* O S C I L A T O R 
        Pro zvyseni 4x vnitrnich hodin je nutne:
         1.) Konfiguracni bit FOSC nastaven na HSPLL
@@ -58,3 +47,14 @@ void preambleInitialization(void)
 }
 
 
+// Volejte tuto funkci v main.c v pripade pozadavku na POVOLENI vysoke i nizke urovne preruseni
+void enableAllInterrupts(void) {
+    INTCONbits.GIEH = 1;
+    INTCONbits.GIEL = 1;
+}
+
+// Volejte tuto funkci v main.c v pripade pozadavku na ZAKAZANI vysoke i nizke urovne preruseni
+void disableAllInterrupts(void) {
+    INTCONbits.GIEH = 0;
+    INTCONbits.GIEL = 0;
+}
