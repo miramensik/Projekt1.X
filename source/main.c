@@ -1,18 +1,27 @@
-/* 
- * Soubor:      main.c 
- * Autor:       VLOZTE_AUTORA 
+/*
+ * Soubor:      main.c
+ * Autor:       VLOZTE_AUTORA
  * Spolecnost:  CVUT-FEL-K13114
  *
- * Kompilator:  C18-V3.47
+ * Kompilator:  XC8-v2.36
  * Procesor:    PIC18F87J11
  */
 
-
 // Systemove hlavickove soubory:
-#include <p18f87j11.h> // Header soubor procesoru
+// v pripade, ze je pouzit jako kompilator XC8 - include souboru
+// pokud ne, vypise chybu
 
-// Header soubor prvotni inicializace procesoru, pripraveny od k13114
+#if defined(__XC)
+#include <stdbool.h> // Definice logicke promenne false/true */
+#include <stdint.h>  // Definice celociselnych promennych
+#include <xc.h>      // Vtazeni obecneho soubory pro XC8
+#else
+#error "Invalid compiler selection"
+#endif
+
+// Pripravena zakladni inicializace od k13114 pro PIC18F87J11
 #include "./../header/preambleInitialization.h"
+
 
 //----------------------------------------------------------------------------
 /* ZDE ZACINA BLOK #include PRO VLASTNI HEADER SOUBORY */
@@ -21,6 +30,7 @@
 
 /* ZDE KONCI BLOK PRO #include PRO VLASTNI HEADER SOUBORY */
 //----------------------------------------------------------------------------
+
 
 
 
@@ -40,72 +50,38 @@
 
 //----------------------------------------------------------------------------
 // hlavni program
-void main ()
+void main(void)
 {
-    
+  // Inizializacni cast pro zakladni funkci programu/procesoru
+  preambleInitialization();
 
-    // Inizializacni cast pro zakladni funkci programu/procesoru
-    preambleInitialization();
+  // Inicializujte vlastni casti programu vlastnimi inicializacnimi funkcemi
 
-    // Inicializujte vlastni casti programu vlastnimi inicializacnimi funkcemi
-
-    // Zde v nekonecne smycce je beh programu na pozadi
-    while (1)
-    {
+  // Zde v nekonecne smycce je beh programu na pozadi
+  while (1)
+  {
       // Piste svuj kod pro program na pozadi
-    }
+     
+  }
 }
-
 
 //----------------------------------------------------------------------------
 /* Sekce obsahujici obsluhu preruseni */
 
-
-// Vektor preruseni vyssi priority
-// Neupravovat
-#pragma code InterruptVectorHigh = 0x08
-
-void InterruptVectorHigh (void)
+// Vyssi priorita preruseni
+void __interrupt(high_priority) high_isr(void)
 {
-  _asm
-    goto InterruptHandlerHigh // skok na obsluzny program preruseni
-  _endasm
-}
-
-
-// Vektor preruseni nizsi priority
-// Neupravovat
-#pragma code InterruptVectorLow = 0x18
-
-void InterruptVectorLow (void)
-{
-  _asm
-    goto InterruptHandlerLow // skok na obsluzny program preruseni
-  _endasm
-}
-
-
-// Podprogram obsluhy preruseni vyssi priority
-#pragma code
-#pragma interrupt InterruptHandlerHigh
-
-void InterruptHandlerHigh ()
-{
-// start podprogramu obsluhy preruseni
-// zde psat vlastni kod pro obsluhu preruseni
 
 }
 
-//----------------------------------------------------------------------------
-// Podprogram obsluhy preruseni nizsi priority
-#pragma code
-#pragma interruptlow InterruptHandlerLow
-
-void InterruptHandlerLow ()
+// Nizsi priorita preruseni
+void __interrupt(low_priority) low_isr(void)
 {
-// start podprogramu obsluhy preruseni
-// zde psat vlastni kod pro obsluhu preruseni
-
+    if(INTCONbits.TMR0IF == 1)
+    {
+        TMR0H = 0xD8;
+        TMR0L = 0xEF;
+        INTCONbits.TMR0IF = 0;
+    }
 }
-
 //----------------------------------------------------------------------------
