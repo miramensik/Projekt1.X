@@ -11,13 +11,13 @@
 /* Hlavickove soubory*/
 #include "./../header/filter.h"
 
-char filter1(char stav, char vstup)
+
+void filterFce(typeFilter*tlacitko, char vstup)
 {   
-char vystup = 0;
 char dalsiStav = s0;
+   
     
-    
-  switch(stav){
+  switch(tlacitko->stav){
       case s0:{
           if(vstup == 1){
               dalsiStav = s1;
@@ -37,7 +37,7 @@ char dalsiStav = s0;
       case s2:{
           if(vstup == 1){
               dalsiStav = s2;
-              vystup = 1;
+              tlacitko->vystupFilter = 1;
           }else{
               dalsiStav = s3;          
       }
@@ -55,7 +55,7 @@ char dalsiStav = s0;
       case s4:{
           if(vstup == 0){
               dalsiStav = s4;
-              vystup = 0;
+              tlacitko->vystupFilter = 0;
           }else{
               dalsiStav = s1;          
       }

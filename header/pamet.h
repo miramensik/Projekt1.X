@@ -7,8 +7,8 @@
  * Procesor:    PIC18F87J11
  */
 
-#ifndef _filter_H
-#define _filter_H
+#ifndef _pamet_H
+#define _pamet_H
 
 #if defined(__XC)
 #include <xc.h>      // Vtazeni obecneho soubory pro XC8
@@ -18,16 +18,9 @@
 #error "Invalid compiler selection"
 #endif
 
-// Deklarace ukazkove funkce
+#include "filter.h"
 
-enum{s0,s1,s2,s3,s4};
+void pametFce(typeFilter*tlacitko,char input);
 
-typedef struct{
-    char stav;
-    char vystupFilter;
-}typeFilter;
 
-void filterFce(typeFilter*tlacitko, char vstup);
-
-/*char filter1(char stav, char vstup);*/
-#endif /* FILTER.H */
+#endif /* PAMET.H */

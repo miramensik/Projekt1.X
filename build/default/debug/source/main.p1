@@ -1,11 +1,60 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"25 source/./../header/filter.h
+[; ;source/./../header/filter.h: 25: typedef struct{
+[s S572 `uc 1 `uc 1 ]
+[n S572 . stav vystupFilter ]
 [p mainexit ]
 "65 source/./../header/preambleInitialization.h
 [v _preambleInitialization `(v ~T0 @X0 0 ef ]
+"30 source/./../header/filter.h
+[; ;source/./../header/filter.h: 30: void filterFce(typeFilter*tlacitko, char vstup);
+[v _filterFce `(v ~T0 @X0 0 ef2`*S572`uc ]
+"4406 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4406:     struct {
+[s S172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S172 . RJ0 RJ1 RJ2 RJ3 RJ4 RJ5 RJ6 RJ7 ]
+"4416
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4416:     struct {
+[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S173 . ALE OE WRL WRH BA0 CE LB UB ]
+"4405
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4405: typedef union {
+[u S171 `S172 1 `S173 1 ]
+[n S171 . . . ]
+"4427
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4427: extern volatile PORTJbits_t PORTJbits __attribute__((address(0xF88)));
+[v _PORTJbits `VS171 ~T0 @X0 0 e@3976 ]
+"3327
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3327:     struct {
+[s S138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S138 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"3337
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3337:     struct {
+[s S139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S139 . PMD0 PMD1 PMD2 PMD3 PMD4 PMD5 PMD6 PMD7 ]
+"3347
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3347:     struct {
+[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S140 . AD0 AD1 AD2 AD3 AD4 AD5 AD6 AD7 ]
+"3357
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3357:     struct {
+[s S141 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S141 . . SDA2 SCL2 SS2 ]
+"3363
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3363:     struct {
+[s S142 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S142 . . SDO2 SDI2 SCK2 ]
+"3326
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3326: typedef union {
+[u S137 `S138 1 `S139 1 `S140 1 `S141 1 `S142 1 ]
+[n S137 . . . . . . ]
+"3370
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 3370: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS137 ~T0 @X0 0 e@3971 ]
 [t ~ __interrupt . k ]
 [t T129 __interrupt high_priority ]
 [t T130 __interrupt low_priority ]
-"14523 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
+"14523
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14523:     struct {
 [s S565 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S565 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -741,76 +790,115 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WDTPS  =  32768 ]
 "46
 [p x CP0  =  OFF ]
+"51 source/main.c
+[; ;source/main.c: 51: typeFilter S4;
+[v _S4 `S572 ~T0 @X0 1 e ]
+"52
+[; ;source/main.c: 52: typeFilter S5A;
+[v _S5A `S572 ~T0 @X0 1 e ]
+"53
+[; ;source/main.c: 53: typeFilter S5B;
+[v _S5B `S572 ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"53 source/main.c
-[; ;source/main.c: 53: void main(void)
+"56
+[; ;source/main.c: 56: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"54
-[; ;source/main.c: 54: {
+"57
+[; ;source/main.c: 57: {
 {
 [e :U _main ]
 [f ]
-"56
-[; ;source/main.c: 56:   preambleInitialization();
-[e ( _preambleInitialization ..  ]
+"58
+[; ;source/main.c: 58:     S4.stav = 0;
+[e = . _S4 0 -> -> 0 `i `uc ]
+"59
+[; ;source/main.c: 59:     S4.vystupFilter = 0;
+[e = . _S4 1 -> -> 0 `i `uc ]
 "61
-[; ;source/main.c: 61:   while (1)
-[e :U 574 ]
+[; ;source/main.c: 61:     S5A.stav = 0;
+[e = . _S5A 0 -> -> 0 `i `uc ]
 "62
-[; ;source/main.c: 62:   {
-{
+[; ;source/main.c: 62:     S5A.vystupFilter = 0;
+[e = . _S5A 1 -> -> 0 `i `uc ]
+"64
+[; ;source/main.c: 64:     S5B.stav = 0;
+[e = . _S5B 0 -> -> 0 `i `uc ]
 "65
-[; ;source/main.c: 65:   }
-}
-[e :U 573 ]
-[e $U 574  ]
+[; ;source/main.c: 65:     S5B.vystupFilter = 0;
+[e = . _S5B 1 -> -> 0 `i `uc ]
+"68
+[; ;source/main.c: 68:   preambleInitialization();
+[e ( _preambleInitialization ..  ]
+"73
+[; ;source/main.c: 73:   while (1)
 [e :U 575 ]
-"66
-[; ;source/main.c: 66: }
-[e :UE 572 ]
+"74
+[; ;source/main.c: 74:   {
+{
+"77
+[; ;source/main.c: 77:    filterFce(&S4, PORTJbits.RJ7);
+[e ( _filterFce (2 , &U _S4 -> . . _PORTJbits 0 7 `uc ]
+"78
+[; ;source/main.c: 78:    filterFce(&S5A, PORTJbits.RJ0);
+[e ( _filterFce (2 , &U _S5A -> . . _PORTJbits 0 0 `uc ]
+"79
+[; ;source/main.c: 79:    filterFce(&S5B, PORTJbits.RJ1);
+[e ( _filterFce (2 , &U _S5B -> . . _PORTJbits 0 1 `uc ]
+"81
+[; ;source/main.c: 81:    S4.vystupFilter = PORTDbits.RD7;
+[e = . _S4 1 -> . . _PORTDbits 0 7 `uc ]
+"82
+[; ;source/main.c: 82:   }
+}
+[e :U 574 ]
+[e $U 575  ]
+[e :U 576 ]
+"83
+[; ;source/main.c: 83: }
+[e :UE 573 ]
 }
 [v $root$_high_isr `(v ~T0 @X0 0 e ]
-"72
-[; ;source/main.c: 72: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
+"89
+[; ;source/main.c: 89: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
 [v _high_isr `(v ~T129 @X0 1 ef ]
-"73
-[; ;source/main.c: 73: {
+"90
+[; ;source/main.c: 90: {
 {
 [e :U _high_isr ]
 [f ]
-"75
-[; ;source/main.c: 75: }
-[e :UE 576 ]
+"92
+[; ;source/main.c: 92: }
+[e :UE 577 ]
 }
 [v $root$_low_isr `(v ~T0 @X0 0 e ]
-"78
-[; ;source/main.c: 78: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
+"95
+[; ;source/main.c: 95: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
 [v _low_isr `(v ~T130 @X0 1 ef ]
-"79
-[; ;source/main.c: 79: {
+"96
+[; ;source/main.c: 96: {
 {
 [e :U _low_isr ]
 [f ]
-"80
-[; ;source/main.c: 80:     if(INTCONbits.TMR0IF == 1)
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 578  ]
-"81
-[; ;source/main.c: 81:     {
+"97
+[; ;source/main.c: 97:     if(INTCONbits.TMR0IF == 1)
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 579  ]
+"98
+[; ;source/main.c: 98:     {
 {
-"82
-[; ;source/main.c: 82:         TMR0H = 0xD8;
+"99
+[; ;source/main.c: 99:         TMR0H = 0xD8;
 [e = _TMR0H -> -> 216 `i `uc ]
-"83
-[; ;source/main.c: 83:         TMR0L = 0xEF;
+"100
+[; ;source/main.c: 100:         TMR0L = 0xEF;
 [e = _TMR0L -> -> 239 `i `uc ]
-"84
-[; ;source/main.c: 84:         INTCONbits.TMR0IF = 0;
+"101
+[; ;source/main.c: 101:         INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"85
-[; ;source/main.c: 85:     }
+"102
+[; ;source/main.c: 102:     }
 }
-[e :U 578 ]
-"86
-[; ;source/main.c: 86: }
-[e :UE 577 ]
+[e :U 579 ]
+"103
+[; ;source/main.c: 103: }
+[e :UE 578 ]
 }

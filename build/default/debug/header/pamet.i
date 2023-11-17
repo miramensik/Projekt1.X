@@ -1,4 +1,4 @@
-# 1 "source/filter.c"
+# 1 "header/pamet.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "source/filter.c" 2
-# 12 "source/filter.c"
-# 1 "source/./../header/filter.h" 1
-# 14 "source/./../header/filter.h"
+# 1 "header/pamet.c" 2
+# 12 "header/pamet.c"
+# 1 "header/./../header/pamet.h" 1
+# 14 "header/./../header/pamet.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -8651,16 +8651,18 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 2 3
-# 15 "source/./../header/filter.h" 2
+# 14 "header/./../header/pamet.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 17 "source/./../header/filter.h" 2
+# 16 "header/./../header/pamet.h" 2
 
 
 
 
 
-
+# 1 "header/filter.h" 1
+# 23 "header/filter.h"
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
@@ -8669,57 +8671,9 @@ typedef struct{
 }typeFilter;
 
 void filterFce(typeFilter*tlacitko, char vstup);
-# 13 "source/filter.c" 2
+# 21 "header/./../header/pamet.h" 2
 
 
-void filterFce(typeFilter*tlacitko, char vstup)
-{
-char dalsiStav = s0;
+void pametFce(typeFilter*tlacitko,char input);
+# 12 "header/pamet.c" 2
 
-
-  switch(tlacitko->stav){
-      case s0:{
-          if(vstup == 1){
-              dalsiStav = s1;
-          }else{
-              dalsiStav = s3;
-      }
-          break;
-  }
-      case s1:{
-          if(vstup == 1){
-              dalsiStav = s2;
-          }else{
-              dalsiStav = s3;
-      }
-          break;
-  }
-      case s2:{
-          if(vstup == 1){
-              dalsiStav = s2;
-              tlacitko->vystupFilter = 1;
-          }else{
-              dalsiStav = s3;
-      }
-          break;
-  }
-      case s3:{
-          if(vstup == 0){
-              dalsiStav = s4;
-          }else{
-              dalsiStav = s1;
-      }
-          break;
-  }
-
-      case s4:{
-          if(vstup == 0){
-              dalsiStav = s4;
-              tlacitko->vystupFilter = 0;
-          }else{
-              dalsiStav = s1;
-      }
-          break;
-  }
-}
-}

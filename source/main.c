@@ -21,6 +21,8 @@
 
 // Pripravena zakladni inicializace od k13114 pro PIC18F87J11
 #include "./../header/preambleInitialization.h"
+#include "./../header/filter.h"
+
 
 
 //----------------------------------------------------------------------------
@@ -46,12 +48,22 @@
 /* ZDE KONCI BLOK PRO DEKLARACI VLASTNICH GLOBALNICH PROMENNYCH */
 //----------------------------------------------------------------------------
 
-
-
+typeFilter S4;
+typeFilter S5A;
+typeFilter S5B;
 //----------------------------------------------------------------------------
 // hlavni program
 void main(void)
 {
+    S4.stav = 0;
+    S4.vystupFilter = 0;
+    
+    S5A.stav = 0;
+    S5A.vystupFilter = 0;
+    
+    S5B.stav = 0;
+    S5B.vystupFilter = 0;
+    
   // Inizializacni cast pro zakladni funkci programu/procesoru
   preambleInitialization();
 
@@ -60,8 +72,13 @@ void main(void)
   // Zde v nekonecne smycce je beh programu na pozadi
   while (1)
   {
+
       // Piste svuj kod pro program na pozadi
-     
+   filterFce(&S4, PORTJbits.RJ7);
+   filterFce(&S5A, PORTJbits.RJ0);
+   filterFce(&S5B, PORTJbits.RJ1);
+       
+   S4.vystupFilter = PORTDbits.RD7;
   }
 }
 

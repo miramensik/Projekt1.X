@@ -1,6 +1,6 @@
 
 Memory Summary:
-    Program space        used    82h (   130) of 1FFF8h bytes   (  0.1%)
-    Data space           used     4h (     4) of   F40h bytes   (  0.1%)
+    Program space        used   1AEh (   430) of 1FFF8h bytes   (  0.3%)
+    Data space           used     Eh (    14) of   F40h bytes   (  0.4%)
     Configuration bits   used     3h (     3) of     3h words   (100.0%)
 
