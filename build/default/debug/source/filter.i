@@ -8721,5 +8721,7 @@ char dalsiStav = s0;
       }
           break;
   }
+
 }
+  tlacitko->stav = dalsiStav;
 }

@@ -8728,6 +8728,7 @@ void filterFce(typeFilter*tlacitko, char vstup);
 typeFilter S4;
 typeFilter S5A;
 typeFilter S5B;
+char is1ms;
 
 
 void main(void)
@@ -8749,13 +8750,18 @@ void main(void)
 
   while (1)
   {
+      if(is1ms == 1){
+
+
 
 
    filterFce(&S4, PORTJbits.RJ7);
    filterFce(&S5A, PORTJbits.RJ0);
    filterFce(&S5B, PORTJbits.RJ1);
 
-   S4.vystupFilter = PORTDbits.RD7;
+   is1ms = 0;
+   }
+  LATDbits.LATD7 = S4.vystupFilter;
   }
 }
 
@@ -8773,6 +8779,7 @@ void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
 {
     if(INTCONbits.TMR0IF == 1)
     {
+        is1ms = 1;
         TMR0H = 0xD8;
         TMR0L = 0xEF;
         INTCONbits.TMR0IF = 0;

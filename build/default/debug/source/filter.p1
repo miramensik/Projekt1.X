@@ -878,8 +878,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [; ;source/filter.c: 63:   }
 }
-"64
-[; ;source/filter.c: 64: }
+"65
+[; ;source/filter.c: 65: }
 }
 [e $U 574  ]
 [e :U 575 ]
@@ -890,7 +890,10 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E5045 4 588
  574 ]
 [e :U 574 ]
-"65
-[; ;source/filter.c: 65: }
+"66
+[; ;source/filter.c: 66:   tlacitko->stav = dalsiStav;
+[e = . *U _tlacitko 0 _dalsiStav ]
+"67
+[; ;source/filter.c: 67: }
 [e :UE 573 ]
 }
