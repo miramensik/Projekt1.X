@@ -23,6 +23,7 @@
 #include "./../header/preambleInitialization.h"
 #include "./../header/filter.h"
 #include "./../header/pamet.h"
+#include "./../header/dekoder.h"
 
 
 
@@ -53,6 +54,7 @@ typeFilter S4;
 typeFilter S5A;
 typeFilter S5B;
 typeFilter S4Filtr;
+typeFilter dekoderAB;
 char is1ms;
 //----------------------------------------------------------------------------
 // hlavni program
@@ -70,6 +72,9 @@ void main(void)
     S4Filtr.stav = 0;
     S4Filtr.vystup = 0;
     
+    dekoderAB.stav = 0;
+    dekoderAB.vystup = 0;
+    
   // Inizializacni cast pro zakladni funkci programu/procesoru
   preambleInitialization();
 
@@ -85,6 +90,7 @@ void main(void)
   pametFce(&S4Filtr, S4.vystup);
   filterFce(&S5A, PORTJbits.RJ0);
   filterFce(&S5B, PORTJbits.RJ1);
+  dekoderFce(&dekoderAB, S5A.vystup, S5B.vystup);
    
    is1ms = 0;
    }

@@ -7,6 +7,7 @@
       <itemPath>header/preambleInitialization.h</itemPath>
       <itemPath>header/filter.h</itemPath>
       <itemPath>header/pamet.h</itemPath>
+      <itemPath>header/dekoder.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +21,7 @@
       <itemPath>source/preambleInitialization.c</itemPath>
       <itemPath>source/filter.c</itemPath>
       <itemPath>header/pamet.c</itemPath>
+      <itemPath>header/dekoder.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

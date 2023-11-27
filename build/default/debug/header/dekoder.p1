@@ -1,75 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"25 source/./../header/filter.h
-[; ;source/./../header/filter.h: 25: typedef struct{
+"25 header/filter.h
+[; ;header/filter.h: 25: typedef struct{
 [s S572 `uc 1 `uc 1 ]
 [n S572 . stav vystup ]
-[p mainexit ]
-"65 source/./../header/preambleInitialization.h
-[v _preambleInitialization `(v ~T0 @X0 0 ef ]
-"32 source/./../header/filter.h
-[; ;source/./../header/filter.h: 32: void filterFce(typeFilter*tlacitko, char vstup);
-[v _filterFce `(v ~T0 @X0 0 ef2`*S572`uc ]
-"4406 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4406:     struct {
-[s S172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S172 . RJ0 RJ1 RJ2 RJ3 RJ4 RJ5 RJ6 RJ7 ]
-"4416
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4416:     struct {
-[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S173 . ALE OE WRL WRH BA0 CE LB UB ]
-"4405
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4405: typedef union {
-[u S171 `S172 1 `S173 1 ]
-[n S171 . . . ]
-"4427
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4427: extern volatile PORTJbits_t PORTJbits __attribute__((address(0xF88)));
-[v _PORTJbits `VS171 ~T0 @X0 0 e@3976 ]
-"23 source/./../header/pamet.h
-[; ;source/./../header/pamet.h: 23: void pametFce(typeFilter*tlacitko,char input);
-[v _pametFce `(v ~T0 @X0 0 ef2`*S572`uc ]
-"4854 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4854:     struct {
-[s S184 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S184 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"4864
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4864:     struct {
-[s S185 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S185 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"4853
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4853: typedef union {
-[u S183 `S184 1 `S185 1 ]
-[n S183 . . . ]
-"4875
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4875: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-[v _LATDbits `VS183 ~T0 @X0 0 e@3980 ]
-[t ~ __interrupt . k ]
-[t T129 __interrupt high_priority ]
-[t T130 __interrupt low_priority ]
-"14523
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14523:     struct {
-[s S565 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S565 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"14533
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14533:     struct {
-[s S566 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S566 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"14543
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14543:     struct {
-[s S567 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S567 . . GIEL GIEH ]
-"14522
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14522: typedef union {
-[u S564 `S565 1 `S566 1 `S567 1 ]
-[n S564 . . . . ]
-"14549
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14549: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS564 ~T0 @X0 0 e@4082 ]
-"14052
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14052: extern volatile unsigned char TMR0H __attribute__((address(0xFD7)));
-[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
-"14045
-[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14045: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
-[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
+"15 header/dekoder.c
+[; ;header/dekoder.c: 15:     char dalsiStav = s0;
+[c E5045 0 1 2 3 4 .. ]
+[n E5045 . s0 s1 s2 s3 s4  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 54: __asm("PMSTAT equ 0F5Ah");
 [; <" PMSTAT equ 0F5Ah ;# ">
@@ -763,162 +700,190 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14858
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14858: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"22 source/./../header/preambleInitialization.h
-[p x FOSC  =  HSPLL ]
-"25
-[p x IESO  =  OFF ]
-"28
-[p x FCMEN  =  OFF ]
-"31
-[p x MODE  =  MM ]
-"34
-[p x XINST  =  OFF ]
-"37
-[p x STVREN  =  ON ]
-"40
-[p x WDTEN  =  OFF ]
-"43
-[p x WDTPS  =  32768 ]
-"46
-[p x CP0  =  OFF ]
-"53 source/main.c
-[; ;source/main.c: 53: typeFilter S4;
-[v _S4 `S572 ~T0 @X0 1 e ]
-"54
-[; ;source/main.c: 54: typeFilter S5A;
-[v _S5A `S572 ~T0 @X0 1 e ]
-"55
-[; ;source/main.c: 55: typeFilter S5B;
-[v _S5B `S572 ~T0 @X0 1 e ]
-"56
-[; ;source/main.c: 56: typeFilter S4Filtr;
-[v _S4Filtr `S572 ~T0 @X0 1 e ]
-"57
-[; ;source/main.c: 57: char is1ms;
-[v _is1ms `uc ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"60
-[; ;source/main.c: 60: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"61
-[; ;source/main.c: 61: {
+"14 header/dekoder.c
+[; ;header/dekoder.c: 14: void dekoderFce(typeFilter*tlacitko,char A, char B){
+[v _dekoderFce `(v ~T0 @X0 1 ef3`*S572`uc`uc ]
 {
-[e :U _main ]
+[e :U _dekoderFce ]
+[v _tlacitko `*S572 ~T0 @X0 1 r1 ]
+[v _A `uc ~T0 @X0 1 r2 ]
+[v _B `uc ~T0 @X0 1 r3 ]
 [f ]
-"62
-[; ;source/main.c: 62:     S4.stav = 0;
-[e = . _S4 0 -> -> 0 `i `uc ]
-"63
-[; ;source/main.c: 63:     S4.vystup = 0;
-[e = . _S4 1 -> -> 0 `i `uc ]
-"65
-[; ;source/main.c: 65:     S5A.stav = 0;
-[e = . _S5A 0 -> -> 0 `i `uc ]
-"66
-[; ;source/main.c: 66:     S5A.vystup = 0;
-[e = . _S5A 1 -> -> 0 `i `uc ]
-"68
-[; ;source/main.c: 68:     S5B.stav = 0;
-[e = . _S5B 0 -> -> 0 `i `uc ]
-"69
-[; ;source/main.c: 69:     S5B.vystup = 0;
-[e = . _S5B 1 -> -> 0 `i `uc ]
-"71
-[; ;source/main.c: 71:     S4Filtr.stav = 0;
-[e = . _S4Filtr 0 -> -> 0 `i `uc ]
-"72
-[; ;source/main.c: 72:     S4Filtr.vystup = 0;
-[e = . _S4Filtr 1 -> -> 0 `i `uc ]
-"75
-[; ;source/main.c: 75:   preambleInitialization();
-[e ( _preambleInitialization ..  ]
-"80
-[; ;source/main.c: 80:   while (1)
-[e :U 575 ]
-"81
-[; ;source/main.c: 81:   {
-{
-"82
-[; ;source/main.c: 82:       if(is1ms == 1){
-[e $ ! == -> _is1ms `i -> 1 `i 577  ]
-{
-"85
-[; ;source/main.c: 85:    filterFce(&S4, PORTJbits.RJ7);
-[e ( _filterFce (2 , &U _S4 -> . . _PORTJbits 0 7 `uc ]
-"86
-[; ;source/main.c: 86:   pametFce(&S4Filtr, S4.vystup);
-[e ( _pametFce (2 , &U _S4Filtr . _S4 1 ]
-"87
-[; ;source/main.c: 87:   filterFce(&S5A, PORTJbits.RJ0);
-[e ( _filterFce (2 , &U _S5A -> . . _PORTJbits 0 0 `uc ]
-"88
-[; ;source/main.c: 88:   filterFce(&S5B, PORTJbits.RJ1);
-[e ( _filterFce (2 , &U _S5B -> . . _PORTJbits 0 1 `uc ]
-"90
-[; ;source/main.c: 90:    is1ms = 0;
-[e = _is1ms -> -> 0 `i `uc ]
-"91
-[; ;source/main.c: 91:    }
-}
-[e :U 577 ]
-"92
-[; ;source/main.c: 92:   LATDbits.LATD7 = S4Filtr.vystup;
-[e = . . _LATDbits 0 7 -> . _S4Filtr 1 `uc ]
-"93
-[; ;source/main.c: 93:   }
-}
-[e :U 574 ]
+"15
+[; ;header/dekoder.c: 15:     char dalsiStav = s0;
+[v _dalsiStav `uc ~T0 @X0 1 a ]
+[e = _dalsiStav -> . `E5045 0 `uc ]
+"17
+[; ;header/dekoder.c: 17:     switch(tlacitko->stav){
 [e $U 575  ]
+{
+"18
+[; ;header/dekoder.c: 18:         case s0:{
 [e :U 576 ]
-"94
-[; ;source/main.c: 94: }
-[e :UE 573 ]
-}
-[v $root$_high_isr `(v ~T0 @X0 0 e ]
-"100
-[; ;source/main.c: 100: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
-[v _high_isr `(v ~T129 @X0 1 ef ]
-"101
-[; ;source/main.c: 101: {
 {
-[e :U _high_isr ]
-[f ]
-"103
-[; ;source/main.c: 103: }
-[e :UE 578 ]
-}
-[v $root$_low_isr `(v ~T0 @X0 0 e ]
-"106
-[; ;source/main.c: 106: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
-[v _low_isr `(v ~T130 @X0 1 ef ]
-"107
-[; ;source/main.c: 107: {
+"19
+[; ;header/dekoder.c: 19:             if(A == 1 && B == 0){
+[e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 0 `i 577  ]
 {
-[e :U _low_isr ]
-[f ]
-"108
-[; ;source/main.c: 108:     if(INTCONbits.TMR0IF == 1)
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 580  ]
-"109
-[; ;source/main.c: 109:     {
-{
-"110
-[; ;source/main.c: 110:         is1ms = 1;
-[e = _is1ms -> -> 1 `i `uc ]
-"111
-[; ;source/main.c: 111:         TMR0H = 0xD8;
-[e = _TMR0H -> -> 216 `i `uc ]
-"112
-[; ;source/main.c: 112:         TMR0L = 0xEF;
-[e = _TMR0L -> -> 239 `i `uc ]
-"113
-[; ;source/main.c: 113:         INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"114
-[; ;source/main.c: 114:     }
+"20
+[; ;header/dekoder.c: 20:                 dalsiStav = s1;
+[e = _dalsiStav -> . `E5045 1 `uc ]
+"21
+[; ;header/dekoder.c: 21:                 tlacitko->vystup ++;
+[e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
+"22
+[; ;header/dekoder.c: 22:             }else if (A == 0 && B == 1){
 }
+[e $U 578  ]
+[e :U 577 ]
+[e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 1 `i 579  ]
+{
+"23
+[; ;header/dekoder.c: 23:                 dalsiStav = s3;
+[e = _dalsiStav -> . `E5045 3 `uc ]
+"24
+[; ;header/dekoder.c: 24:                 tlacitko->vystup --;
+[e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
+"25
+[; ;header/dekoder.c: 25:             }
+}
+[e :U 579 ]
+[e :U 578 ]
+"26
+[; ;header/dekoder.c: 26:             break;
+[e $U 574  ]
+"27
+[; ;header/dekoder.c: 27:         }
+}
+"28
+[; ;header/dekoder.c: 28:         case s1:{
 [e :U 580 ]
-"115
-[; ;source/main.c: 115: }
-[e :UE 579 ]
+{
+"29
+[; ;header/dekoder.c: 29:             if(A == 1 && B == 1){
+[e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 1 `i 581  ]
+{
+"30
+[; ;header/dekoder.c: 30:                 dalsiStav = s2;
+[e = _dalsiStav -> . `E5045 2 `uc ]
+"31
+[; ;header/dekoder.c: 31:                tlacitko->vystup ++;
+[e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
+"32
+[; ;header/dekoder.c: 32:             }else if (A == 0 && B == 0){
+}
+[e $U 582  ]
+[e :U 581 ]
+[e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 0 `i 583  ]
+{
+"33
+[; ;header/dekoder.c: 33:                 dalsiStav = s0;
+[e = _dalsiStav -> . `E5045 0 `uc ]
+"34
+[; ;header/dekoder.c: 34:                 tlacitko->vystup --;
+[e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
+"35
+[; ;header/dekoder.c: 35:             }
+}
+[e :U 583 ]
+[e :U 582 ]
+"36
+[; ;header/dekoder.c: 36:             break;
+[e $U 574  ]
+"37
+[; ;header/dekoder.c: 37:         }
+}
+"38
+[; ;header/dekoder.c: 38:          case s2:{
+[e :U 584 ]
+{
+"39
+[; ;header/dekoder.c: 39:             if(A == 0 && B == 1){
+[e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 1 `i 585  ]
+{
+"40
+[; ;header/dekoder.c: 40:                 dalsiStav = s3;
+[e = _dalsiStav -> . `E5045 3 `uc ]
+"41
+[; ;header/dekoder.c: 41:                 tlacitko->vystup ++;
+[e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
+"42
+[; ;header/dekoder.c: 42:             }else if (A == 1 && B == 0){
+}
+[e $U 586  ]
+[e :U 585 ]
+[e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 0 `i 587  ]
+{
+"43
+[; ;header/dekoder.c: 43:                 dalsiStav = s1;
+[e = _dalsiStav -> . `E5045 1 `uc ]
+"44
+[; ;header/dekoder.c: 44:                 tlacitko->vystup --;
+[e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
+"45
+[; ;header/dekoder.c: 45:             }
+}
+[e :U 587 ]
+[e :U 586 ]
+"46
+[; ;header/dekoder.c: 46:             break;
+[e $U 574  ]
+"47
+[; ;header/dekoder.c: 47:         }
+}
+"48
+[; ;header/dekoder.c: 48:          case s3:{
+[e :U 588 ]
+{
+"49
+[; ;header/dekoder.c: 49:             if(A == 0 && B == 0){
+[e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 0 `i 589  ]
+{
+"50
+[; ;header/dekoder.c: 50:                 dalsiStav = s0;
+[e = _dalsiStav -> . `E5045 0 `uc ]
+"51
+[; ;header/dekoder.c: 51:                 tlacitko->vystup ++;
+[e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
+"52
+[; ;header/dekoder.c: 52:             }else if (A == 1 && B == 1){
+}
+[e $U 590  ]
+[e :U 589 ]
+[e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 1 `i 591  ]
+{
+"53
+[; ;header/dekoder.c: 53:                 dalsiStav = s2;
+[e = _dalsiStav -> . `E5045 2 `uc ]
+"54
+[; ;header/dekoder.c: 54:                 tlacitko->vystup --;
+[e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
+"55
+[; ;header/dekoder.c: 55:             }
+}
+[e :U 591 ]
+[e :U 590 ]
+"56
+[; ;header/dekoder.c: 56:             break;
+[e $U 574  ]
+"57
+[; ;header/dekoder.c: 57:         }
+}
+"59
+[; ;header/dekoder.c: 59:     }
+}
+[e $U 574  ]
+[e :U 575 ]
+[e [\ -> . *U _tlacitko 0 `i , $ . `E5045 0 576
+ , $ . `E5045 1 580
+ , $ . `E5045 2 584
+ , $ . `E5045 3 588
+ 574 ]
+[e :U 574 ]
+"60
+[; ;header/dekoder.c: 60:       tlacitko->stav = dalsiStav;
+[e = . *U _tlacitko 0 _dalsiStav ]
+"61
+[; ;header/dekoder.c: 61: }
+[e :UE 573 ]
 }

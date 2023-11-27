@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Mon Nov 27 16:04:44 2023
+                                                                                               Mon Nov 27 17:05:00 2023
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	18F87J11
@@ -166,7 +166,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    152 ;;
    153 ;; *************** function _main *****************
    154 ;; Defined at:
-   155 ;;		line 59 in file "source/main.c"
+   155 ;;		line 60 in file "source/main.c"
    156 ;; Parameters:    Size  Location     Type
    157 ;;		None
    158 ;; Auto vars:     Size  Location     Type
@@ -206,52 +206,52 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    187   0011D6                     _main:
    188                           	callstack 28
    189   0011D6                     
-   190                           ;source/main.c: 61:     S4.stav = 0;
+   190                           ;source/main.c: 62:     S4.stav = 0;
    191   0011D6  0E00               	movlw	0
    192   0011D8  6E08               	movwf	_S4^0,c
    193                           
-   194                           ;source/main.c: 62:     S4.vystup = 0;
+   194                           ;source/main.c: 63:     S4.vystup = 0;
    195   0011DA  0E00               	movlw	0
    196   0011DC  6E09               	movwf	(_S4+1)^0,c
    197                           
-   198                           ;source/main.c: 64:     S5A.stav = 0;
+   198                           ;source/main.c: 65:     S5A.stav = 0;
    199   0011DE  0E00               	movlw	0
    200   0011E0  6E06               	movwf	_S5A^0,c
    201                           
-   202                           ;source/main.c: 65:     S5A.vystup = 0;
+   202                           ;source/main.c: 66:     S5A.vystup = 0;
    203   0011E2  0E00               	movlw	0
    204   0011E4  6E07               	movwf	(_S5A+1)^0,c
    205                           
-   206                           ;source/main.c: 67:     S5B.stav = 0;
+   206                           ;source/main.c: 68:     S5B.stav = 0;
    207   0011E6  0E00               	movlw	0
    208   0011E8  6E04               	movwf	_S5B^0,c
    209                           
-   210                           ;source/main.c: 68:     S5B.vystup = 0;
+   210                           ;source/main.c: 69:     S5B.vystup = 0;
    211   0011EA  0E00               	movlw	0
    212   0011EC  6E05               	movwf	(_S5B+1)^0,c
    213                           
-   214                           ;source/main.c: 70:     S4Filtr.stav = 0;
+   214                           ;source/main.c: 71:     S4Filtr.stav = 0;
    215   0011EE  0E00               	movlw	0
    216   0011F0  6E02               	movwf	_S4Filtr^0,c
    217                           
-   218                           ;source/main.c: 71:     S4Filtr.vystup = 1;
-   219   0011F2  0E01               	movlw	1
+   218                           ;source/main.c: 72:     S4Filtr.vystup = 0;
+   219   0011F2  0E00               	movlw	0
    220   0011F4  6E03               	movwf	(_S4Filtr+1)^0,c
    221   0011F6                     
-   222                           ;source/main.c: 74:   preambleInitialization();
+   222                           ;source/main.c: 75:   preambleInitialization();
    223   0011F6  EC2E  F009         	call	_preambleInitialization	;wreg free
-   224   0011FA                     l1018:
+   224   0011FA                     l1115:
    225                           
-   226                           ;source/main.c: 80:   {;source/main.c: 81:       if(is1ms == 1){
+   226                           ;source/main.c: 81:   {;source/main.c: 82:       if(is1ms == 1){
    227   0011FA  0401               	decf	_is1ms^0,w,c
    228   0011FC  A4D8               	btfss	status,2,c
-   229   0011FE  EF03  F009         	goto	u221
-   230   001202  EF05  F009         	goto	u220
-   231   001206                     u221:
-   232   001206  EF25  F009         	goto	l1024
-   233   00120A                     u220:
+   229   0011FE  EF03  F009         	goto	u381
+   230   001202  EF05  F009         	goto	u380
+   231   001206                     u381:
+   232   001206  EF25  F009         	goto	l1121
+   233   00120A                     u380:
    234   00120A                     
-   235                           ;source/main.c: 84:    filterFce(&S4, PORTJbits.RJ7);
+   235                           ;source/main.c: 85:    filterFce(&S4, PORTJbits.RJ7);
    236   00120A  0E08               	movlw	low _S4
    237   00120C  6E0D               	movwf	filterFce@tlacitko^0,c
    238   00120E  0E00               	movlw	0
@@ -260,13 +260,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    241   001214  6E0E               	movwf	filterFce@vstup^0,c
    242   001216  EC01  F008         	call	_filterFce	;wreg free
    243                           
-   244                           ;source/main.c: 85:   pametFce(&S4Filtr, S4.vystup);
+   244                           ;source/main.c: 86:   pametFce(&S4Filtr, S4.vystup);
    245   00121A  0E02               	movlw	low _S4Filtr
    246   00121C  6E0D               	movwf	pametFce@tlacitko^0,c
    247   00121E  C009  F00E         	movff	_S4+1,pametFce@input
    248   001222  EC7C  F008         	call	_pametFce	;wreg free
    249                           
-   250                           ;source/main.c: 86:   filterFce(&S5A, PORTJbits.RJ0);
+   250                           ;source/main.c: 87:   filterFce(&S5A, PORTJbits.RJ0);
    251   001226  0E06               	movlw	low _S5A
    252   001228  6E0D               	movwf	filterFce@tlacitko^0,c
    253   00122A  0E00               	movlw	0
@@ -275,7 +275,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    256   001230  6E0E               	movwf	filterFce@vstup^0,c
    257   001232  EC01  F008         	call	_filterFce	;wreg free
    258                           
-   259                           ;source/main.c: 87:   filterFce(&S5B, PORTJbits.RJ1);
+   259                           ;source/main.c: 88:   filterFce(&S5B, PORTJbits.RJ1);
    260   001236  0E04               	movlw	low _S5B
    261   001238  6E0D               	movwf	filterFce@tlacitko^0,c
    262   00123A  0E00               	movlw	0
@@ -284,20 +284,20 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    265   001240  6E0E               	movwf	filterFce@vstup^0,c
    266   001242  EC01  F008         	call	_filterFce	;wreg free
    267   001246                     
-   268                           ;source/main.c: 89:    is1ms = 0;
+   268                           ;source/main.c: 90:    is1ms = 0;
    269   001246  0E00               	movlw	0
    270   001248  6E01               	movwf	_is1ms^0,c
-   271   00124A                     l1024:
+   271   00124A                     l1121:
    272                           
-   273                           ;source/main.c: 91:   LATDbits.LATD7 = S4Filtr.vystup;
+   273                           ;source/main.c: 92:   LATDbits.LATD7 = S4Filtr.vystup;
    274   00124A  B003               	btfsc	(_S4Filtr+1)^0,0,c
-   275   00124C  D002               	bra	u235
+   275   00124C  D002               	bra	u395
    276   00124E  9E8C               	bcf	140,7,c	;volatile
-   277   001250  D001               	bra	u236
-   278   001252                     u235:
+   277   001250  D001               	bra	u396
+   278   001252                     u395:
    279   001252  8E8C               	bsf	140,7,c	;volatile
-   280   001254                     u236:
-   281   001254  EFFD  F008         	goto	l1018
+   280   001254                     u396:
+   281   001254  EFFD  F008         	goto	l1115
    282   001258  EF29  F000         	goto	start
    283   00125C                     __end_of_main:
    284                           	callstack 0
@@ -445,40 +445,40 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    416   0010FA  6E11               	movwf	pametFce@dalsiStav^0,c
    417                           
    418                           ;header/pamet.c: 17:     switch(tlacitko->stav){
-   419   0010FC  EFC5  F008         	goto	l1006
-   420   001100                     l976:
+   419   0010FC  EFC5  F008         	goto	l1103
+   420   001100                     l1073:
    421                           
    422                           ;header/pamet.c: 19:             if(input == 0){
    423   001100  500E               	movf	pametFce@input^0,w,c
    424   001102  A4D8               	btfss	status,2,c
-   425   001104  EF86  F008         	goto	u181
-   426   001108  EF88  F008         	goto	u180
-   427   00110C                     u181:
-   428   00110C  EF8C  F008         	goto	l980
-   429   001110                     u180:
+   425   001104  EF86  F008         	goto	u341
+   426   001108  EF88  F008         	goto	u340
+   427   00110C                     u341:
+   428   00110C  EF8C  F008         	goto	l1077
+   429   001110                     u340:
    430   001110                     
    431                           ;header/pamet.c: 20:                 dalsiStav = s1;
    432   001110  0E01               	movlw	1
    433   001112  6E11               	movwf	pametFce@dalsiStav^0,c
    434                           
    435                           ;header/pamet.c: 21:             }else{
-   436   001114  EFE5  F008         	goto	l1008
-   437   001118                     l980:
+   436   001114  EFE5  F008         	goto	l1105
+   437   001118                     l1077:
    438                           
    439                           ;header/pamet.c: 22:                 dalsiStav = s0;
    440   001118  0E00               	movlw	0
    441   00111A  6E11               	movwf	pametFce@dalsiStav^0,c
-   442   00111C  EFE5  F008         	goto	l1008
-   443   001120                     l982:
+   442   00111C  EFE5  F008         	goto	l1105
+   443   001120                     l1079:
    444                           
    445                           ;header/pamet.c: 27:             if(input == 0){
    446   001120  500E               	movf	pametFce@input^0,w,c
    447   001122  A4D8               	btfss	status,2,c
-   448   001124  EF96  F008         	goto	u191
-   449   001128  EF98  F008         	goto	u190
-   450   00112C                     u191:
-   451   00112C  EFA2  F008         	goto	l988
-   452   001130                     u190:
+   448   001124  EF96  F008         	goto	u351
+   449   001128  EF98  F008         	goto	u350
+   450   00112C                     u351:
+   451   00112C  EFA2  F008         	goto	l1085
+   452   001130                     u350:
    453   001130                     
    454                           ;header/pamet.c: 28:                 dalsiStav = s1;
    455   001130  0E01               	movlw	1
@@ -493,40 +493,40 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    464   00113E  6ADF               	clrf	indf2,c
    465                           
    466                           ;header/pamet.c: 30:             }else{
-   467   001140  EFE5  F008         	goto	l1008
-   468   001144                     l988:
+   467   001140  EFE5  F008         	goto	l1105
+   468   001144                     l1085:
    469                           
    470                           ;header/pamet.c: 31:                 dalsiStav = s2;
    471   001144  0E02               	movlw	2
    472   001146  6E11               	movwf	pametFce@dalsiStav^0,c
-   473   001148  EFE5  F008         	goto	l1008
-   474   00114C                     l990:
+   473   001148  EFE5  F008         	goto	l1105
+   474   00114C                     l1087:
    475                           
    476                           ;header/pamet.c: 36:             if(input == 0){
    477   00114C  500E               	movf	pametFce@input^0,w,c
    478   00114E  A4D8               	btfss	status,2,c
-   479   001150  EFAC  F008         	goto	u201
-   480   001154  EFAE  F008         	goto	u200
-   481   001158                     u201:
-   482   001158  EFA2  F008         	goto	l988
-   483   00115C                     u200:
+   479   001150  EFAC  F008         	goto	u361
+   480   001154  EFAE  F008         	goto	u360
+   481   001158                     u361:
+   482   001158  EFA2  F008         	goto	l1085
+   483   00115C                     u360:
    484   00115C                     
    485                           ;header/pamet.c: 37:                 dalsiStav = s3;
    486   00115C  0E03               	movlw	3
    487   00115E  6E11               	movwf	pametFce@dalsiStav^0,c
    488                           
    489                           ;header/pamet.c: 38:             }else{
-   490   001160  EFE5  F008         	goto	l1008
-   491   001164                     l996:
+   490   001160  EFE5  F008         	goto	l1105
+   491   001164                     l1093:
    492                           
    493                           ;header/pamet.c: 44:             if(input == 0){
    494   001164  500E               	movf	pametFce@input^0,w,c
    495   001166  A4D8               	btfss	status,2,c
-   496   001168  EFB8  F008         	goto	u211
-   497   00116C  EFBA  F008         	goto	u210
-   498   001170                     u211:
-   499   001170  EF8C  F008         	goto	l980
-   500   001174                     u210:
+   496   001168  EFB8  F008         	goto	u371
+   497   00116C  EFBA  F008         	goto	u370
+   498   001170                     u371:
+   499   001170  EF8C  F008         	goto	l1077
+   500   001174                     u370:
    501   001174                     
    502                           ;header/pamet.c: 45:                 dalsiStav = s3;
    503   001174  0E03               	movlw	3
@@ -542,8 +542,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    513   001184  6EDF               	movwf	indf2,c
    514                           
    515                           ;header/pamet.c: 47:             }else{
-   516   001186  EFE5  F008         	goto	l1008
-   517   00118A                     l1006:
+   516   001186  EFE5  F008         	goto	l1105
+   517   00118A                     l1103:
    518   00118A  500D               	movf	pametFce@tlacitko^0,w,c
    519   00118C  6ED9               	movwf	fsr2l,c
    520   00118E  6ADA               	clrf	fsr2h,c
@@ -562,9 +562,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    532   001196  5010               	movf	(??_pametFce+1)^0,w,c
    533   001198  0A00               	xorlw	0	; case 0
    534   00119A  B4D8               	btfsc	status,2,c
-   535   00119C  EFD2  F008         	goto	l1034
-   536   0011A0  EFE5  F008         	goto	l1008
-   537   0011A4                     l1034:
+   535   00119C  EFD2  F008         	goto	l1131
+   536   0011A0  EFE5  F008         	goto	l1105
+   537   0011A4                     l1131:
    538                           
    539                           ; Switch size 1, requested type "simple"
    540                           ; Number of cases is 4, Range of values is 0 to 3
@@ -575,18 +575,18 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    545   0011A4  500F               	movf	??_pametFce^0,w,c
    546   0011A6  0A00               	xorlw	0	; case 0
    547   0011A8  B4D8               	btfsc	status,2,c
-   548   0011AA  EF80  F008         	goto	l976
+   548   0011AA  EF80  F008         	goto	l1073
    549   0011AE  0A01               	xorlw	1	; case 1
    550   0011B0  B4D8               	btfsc	status,2,c
-   551   0011B2  EF90  F008         	goto	l982
+   551   0011B2  EF90  F008         	goto	l1079
    552   0011B6  0A03               	xorlw	3	; case 2
    553   0011B8  B4D8               	btfsc	status,2,c
-   554   0011BA  EFA6  F008         	goto	l990
+   554   0011BA  EFA6  F008         	goto	l1087
    555   0011BE  0A01               	xorlw	1	; case 3
    556   0011C0  B4D8               	btfsc	status,2,c
-   557   0011C2  EFB2  F008         	goto	l996
-   558   0011C6  EFE5  F008         	goto	l1008
-   559   0011CA                     l1008:
+   557   0011C2  EFB2  F008         	goto	l1093
+   558   0011C6  EFE5  F008         	goto	l1105
+   559   0011CA                     l1105:
    560                           
    561                           ;header/pamet.c: 54:       tlacitko->stav = dalsiStav;
    562   0011CA  500D               	movf	pametFce@tlacitko^0,w,c
@@ -646,58 +646,58 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    610   001004  6E11               	movwf	filterFce@dalsiStav^0,c
    611                           
    612                           ;source/filter.c: 20:   switch(tlacitko->stav){
-   613   001006  EF52  F008         	goto	l966
-   614   00100A                     l930:
+   613   001006  EF52  F008         	goto	l1063
+   614   00100A                     l1027:
    615                           
    616                           ;source/filter.c: 22:           if(vstup == 1){
    617   00100A  040E               	decf	filterFce@vstup^0,w,c
    618   00100C  A4D8               	btfss	status,2,c
-   619   00100E  EF0B  F008         	goto	u131
-   620   001012  EF0D  F008         	goto	u130
-   621   001016                     u131:
-   622   001016  EF11  F008         	goto	l934
-   623   00101A                     u130:
-   624   00101A                     l932:
+   619   00100E  EF0B  F008         	goto	u291
+   620   001012  EF0D  F008         	goto	u290
+   621   001016                     u291:
+   622   001016  EF11  F008         	goto	l1031
+   623   00101A                     u290:
+   624   00101A                     l1029:
    625                           
    626                           ;source/filter.c: 23:               dalsiStav = s1;
    627   00101A  0E01               	movlw	1
    628   00101C  6E11               	movwf	filterFce@dalsiStav^0,c
    629                           
    630                           ;source/filter.c: 24:           }else{
-   631   00101E  EF76  F008         	goto	l968
-   632   001022                     l934:
+   631   00101E  EF76  F008         	goto	l1065
+   632   001022                     l1031:
    633                           
    634                           ;source/filter.c: 25:               dalsiStav = s3;
    635   001022  0E03               	movlw	3
    636   001024  6E11               	movwf	filterFce@dalsiStav^0,c
-   637   001026  EF76  F008         	goto	l968
-   638   00102A                     l936:
+   637   001026  EF76  F008         	goto	l1065
+   638   00102A                     l1033:
    639                           
    640                           ;source/filter.c: 30:           if(vstup == 1){
    641   00102A  040E               	decf	filterFce@vstup^0,w,c
    642   00102C  A4D8               	btfss	status,2,c
-   643   00102E  EF1B  F008         	goto	u141
-   644   001032  EF1D  F008         	goto	u140
-   645   001036                     u141:
-   646   001036  EF11  F008         	goto	l934
-   647   00103A                     u140:
+   643   00102E  EF1B  F008         	goto	u301
+   644   001032  EF1D  F008         	goto	u300
+   645   001036                     u301:
+   646   001036  EF11  F008         	goto	l1031
+   647   00103A                     u300:
    648   00103A                     
    649                           ;source/filter.c: 31:               dalsiStav = s2;
    650   00103A  0E02               	movlw	2
    651   00103C  6E11               	movwf	filterFce@dalsiStav^0,c
    652                           
    653                           ;source/filter.c: 32:           }else{
-   654   00103E  EF76  F008         	goto	l968
-   655   001042                     l942:
+   654   00103E  EF76  F008         	goto	l1065
+   655   001042                     l1039:
    656                           
    657                           ;source/filter.c: 38:           if(vstup == 1){
    658   001042  040E               	decf	filterFce@vstup^0,w,c
    659   001044  A4D8               	btfss	status,2,c
-   660   001046  EF27  F008         	goto	u151
-   661   00104A  EF29  F008         	goto	u150
-   662   00104E                     u151:
-   663   00104E  EF11  F008         	goto	l934
-   664   001052                     u150:
+   660   001046  EF27  F008         	goto	u311
+   661   00104A  EF29  F008         	goto	u310
+   662   00104E                     u311:
+   663   00104E  EF11  F008         	goto	l1031
+   664   001052                     u310:
    665   001052                     
    666                           ;source/filter.c: 39:               dalsiStav = s2;
    667   001052  0E02               	movlw	2
@@ -713,34 +713,34 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    677   001062  6EDF               	movwf	indf2,c
    678                           
    679                           ;source/filter.c: 41:           }else{
-   680   001064  EF76  F008         	goto	l968
-   681   001068                     l950:
+   680   001064  EF76  F008         	goto	l1065
+   681   001068                     l1047:
    682                           
    683                           ;source/filter.c: 47:           if(vstup == 0){
    684   001068  500E               	movf	filterFce@vstup^0,w,c
    685   00106A  A4D8               	btfss	status,2,c
-   686   00106C  EF3A  F008         	goto	u161
-   687   001070  EF3C  F008         	goto	u160
-   688   001074                     u161:
-   689   001074  EF0D  F008         	goto	l932
-   690   001078                     u160:
+   686   00106C  EF3A  F008         	goto	u321
+   687   001070  EF3C  F008         	goto	u320
+   688   001074                     u321:
+   689   001074  EF0D  F008         	goto	l1029
+   690   001078                     u320:
    691   001078                     
    692                           ;source/filter.c: 48:               dalsiStav = s4;
    693   001078  0E04               	movlw	4
    694   00107A  6E11               	movwf	filterFce@dalsiStav^0,c
    695                           
    696                           ;source/filter.c: 49:           }else{
-   697   00107C  EF76  F008         	goto	l968
-   698   001080                     l956:
+   697   00107C  EF76  F008         	goto	l1065
+   698   001080                     l1053:
    699                           
    700                           ;source/filter.c: 56:           if(vstup == 0){
    701   001080  500E               	movf	filterFce@vstup^0,w,c
    702   001082  A4D8               	btfss	status,2,c
-   703   001084  EF46  F008         	goto	u171
-   704   001088  EF48  F008         	goto	u170
-   705   00108C                     u171:
-   706   00108C  EF0D  F008         	goto	l932
-   707   001090                     u170:
+   703   001084  EF46  F008         	goto	u331
+   704   001088  EF48  F008         	goto	u330
+   705   00108C                     u331:
+   706   00108C  EF0D  F008         	goto	l1029
+   707   001090                     u330:
    708   001090                     
    709                           ;source/filter.c: 57:               dalsiStav = s4;
    710   001090  0E04               	movlw	4
@@ -755,8 +755,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    719   00109E  6ADF               	clrf	indf2,c
    720                           
    721                           ;source/filter.c: 59:           }else{
-   722   0010A0  EF76  F008         	goto	l968
-   723   0010A4                     l966:
+   722   0010A0  EF76  F008         	goto	l1065
+   723   0010A4                     l1063:
    724   0010A4  500D               	movf	filterFce@tlacitko^0,w,c
    725   0010A6  6ED9               	movwf	fsr2l,c
    726   0010A8  6ADA               	clrf	fsr2h,c
@@ -775,9 +775,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    738   0010B0  5010               	movf	(??_filterFce+1)^0,w,c
    739   0010B2  0A00               	xorlw	0	; case 0
    740   0010B4  B4D8               	btfsc	status,2,c
-   741   0010B6  EF5F  F008         	goto	l1036
-   742   0010BA  EF76  F008         	goto	l968
-   743   0010BE                     l1036:
+   741   0010B6  EF5F  F008         	goto	l1133
+   742   0010BA  EF76  F008         	goto	l1065
+   743   0010BE                     l1133:
    744                           
    745                           ; Switch size 1, requested type "simple"
    746                           ; Number of cases is 5, Range of values is 0 to 4
@@ -788,21 +788,21 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    751   0010BE  500F               	movf	??_filterFce^0,w,c
    752   0010C0  0A00               	xorlw	0	; case 0
    753   0010C2  B4D8               	btfsc	status,2,c
-   754   0010C4  EF05  F008         	goto	l930
+   754   0010C4  EF05  F008         	goto	l1027
    755   0010C8  0A01               	xorlw	1	; case 1
    756   0010CA  B4D8               	btfsc	status,2,c
-   757   0010CC  EF15  F008         	goto	l936
+   757   0010CC  EF15  F008         	goto	l1033
    758   0010D0  0A03               	xorlw	3	; case 2
    759   0010D2  B4D8               	btfsc	status,2,c
-   760   0010D4  EF21  F008         	goto	l942
+   760   0010D4  EF21  F008         	goto	l1039
    761   0010D8  0A01               	xorlw	1	; case 3
    762   0010DA  B4D8               	btfsc	status,2,c
-   763   0010DC  EF34  F008         	goto	l950
+   763   0010DC  EF34  F008         	goto	l1047
    764   0010E0  0A07               	xorlw	7	; case 4
    765   0010E2  B4D8               	btfsc	status,2,c
-   766   0010E4  EF40  F008         	goto	l956
-   767   0010E8  EF76  F008         	goto	l968
-   768   0010EC                     l968:
+   766   0010E4  EF40  F008         	goto	l1053
+   767   0010E8  EF76  F008         	goto	l1065
+   768   0010EC                     l1065:
    769                           
    770                           ;source/filter.c: 66:   tlacitko->stav = dalsiStav;
    771   0010EC  500D               	movf	filterFce@tlacitko^0,w,c
@@ -815,7 +815,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    778                           
    779 ;; *************** function _low_isr *****************
    780 ;; Defined at:
-   781 ;;		line 105 in file "source/main.c"
+   781 ;;		line 106 in file "source/main.c"
    782 ;; Parameters:    Size  Location     Type
    783 ;;		None
    784 ;; Auto vars:     Size  Location     Type
@@ -860,7 +860,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    818   00001E  CFE8 F00B          	movff	wreg,??_low_isr+1
    819   000022  CFE0 F00C          	movff	bsr,??_low_isr+2
    820   000026                     
-   821                           ;source/main.c: 107:     if(INTCONbits.TMR0IF == 1)
+   821                           ;source/main.c: 108:     if(INTCONbits.TMR0IF == 1)
    822   000026  A4F2               	btfss	242,2,c	;volatile
    823   000028  EF18  F000         	goto	i1u12_21
    824   00002C  EF1A  F000         	goto	i1u12_20
@@ -868,19 +868,19 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    826   000030  EF21  F000         	goto	i1l46
    827   000034                     i1u12_20:
    828   000034                     
-   829                           ;source/main.c: 108:     {;source/main.c: 109:         is1ms = 1;
+   829                           ;source/main.c: 109:     {;source/main.c: 110:         is1ms = 1;
    830   000034  0E01               	movlw	1
    831   000036  6E01               	movwf	_is1ms^0,c
    832                           
-   833                           ;source/main.c: 110:         TMR0H = 0xD8;
+   833                           ;source/main.c: 111:         TMR0H = 0xD8;
    834   000038  0ED8               	movlw	216
    835   00003A  6ED7               	movwf	215,c	;volatile
    836                           
-   837                           ;source/main.c: 111:         TMR0L = 0xEF;
+   837                           ;source/main.c: 112:         TMR0L = 0xEF;
    838   00003C  0EEF               	movlw	239
    839   00003E  6ED6               	movwf	214,c	;volatile
    840   000040                     
-   841                           ;source/main.c: 112:         INTCONbits.TMR0IF = 0;
+   841                           ;source/main.c: 113:         INTCONbits.TMR0IF = 0;
    842   000040  94F2               	bcf	242,2,c	;volatile
    843   000042                     i1l46:
    844   000042  C00C  FFE0         	movff	??_low_isr+2,bsr
@@ -893,7 +893,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    851                           
    852 ;; *************** function _high_isr *****************
    853 ;; Defined at:
-   854 ;;		line 99 in file "source/main.c"
+   854 ;;		line 100 in file "source/main.c"
    855 ;; Parameters:    Size  Location     Type
    856 ;;		None
    857 ;; Auto vars:     Size  Location     Type
@@ -1408,40 +1408,40 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Mon Nov 27 16:04:44 2023
+Symbol Table                                                                                   Mon Nov 27 17:05:00 2023
 
                             l73 1286                              _S4 0008                              l99 10F6  
-                            bsr 0FE0                             l116 11D4                             l800 126E  
-                           l810 1284                             l802 1270                             l804 1272  
-                           l806 1274                             l808 1282                             l930 100A  
-                           l932 101A                             l950 1068                             l942 1042  
-                           l934 1022                             l960 1094                             l952 1078  
-                           l944 1052                             l936 102A                             l928 1002  
-                           l792 125C                             l946 1056                             l938 103A  
-                           l794 1260                             l956 1080                             l980 1118  
-                           l796 1262                             l958 1090                             l966 10A4  
-                           l990 114C                             l982 1120                             l974 10F8  
-                           l798 126C                             l968 10EC                             l992 115C  
-                           l984 1130                             l976 1100                             l986 1134  
-                           l978 1110                             l996 1164                             l988 1144  
-                           l998 1174                             _S5A 0006                             _S5B 0004  
-                           u200 115C                             u201 1158                             u130 101A  
-                           u210 1174                             u131 1016                             u211 1170  
-                           u140 103A                             u220 120A                             u141 1036  
-                           u221 1206                             u150 1052                             u151 104E  
-                           u160 1078                             u161 1074                             u170 1090  
-                           u171 108C                             u235 1252                             u180 1110  
-                           u236 1254                             u181 110C                             u190 1130  
-                           u191 112C                             wreg 0FE8                            l1000 1178  
-                          l1020 120A                            l1006 118A                            l1022 1246  
-                          l1014 11D6                            l1008 11CA                            l1024 124A  
-                          l1016 11F6                            l1034 11A4                            l1018 11FA  
-                          l1036 10BE                            i1l46 0042                            i2l40 129E  
+                            bsr 0FE0                             l116 11D4                             l821 126E  
+                           l813 125C                             l831 1284                             l823 1270  
+                           l815 1260                             l825 1272                             l817 1262  
+                           l827 1274                             l819 126C                             l829 1282  
+                           _S5A 0006                             _S5B 0004                             u300 103A  
+                           u301 1036                             u310 1052                             u311 104E  
+                           u320 1078                             u321 1074                             u330 1090  
+                           u331 108C                             u340 1110                             u341 110C  
+                           u350 1130                             u351 112C                             u360 115C  
+                           u361 1158                             u290 101A                             u370 1174  
+                           u291 1016                             u371 1170                             u380 120A  
+                           u381 1206                             u395 1252                             u396 1254  
+                           wreg 0FE8                            l1031 1022                            l1103 118A  
+                          l1111 11D6                            l1041 1052                            l1033 102A  
+                          l1025 1002                            l1105 11CA                            l1121 124A  
+                          l1113 11F6                            l1043 1056                            l1035 103A  
+                          l1027 100A                            l1131 11A4                            l1115 11FA  
+                          l1133 10BE                            l1053 1080                            l1029 101A  
+                          l1117 120A                            l1055 1090                            l1047 1068  
+                          l1039 1042                            l1063 10A4                            l1071 10F8  
+                          l1119 1246                            l1057 1094                            l1049 1078  
+                          l1065 10EC                            l1081 1130                            l1073 1100  
+                          l1083 1134                            l1075 1110                            l1093 1164  
+                          l1085 1144                            l1077 1118                            l1095 1174  
+                          l1087 114C                            l1079 1120                            l1097 1178  
+                          l1089 115C                            i1l46 0042                            i2l40 129E  
                           _main 11D6                            fsr2h 0FDA                            indf2 0FDF  
                           fsr2l 0FD9                            btemp 0012                            start 0052  
              pametFce@dalsiStav 0011                    ___param_bank 0000                           ?_main 000A  
-                         _T0CON 0FD5                           i1l910 0026                           i1l912 0034  
-                         i1l914 0040                           _TMR0H 0FD7                           _TMR0L 0FD6  
+                         _T0CON 0FD5                           i1l931 0026                           i1l933 0034  
+                         i1l935 0040                           _TMR0H 0FD7                           _TMR0L 0FD6  
                          _TRISD 0F95                           _TRISH 0F99                           _TRISJ 0F9A  
                          _is1ms 0001                 __end_of_low_isr 0052                           ttemp5 0013  
                          ttemp6 0016                           ttemp7 001A                           status 0FD8  
