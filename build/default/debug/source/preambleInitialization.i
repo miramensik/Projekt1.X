@@ -8721,7 +8721,11 @@ void preambleInitialization(void)
 
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
-# 39 "source/preambleInitialization.c"
+
+    TRISJ = 0xFF;
+    TRISD = 0x00;
+    TRISH = 0x00;
+# 43 "source/preambleInitialization.c"
     OSCCONbits.SCS = 0;
 
     OSCTUNEbits.PLLEN = 1;

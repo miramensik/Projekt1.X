@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25 source/./../header/filter.h
 [; ;source/./../header/filter.h: 25: typedef struct{
 [s S572 `uc 1 `uc 1 ]
-[n S572 . stav vystupFilter ]
+[n S572 . stav vystup ]
 "17 source/filter.c
 [; ;source/filter.c: 17: char dalsiStav = s0;
 [c E5045 0 1 2 3 4 .. ]
@@ -794,7 +794,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;source/filter.c: 39:               dalsiStav = s2;
 [e = _dalsiStav -> . `E5045 2 `uc ]
 "40
-[; ;source/filter.c: 40:               tlacitko->vystupFilter = 1;
+[; ;source/filter.c: 40:               tlacitko->vystup = 1;
 [e = . *U _tlacitko 1 -> -> 1 `i `uc ]
 "41
 [; ;source/filter.c: 41:           }else{
@@ -857,7 +857,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;source/filter.c: 57:               dalsiStav = s4;
 [e = _dalsiStav -> . `E5045 4 `uc ]
 "58
-[; ;source/filter.c: 58:               tlacitko->vystupFilter = 0;
+[; ;source/filter.c: 58:               tlacitko->vystup = 0;
 [e = . *U _tlacitko 1 -> -> 0 `i `uc ]
 "59
 [; ;source/filter.c: 59:           }else{

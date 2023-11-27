@@ -23,8 +23,10 @@
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
+    
     char stav;
-    char vystupFilter;
+    char vystup;
+    
 }typeFilter;
 
 void filterFce(typeFilter*tlacitko, char vstup);

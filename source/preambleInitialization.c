@@ -28,6 +28,10 @@ void preambleInitialization(void)
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
     
+    TRISJ = 0xFF;
+    TRISD = 0x00;
+    TRISH = 0x00;
+    
     
     /* O S C I L A T O R 
        Pro zvyseni 4x vnitrnich hodin je nutne:

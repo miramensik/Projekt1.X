@@ -37,7 +37,7 @@ char dalsiStav = s0;
       case s2:{
           if(vstup == 1){
               dalsiStav = s2;
-              tlacitko->vystupFilter = 1;
+              tlacitko->vystup = 1;
           }else{
               dalsiStav = s3;          
       }
@@ -55,7 +55,7 @@ char dalsiStav = s0;
       case s4:{
           if(vstup == 0){
               dalsiStav = s4;
-              tlacitko->vystupFilter = 0;
+              tlacitko->vystup = 0;
           }else{
               dalsiStav = s1;          
       }

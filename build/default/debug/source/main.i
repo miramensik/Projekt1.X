@@ -8718,29 +8718,39 @@ void preambleInitialization(void);
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
+
     char stav;
-    char vystupFilter;
+    char vystup;
+
 }typeFilter;
 
 void filterFce(typeFilter*tlacitko, char vstup);
 # 25 "source/main.c" 2
-# 51 "source/main.c"
+# 1 "source/./../header/pamet.h" 1
+# 23 "source/./../header/pamet.h"
+void pametFce(typeFilter*tlacitko,char input);
+# 26 "source/main.c" 2
+# 52 "source/main.c"
 typeFilter S4;
 typeFilter S5A;
 typeFilter S5B;
+typeFilter S4Filtr;
 char is1ms;
 
 
 void main(void)
 {
     S4.stav = 0;
-    S4.vystupFilter = 0;
+    S4.vystup = 0;
 
     S5A.stav = 0;
-    S5A.vystupFilter = 0;
+    S5A.vystup = 0;
 
     S5B.stav = 0;
-    S5B.vystupFilter = 0;
+    S5B.vystup = 0;
+
+    S4Filtr.stav = 0;
+    S4Filtr.vystup = 1;
 
 
   preambleInitialization();
@@ -8753,15 +8763,14 @@ void main(void)
       if(is1ms == 1){
 
 
-
-
    filterFce(&S4, PORTJbits.RJ7);
-   filterFce(&S5A, PORTJbits.RJ0);
-   filterFce(&S5B, PORTJbits.RJ1);
+  pametFce(&S4Filtr, S4.vystup);
+  filterFce(&S5A, PORTJbits.RJ0);
+  filterFce(&S5B, PORTJbits.RJ1);
 
    is1ms = 0;
    }
-  LATDbits.LATD7 = S4.vystupFilter;
+  LATDbits.LATD7 = S4Filtr.vystup;
   }
 }
 

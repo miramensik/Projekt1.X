@@ -22,6 +22,7 @@
 // Pripravena zakladni inicializace od k13114 pro PIC18F87J11
 #include "./../header/preambleInitialization.h"
 #include "./../header/filter.h"
+#include "./../header/pamet.h"
 
 
 
@@ -51,19 +52,23 @@
 typeFilter S4;
 typeFilter S5A;
 typeFilter S5B;
+typeFilter S4Filtr;
 char is1ms;
 //----------------------------------------------------------------------------
 // hlavni program
 void main(void)
 {
     S4.stav = 0;
-    S4.vystupFilter = 0;
+    S4.vystup = 0;
     
     S5A.stav = 0;
-    S5A.vystupFilter = 0;
+    S5A.vystup = 0;
     
     S5B.stav = 0;
-    S5B.vystupFilter = 0;
+    S5B.vystup = 0;
+    
+    S4Filtr.stav = 0;
+    S4Filtr.vystup = 0;
     
   // Inizializacni cast pro zakladni funkci programu/procesoru
   preambleInitialization();
@@ -74,17 +79,16 @@ void main(void)
   while (1)
   {
       if(is1ms == 1){
-          
-      
-
+    
       // Piste svuj kod pro program na pozadi
    filterFce(&S4, PORTJbits.RJ7);
-   filterFce(&S5A, PORTJbits.RJ0);
-   filterFce(&S5B, PORTJbits.RJ1);
+  pametFce(&S4Filtr, S4.vystup);
+  filterFce(&S5A, PORTJbits.RJ0);
+  filterFce(&S5B, PORTJbits.RJ1);
    
    is1ms = 0;
    }
-  LATDbits.LATD7 = S4.vystupFilter;
+  LATDbits.LATD7 = S4Filtr.vystup;
   }
 }
 
