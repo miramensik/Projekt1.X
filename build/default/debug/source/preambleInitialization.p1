@@ -70,6 +70,95 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6936
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 6936: extern volatile unsigned char TRISH __attribute__((address(0xF99)));
 [v _TRISH `Vuc ~T0 @X0 0 e@3993 ]
+"6595
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 6595:     struct {
+[s S232 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S232 . . TRISF1 TRISF2 TRISF3 TRISF4 TRISF5 TRISF6 TRISF7 ]
+"6605
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 6605:     struct {
+[s S233 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S233 . . RF1 RF2 RF3 RF4 RF5 RF6 RF7 ]
+"6594
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 6594: typedef union {
+[u S231 `S232 1 `S233 1 ]
+[n S231 . . . ]
+"6616
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 6616: extern volatile TRISFbits_t TRISFbits __attribute__((address(0xF97)));
+[v _TRISFbits `VS231 ~T0 @X0 0 e@3991 ]
+"10677
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10677:     struct {
+[s S387 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S387 . SWDTEN . ADSHR . LVDSTAT REGSLP ]
+"10685
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10685:     struct {
+[s S388 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S388 . SWDTE . DEVCFG ]
+"10676
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10676: typedef union {
+[u S386 `S387 1 `S388 1 ]
+[n S386 . . . ]
+"10691
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10691: extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0xFC0)));
+[v _WDTCONbits `VS386 ~T0 @X0 0 e@4032 ]
+"11038
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 11038:     struct {
+[s S406 :8 `uc 1 ]
+[n S406 . PCFGH ]
+"11041
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 11041:     struct {
+[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S407 . PCFG8 PCFG9 PCFG10 PCFG11 PCFG12 PCFG13 PCFG14 PCFG15 ]
+"11037
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 11037: typedef union {
+[u S405 `S406 1 `S407 1 ]
+[n S405 . . . ]
+"11052
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 11052: extern volatile ANCON1bits_t ANCON1bits __attribute__((address(0xFC2)));
+[v _ANCON1bits `VS405 ~T0 @X0 0 e@4034 ]
+"10726
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10726: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"10897
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 10897: extern volatile unsigned char ADCON0 __attribute__((address(0xFC2)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"7634
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7634:     struct {
+[s S268 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S268 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE PMPIE ]
+"7644
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7644:     struct {
+[s S269 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S269 . . SSPIE TXIE RCIE ]
+"7650
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7650:     struct {
+[s S270 :7 `uc 1 :1 `uc 1 ]
+[n S270 . . PSPIE ]
+"7633
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7633: typedef union {
+[u S267 `S268 1 `S269 1 `S270 1 ]
+[n S267 . . . . ]
+"7655
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7655: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS267 ~T0 @X0 0 e@3997 ]
+"7818
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7818:     struct {
+[s S276 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S276 . TMR1IP TMR2IP CCP1IP SSP1IP TX1IP RC1IP ADIP PMPIP ]
+"7828
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7828:     struct {
+[s S277 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S277 . . SSPIP TXIP RCIP ]
+"7834
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7834:     struct {
+[s S278 :7 `uc 1 :1 `uc 1 ]
+[n S278 . . PSPIP ]
+"7817
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7817: typedef union {
+[u S275 `S276 1 `S277 1 `S278 1 ]
+[n S275 . . . . ]
+"7839
+[; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 7839: extern volatile IPR1bits_t IPR1bits __attribute__((address(0xF9F)));
+[v _IPR1bits `VS275 ~T0 @X0 0 e@3999 ]
 "13831
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 13831:     struct {
 [s S546 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
@@ -894,48 +983,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;source/preambleInitialization.c: 33:     TRISH = 0x00;
 [e = _TRISH -> -> 0 `i `uc ]
-"43
-[; ;source/preambleInitialization.c: 43:     OSCCONbits.SCS = 0;
-[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
+"36
+[; ;source/preambleInitialization.c: 36:     TRISFbits.RF3 = 1;
+[e = . . _TRISFbits 1 3 -> -> 1 `i `uc ]
+"37
+[; ;source/preambleInitialization.c: 37:     WDTCONbits.ADSHR = 1;
+[e = . . _WDTCONbits 0 2 -> -> 1 `i `uc ]
+"38
+[; ;source/preambleInitialization.c: 38:     ANCON1bits.PCFG8 = 0;
+[e = . . _ANCON1bits 1 0 -> -> 0 `i `uc ]
+"39
+[; ;source/preambleInitialization.c: 39:     WDTCONbits.ADSHR = 0;
+[e = . . _WDTCONbits 0 2 -> -> 0 `i `uc ]
+"41
+[; ;source/preambleInitialization.c: 41:     ADCON1 = 0b10101010;
+[e = _ADCON1 -> -> 170 `i `uc ]
+"42
+[; ;source/preambleInitialization.c: 42:     ADCON0 = 0b00100001;
+[e = _ADCON0 -> -> 33 `i `uc ]
+"44
+[; ;source/preambleInitialization.c: 44:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "45
-[; ;source/preambleInitialization.c: 45:     OSCTUNEbits.PLLEN = 1;
+[; ;source/preambleInitialization.c: 45:     IPR1bits.ADIP = 0;
+[e = . . _IPR1bits 0 6 -> -> 0 `i `uc ]
+"56
+[; ;source/preambleInitialization.c: 56:     OSCCONbits.SCS = 0;
+[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
+"58
+[; ;source/preambleInitialization.c: 58:     OSCTUNEbits.PLLEN = 1;
 [e = . . _OSCTUNEbits 0 1 -> -> 1 `i `uc ]
-"50
-[; ;source/preambleInitialization.c: 50:     RCONbits.IPEN = 1;
+"63
+[; ;source/preambleInitialization.c: 63:     RCONbits.IPEN = 1;
 [e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
-"51
-[; ;source/preambleInitialization.c: 51: }
+"64
+[; ;source/preambleInitialization.c: 64: }
 [e :UE 572 ]
 }
-"55
-[; ;source/preambleInitialization.c: 55: void enableAllInterrupts(void) {
+"68
+[; ;source/preambleInitialization.c: 68: void enableAllInterrupts(void) {
 [v _enableAllInterrupts `(v ~T0 @X0 1 ef ]
 {
 [e :U _enableAllInterrupts ]
 [f ]
-"56
-[; ;source/preambleInitialization.c: 56:     INTCONbits.GIEH = 1;
+"69
+[; ;source/preambleInitialization.c: 69:     INTCONbits.GIEH = 1;
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-"57
-[; ;source/preambleInitialization.c: 57:     INTCONbits.GIEL = 1;
+"70
+[; ;source/preambleInitialization.c: 70:     INTCONbits.GIEL = 1;
 [e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-"58
-[; ;source/preambleInitialization.c: 58: }
+"71
+[; ;source/preambleInitialization.c: 71: }
 [e :UE 573 ]
 }
-"61
-[; ;source/preambleInitialization.c: 61: void disableAllInterrupts(void) {
+"74
+[; ;source/preambleInitialization.c: 74: void disableAllInterrupts(void) {
 [v _disableAllInterrupts `(v ~T0 @X0 1 ef ]
 {
 [e :U _disableAllInterrupts ]
 [f ]
-"62
-[; ;source/preambleInitialization.c: 62:     INTCONbits.GIEH = 0;
+"75
+[; ;source/preambleInitialization.c: 75:     INTCONbits.GIEH = 0;
 [e = . . _INTCONbits 2 2 -> -> 0 `i `uc ]
-"63
-[; ;source/preambleInitialization.c: 63:     INTCONbits.GIEL = 0;
+"76
+[; ;source/preambleInitialization.c: 76:     INTCONbits.GIEL = 0;
 [e = . . _INTCONbits 2 1 -> -> 0 `i `uc ]
-"64
-[; ;source/preambleInitialization.c: 64: }
+"77
+[; ;source/preambleInitialization.c: 77: }
 [e :UE 574 ]
 }

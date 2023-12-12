@@ -8691,40 +8691,40 @@ void dekoderFce(typeFilter*tlacitko,char A, char B){
         case s0:{
             if(A == 1 && B == 0){
                 dalsiStav = s1;
-                tlacitko->vystup ++;
+                tlacitko->vystup++;
             }else if (A == 0 && B == 1){
                 dalsiStav = s3;
-                tlacitko->vystup --;
+                tlacitko->vystup--;
             }
             break;
         }
         case s1:{
             if(A == 1 && B == 1){
                 dalsiStav = s2;
-               tlacitko->vystup ++;
+               tlacitko->vystup++;
             }else if (A == 0 && B == 0){
                 dalsiStav = s0;
-                tlacitko->vystup --;
+                tlacitko->vystup--;
             }
             break;
         }
          case s2:{
             if(A == 0 && B == 1){
                 dalsiStav = s3;
-                tlacitko->vystup ++;
+                tlacitko->vystup++;
             }else if (A == 1 && B == 0){
                 dalsiStav = s1;
-                tlacitko->vystup --;
+                tlacitko->vystup--;
             }
             break;
         }
          case s3:{
             if(A == 0 && B == 0){
                 dalsiStav = s0;
-                tlacitko->vystup ++;
+                tlacitko->vystup++;
             }else if (A == 1 && B == 1){
                 dalsiStav = s2;
-                tlacitko->vystup --;
+                tlacitko->vystup--;
             }
             break;
         }

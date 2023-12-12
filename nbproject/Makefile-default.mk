@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=source/main.c source/preambleInitialization.c source/filter.c header/pamet.c header/dekoder.c
+SOURCEFILES_QUOTED_IF_SPACED=source/main.c source/preambleInitialization.c source/filter.c header/pamet.c header/dekoder.c header/ADprevodnik.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/source/main.p1 ${OBJECTDIR}/source/preambleInitialization.p1 ${OBJECTDIR}/source/filter.p1 ${OBJECTDIR}/header/pamet.p1 ${OBJECTDIR}/header/dekoder.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/source/main.p1.d ${OBJECTDIR}/source/preambleInitialization.p1.d ${OBJECTDIR}/source/filter.p1.d ${OBJECTDIR}/header/pamet.p1.d ${OBJECTDIR}/header/dekoder.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/source/main.p1 ${OBJECTDIR}/source/preambleInitialization.p1 ${OBJECTDIR}/source/filter.p1 ${OBJECTDIR}/header/pamet.p1 ${OBJECTDIR}/header/dekoder.p1 ${OBJECTDIR}/header/ADprevodnik.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/source/main.p1.d ${OBJECTDIR}/source/preambleInitialization.p1.d ${OBJECTDIR}/source/filter.p1.d ${OBJECTDIR}/header/pamet.p1.d ${OBJECTDIR}/header/dekoder.p1.d ${OBJECTDIR}/header/ADprevodnik.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/source/main.p1 ${OBJECTDIR}/source/preambleInitialization.p1 ${OBJECTDIR}/source/filter.p1 ${OBJECTDIR}/header/pamet.p1 ${OBJECTDIR}/header/dekoder.p1
+OBJECTFILES=${OBJECTDIR}/source/main.p1 ${OBJECTDIR}/source/preambleInitialization.p1 ${OBJECTDIR}/source/filter.p1 ${OBJECTDIR}/header/pamet.p1 ${OBJECTDIR}/header/dekoder.p1 ${OBJECTDIR}/header/ADprevodnik.p1
 
 # Source Files
-SOURCEFILES=source/main.c source/preambleInitialization.c source/filter.c header/pamet.c header/dekoder.c
+SOURCEFILES=source/main.c source/preambleInitialization.c source/filter.c header/pamet.c header/dekoder.c header/ADprevodnik.c
 
 
 
@@ -128,6 +128,14 @@ ${OBJECTDIR}/header/dekoder.p1: header/dekoder.c  nbproject/Makefile-${CND_CONF}
 	@-${MV} ${OBJECTDIR}/header/dekoder.d ${OBJECTDIR}/header/dekoder.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/header/dekoder.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/header/ADprevodnik.p1: header/ADprevodnik.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/header" 
+	@${RM} ${OBJECTDIR}/header/ADprevodnik.p1.d 
+	@${RM} ${OBJECTDIR}/header/ADprevodnik.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/header/ADprevodnik.p1 header/ADprevodnik.c 
+	@-${MV} ${OBJECTDIR}/header/ADprevodnik.d ${OBJECTDIR}/header/ADprevodnik.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/header/ADprevodnik.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/source/main.p1: source/main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/source" 
@@ -168,6 +176,14 @@ ${OBJECTDIR}/header/dekoder.p1: header/dekoder.c  nbproject/Makefile-${CND_CONF}
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/header/dekoder.p1 header/dekoder.c 
 	@-${MV} ${OBJECTDIR}/header/dekoder.d ${OBJECTDIR}/header/dekoder.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/header/dekoder.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/header/ADprevodnik.p1: header/ADprevodnik.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/header" 
+	@${RM} ${OBJECTDIR}/header/ADprevodnik.p1.d 
+	@${RM} ${OBJECTDIR}/header/ADprevodnik.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/header/ADprevodnik.p1 header/ADprevodnik.c 
+	@-${MV} ${OBJECTDIR}/header/ADprevodnik.d ${OBJECTDIR}/header/ADprevodnik.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/header/ADprevodnik.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

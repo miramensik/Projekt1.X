@@ -32,7 +32,20 @@ void preambleInitialization(void)
     TRISD = 0x00;
     TRISH = 0x00;
     
+    //AD prevodnik
+    TRISFbits.RF3 = 1;
+    WDTCONbits.ADSHR = 1;
+    ANCON1bits.PCFG8 = 0;
+    WDTCONbits.ADSHR = 0;
     
+    ADCON1 = 0b10101010; //nastaveni casovace AD prevodnku
+    ADCON0 = 0b00100001;
+    
+    PIE1bits.ADIE = 1;
+    IPR1bits.ADIP = 0;
+    
+    
+    //-------------------------------
     /* O S C I L A T O R 
        Pro zvyseni 4x vnitrnich hodin je nutne:
         1.) Konfiguracni bit FOSC nastaven na HSPLL

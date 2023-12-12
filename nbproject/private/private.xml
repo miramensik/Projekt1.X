@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/filter.h</file>
             <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/source/preambleInitialization.c</file>
-            <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/pamet.c</file>
-            <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/pamet.h</file>
+            <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/preambleInitialization.h</file>
+            <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/ADprevodnik.c</file>
             <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/source/filter.c</file>
             <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/source/main.c</file>
+            <file>file:/C:/Users/Míra/MPLABXProjects/Projekt1.X/header/ADprevodnik.h</file>
         </group>
     </open-files>
 </project-private>

@@ -8734,12 +8734,24 @@ void pametFce(typeFilter*tlacitko,char input);
 # 27 "source/./../header/dekoder.h"
 void dekoderFce(typeFilter*tlacitko,char A, char B);
 # 27 "source/main.c" 2
-# 53 "source/main.c"
+# 1 "source/./../header/ADprevodnik.h" 1
+# 23 "source/./../header/ADprevodnik.h"
+unsigned char vystup;
+
+enum{TRUE, FALSE};
+
+void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo);
+# 28 "source/main.c" 2
+# 54 "source/main.c"
 typeFilter S4;
 typeFilter S5A;
 typeFilter S5B;
 typeFilter S4Filtr;
+typeFilter dekoderAB;
 char is1ms;
+char is10ms;
+long vysledek;
+unsigned int ADRhotovo;
 
 
 void main(void)
@@ -8756,6 +8768,11 @@ void main(void)
     S4Filtr.stav = 0;
     S4Filtr.vystup = 0;
 
+    dekoderAB.stav = 0;
+    dekoderAB.vystup = 0;
+
+
+
 
   preambleInitialization();
 
@@ -8771,10 +8788,12 @@ void main(void)
   pametFce(&S4Filtr, S4.vystup);
   filterFce(&S5A, PORTJbits.RJ0);
   filterFce(&S5B, PORTJbits.RJ1);
+  dekoderFce(&dekoderAB, S5A.vystup, S5B.vystup);
 
    is1ms = 0;
    }
   LATDbits.LATD7 = S4Filtr.vystup;
+
   }
 }
 
@@ -8795,6 +8814,21 @@ void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
         is1ms = 1;
         TMR0H = 0xD8;
         TMR0L = 0xEF;
+
         INTCONbits.TMR0IF = 0;
+        is10ms++;
+
+    if(is10ms >= 10){
+        is10ms = 0;
+        ADCON0bits.GO = 1;
+        }
+
+        }
+    if(PIR1bits.ADIF == 1){
+        vysledek = ADRESH;
+        vysledek = (vysledek << 8);
+        vysledek = vysledek + ADRESL;
+        ADRhotovo = TRUE;
+        PIR1bits.ADIF = 0;
     }
 }

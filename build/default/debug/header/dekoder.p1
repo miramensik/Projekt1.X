@@ -729,7 +729,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 20:                 dalsiStav = s1;
 [e = _dalsiStav -> . `E5045 1 `uc ]
 "21
-[; ;header/dekoder.c: 21:                 tlacitko->vystup ++;
+[; ;header/dekoder.c: 21:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
 "22
 [; ;header/dekoder.c: 22:             }else if (A == 0 && B == 1){
@@ -742,7 +742,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 23:                 dalsiStav = s3;
 [e = _dalsiStav -> . `E5045 3 `uc ]
 "24
-[; ;header/dekoder.c: 24:                 tlacitko->vystup --;
+[; ;header/dekoder.c: 24:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
 "25
 [; ;header/dekoder.c: 25:             }
@@ -767,7 +767,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 30:                 dalsiStav = s2;
 [e = _dalsiStav -> . `E5045 2 `uc ]
 "31
-[; ;header/dekoder.c: 31:                tlacitko->vystup ++;
+[; ;header/dekoder.c: 31:                tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
 "32
 [; ;header/dekoder.c: 32:             }else if (A == 0 && B == 0){
@@ -780,7 +780,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 33:                 dalsiStav = s0;
 [e = _dalsiStav -> . `E5045 0 `uc ]
 "34
-[; ;header/dekoder.c: 34:                 tlacitko->vystup --;
+[; ;header/dekoder.c: 34:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
 "35
 [; ;header/dekoder.c: 35:             }
@@ -805,7 +805,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 40:                 dalsiStav = s3;
 [e = _dalsiStav -> . `E5045 3 `uc ]
 "41
-[; ;header/dekoder.c: 41:                 tlacitko->vystup ++;
+[; ;header/dekoder.c: 41:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
 "42
 [; ;header/dekoder.c: 42:             }else if (A == 1 && B == 0){
@@ -818,7 +818,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 43:                 dalsiStav = s1;
 [e = _dalsiStav -> . `E5045 1 `uc ]
 "44
-[; ;header/dekoder.c: 44:                 tlacitko->vystup --;
+[; ;header/dekoder.c: 44:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
 "45
 [; ;header/dekoder.c: 45:             }
@@ -843,7 +843,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 50:                 dalsiStav = s0;
 [e = _dalsiStav -> . `E5045 0 `uc ]
 "51
-[; ;header/dekoder.c: 51:                 tlacitko->vystup ++;
+[; ;header/dekoder.c: 51:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
 "52
 [; ;header/dekoder.c: 52:             }else if (A == 1 && B == 1){
@@ -856,7 +856,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;header/dekoder.c: 53:                 dalsiStav = s2;
 [e = _dalsiStav -> . `E5045 2 `uc ]
 "54
-[; ;header/dekoder.c: 54:                 tlacitko->vystup --;
+[; ;header/dekoder.c: 54:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
 "55
 [; ;header/dekoder.c: 55:             }

@@ -24,6 +24,7 @@
 #include "./../header/filter.h"
 #include "./../header/pamet.h"
 #include "./../header/dekoder.h"
+#include "./../header/ADprevodnik.h"
 
 
 
@@ -56,6 +57,9 @@ typeFilter S5B;
 typeFilter S4Filtr;
 typeFilter dekoderAB;
 char is1ms;
+char is10ms;
+long vysledek;
+unsigned int ADRhotovo;
 //----------------------------------------------------------------------------
 // hlavni program
 void main(void)
@@ -74,6 +78,8 @@ void main(void)
     
     dekoderAB.stav = 0;
     dekoderAB.vystup = 0;
+    
+   
     
   // Inizializacni cast pro zakladni funkci programu/procesoru
   preambleInitialization();
@@ -95,6 +101,7 @@ void main(void)
    is1ms = 0;
    }
   LATDbits.LATD7 = S4Filtr.vystup;
+
   }
 }
 
@@ -115,7 +122,22 @@ void __interrupt(low_priority) low_isr(void)
         is1ms = 1;
         TMR0H = 0xD8;
         TMR0L = 0xEF;
+        
         INTCONbits.TMR0IF = 0;
+        is10ms++;
+    
+    if(is10ms >= 10){
+        is10ms = 0;
+        ADCON0bits.GO = 1;
+        }
+        
+        }
+    if(PIR1bits.ADIF == 1){
+        vysledek = ADRESH;
+        vysledek = (vysledek << 8);
+        vysledek =  vysledek + ADRESL;
+        ADRhotovo = TRUE;
+        PIR1bits.ADIF = 0;
     }
 }
 //----------------------------------------------------------------------------

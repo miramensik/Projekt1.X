@@ -1,5 +1,5 @@
 /*
- * Soubor:      filter.h
+ * Soubor:      ADprevodnik.h
  * Autor:       VLOZTE_AUTORA
  * Spolecnost:  CVUT-FEL-K13114
  *
@@ -7,29 +7,30 @@
  * Procesor:    PIC18F87J11
  */
 
-#ifndef _filter_H
-#define _filter_H
+#ifndef _ADprevodnik_H
+#define _ADprevodnik_H
 
 #if defined(__XC)
 #include <xc.h>      // Vtazeni obecneho soubory pro XC8
 #include <stdint.h>  // Definice celociselnych promennych
 #include <stdbool.h> // Definice logicke promenne false/true */
+
+
 #else
 #error "Invalid compiler selection"
 #endif
 
-// Deklarace ukazkove funkce
+typedef enum
+{
+    FALSE = 0,
+    TRUE = 1
+}AD_BOOL;
 
-enum{s0,s1,s2,s3,s4};
+unsigned char vystup;
 
-typedef struct{
-    
-    char stav;
-    char vystup;
-        
-}typeFilter;
 
-void filterFce(typeFilter*tlacitko, char vstup);
 
-/*char filter1(char stav, char vstup);*/
-#endif /* FILTER.H */
+void ADprevodnikFce(vystup *ABSvysledek,AD_BOOL *ADRhotovo);
+
+
+#endif /* ADPREVODNIK.H */
