@@ -1,4 +1,4 @@
-# 1 "source/preambleInitialization.c"
+# 1 "header/ADprevodnik.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "source/preambleInitialization.c" 2
-# 13 "source/preambleInitialization.c"
-# 1 "source/./../header/preambleInitialization.h" 1
-# 14 "source/./../header/preambleInitialization.h"
+# 1 "header/ADprevodnik.c" 2
+# 14 "header/ADprevodnik.c"
+# 1 "header/./../header/ADprevodnik.h" 1
+# 14 "header/./../header/ADprevodnik.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -8651,116 +8651,49 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 2 3
-# 15 "source/./../header/preambleInitialization.h" 2
+# 14 "header/./../header/ADprevodnik.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 17 "source/./../header/preambleInitialization.h" 2
+# 16 "header/./../header/ADprevodnik.h" 2
 
 
 
 
 
-#pragma config FOSC = HSPLL
 
 
-#pragma config IESO = OFF
-
-
-#pragma config FCMEN = OFF
-
-
-#pragma config MODE = MM
-
-
-#pragma config XINST = OFF
-
-
-#pragma config STVREN = ON
-
-
-#pragma config WDTEN = OFF
-
-
-#pragma config WDTPS = 32768
-
-
-#pragma config CP0 = OFF
-
-
-
-
-
-void __attribute__((picinterrupt(("high_priority")))) high_isr(void);
-
-
-void __attribute__((picinterrupt(("low_priority")))) low_isr(void);
-
-
-
-void enableAllInterrupts(void);
-
-
-void disableAllInterrupts(void);
-
-
-void preambleInitialization(void);
-# 14 "source/preambleInitialization.c" 2
-
-
-
-unsigned int comp;
-
-void preambleInitialization(void)
+typedef enum
 {
-    T0CON = 0b10001000;
-    T0CONbits.PSA = 1;
-    T0CONbits.TMR0ON = 1;
-
-    TMR0H = 0xB1;
-    TMR0L = 0xDF;
-
-    INTCON2bits.TMR0IP = 0;
-    INTCONbits.TMR0IE = 1;
-
-    INTCONbits.GIEH = 1;
-    INTCONbits.GIEL = 1;
-
-    TRISJ = 0xFF;
-    TRISD = 0x00;
-    TRISH = 0x00;
-    TRISF = 0x00;
-
-
-    TRISFbits.RF3 = 1;
-    WDTCONbits.ADSHR = 1;
-    ANCON1bits.PCFG8 = 0;
-    WDTCONbits.ADSHR = 0;
-
-    ADCON1 = 0b10101010;
-    ADCON0 = 0b00100001;
-
-    PIE1bits.ADIE = 1;
-    IPR1bits.ADIP = 0;
-# 72 "source/preambleInitialization.c"
-    OSCCONbits.SCS = 0;
-
-    OSCTUNEbits.PLLEN = 1;
+    FALSE = 0,
+    TRUE = 1
+}AD_BOOL;
 
 
 
 
-    RCONbits.IPEN = 1;
+
+void ADprevodnikFce(int * vysledek,AD_BOOL *ADRhotovo,unsigned char *vystup);
+# 14 "header/ADprevodnik.c" 2
+
+
+void ADprevodnikFce(int *vysledek,AD_BOOL *ADRhotovo,unsigned char *vystup){
+    long adKalkulace;
+    if(*ADRhotovo == TRUE){
+        adKalkulace = (long*)vysledek;
+        if(adKalkulace >= 1000){
+            adKalkulace = 1000;
+        }
+        if(adKalkulace <= 50){
+            adKalkulace = 50;
+        }
+        adKalkulace = adKalkulace - 50;
+        adKalkulace = adKalkulace * 255;
+        adKalkulace = adKalkulace / (1000-50);
+
+        *vystup = (unsigned char)adKalkulace;
+        *ADRhotovo = FALSE;
 }
 
 
-
-void enableAllInterrupts(void) {
-    INTCONbits.GIEH = 1;
-    INTCONbits.GIEL = 1;
-}
-
-
-void disableAllInterrupts(void) {
-    INTCONbits.GIEH = 0;
-    INTCONbits.GIEL = 0;
 }

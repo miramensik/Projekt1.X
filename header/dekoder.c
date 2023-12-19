@@ -12,50 +12,64 @@
 #include "./../header/dekoder.h"
 
 void dekoderFce(typeFilter*tlacitko,char A, char B){
-    char dalsiStav = s0;
-    
     switch(tlacitko->stav){
         case s0:{
-            if(A == 1 && B == 0){
-                dalsiStav = s1;
+            if((A == 1) && (B == 0)){
+                tlacitko->stav = s1;
+                if(tlacitko->vystup < 255){  
                 tlacitko->vystup++;
-            }else if (A == 0 && B == 1){
-                dalsiStav = s3;
+                }
+            }else if((A == 0) && (B == 1)){
+                tlacitko->stav = s3;
+                if(tlacitko->vystup > 0){  
                 tlacitko->vystup--;
+                }
             }
             break;
         }
         case s1:{
-            if(A == 1 && B == 1){
-                dalsiStav = s2;
+            if((A == 1) && (B == 1)){
+                tlacitko->stav = s2;
+                if(tlacitko->vystup < 255){  
                tlacitko->vystup++;
-            }else if (A == 0 && B == 0){
-                dalsiStav = s0;
+                }
+            }else if((A == 0) && (B == 0)){
+                tlacitko->stav = s0;
+                if(tlacitko->vystup > 0){  
                 tlacitko->vystup--;
+                }
             }
             break;
         }
          case s2:{
-            if(A == 0 && B == 1){
-                dalsiStav = s3;
+            if((A == 0) && (B == 1)){
+                tlacitko->stav = s3;
+                if(tlacitko->vystup < 255){  
                 tlacitko->vystup++;
-            }else if (A == 1 && B == 0){
-                dalsiStav = s1;
+                }
+            }else if((A == 1) && (B == 0)){
+                tlacitko->stav = s1;
+                if(tlacitko->vystup > 0){  
                 tlacitko->vystup--;
+                }
             }
             break;
         }
          case s3:{
-            if(A == 0 && B == 0){
-                dalsiStav = s0;
+            if((A == 0) && (B == 0)){
+                tlacitko->stav = s0;
+                if(tlacitko->vystup < 255){                   
                 tlacitko->vystup++;
-            }else if (A == 1 && B == 1){
-                dalsiStav = s2;
+                }
+            }else if ((A == 1) && (B == 1)){
+                tlacitko->stav = s2;
+            if(tlacitko->vystup > 0){      
                 tlacitko->vystup--;
+            }
             }
             break;
         }
             
     }
-      tlacitko->stav = dalsiStav;      
+          
 }

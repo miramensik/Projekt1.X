@@ -11,24 +11,26 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-init CODE 0 C2 C2 4 1 2
-reset_vec CODE 0 0 0 4 1 2
+$C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+init CODE 0 96 96 4 1 2
+reset_vec CODE 0 0 0 6 1 2
 config CONFIG 4 1FFF8 1FFF8 6 1 1
 $dist/default/debug\Projekt1.X.debug.o
-intcodelo CODE 0 18 18 AA 1 2
-cinit CODE 0 14A8 14A8 16 1 2
-intcode_body CODE 0 14BE 14BE 4 1 2
-text0 CODE 0 13CA 13CA 9E 1 2
-text1 CODE 0 1468 1468 40 1 2
-text2 CODE 0 12EC 12EC DE 1 2
-text3 CODE 0 11F6 11F6 F6 1 2
-text4 CODE 0 1002 1002 1F4 1 2
-cstackCOMRAM COMRAM 1 14 14 D 1 1
-temp COMRAM 1 21 21 1 1 1
+intcodelo CODE 0 18 18 7E 1 2
+cinit CODE 0 18BA 18BA 16 1 2
+intcode_body CODE 0 18D0 18D0 4 1 2
+text0 CODE 0 12E8 12E8 244 1 2
+text1 CODE 0 1876 1876 44 1 2
+text2 CODE 0 172E 172E DE 1 2
+text3 CODE 0 1638 1638 F6 1 2
+text4 CODE 0 1002 1002 2E6 1 2
+text5 CODE 0 180C 180C 6A 1 2
+text6 CODE 0 152C 152C 10C 1 2
+cstackCOMRAM COMRAM 1 1B 1B 11 1 1
+temp COMRAM 1 2C 2C 1 1 1
 intcode CODE 0 8 8 6 1 2
 smallconst SMALLCONST 0 1000 1000 2 1 2
-bssCOMRAM COMRAM 1 1 1 13 1 1
+bssCOMRAM COMRAM 1 1 1 1A 1 1
 config CONFIG 4 1FFF8 1FFF8 6 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -37,7 +39,7 @@ config CONFIG 4 1FFF8 1FFF8 6 1 1
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
 RAM 60-F3F 1
-SFR F5A-FFF 1
+SFR F5A-FFC 1
 BANK0 60-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
@@ -48,25 +50,25 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 4-7 1
+CONST 6-7 1
 CONST E-17 1
-CONST C6-FFF 1
-CONST 14C2-1FFF7 1
-SMALLCONST 14C2-1FFF7 1
-CODE 4-7 1
+CONST 9A-FFF 1
+CONST 18D4-1FFF7 1
+SMALLCONST 18D4-1FFF7 1
+CODE 6-7 1
 CODE E-17 1
-CODE C6-FFF 1
-CODE 14C2-1FFF7 1
+CODE 9A-FFF 1
+CODE 18D4-1FFF7 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EFF 1
 BANK15 F00-F3F 1
-BIGRAM 22-F3F 1
-BIGSFR F5A-FFF 1
-COMRAM 22-5F 1
-MEDIUMCONST 14C2-FFFF 1
+BIGRAM 2D-F3F 1
+BIGSFR F5A-FFC 1
+COMRAM 2D-5F 1
+MEDIUMCONST 18D4-FFFF 1
 MEDIUMCONST 11000-1FFF7 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -82,179 +84,258 @@ MEDIUMCONST 11000-1FFF7 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\Projekt1.X.debug.o
-18 intcodelo CODE >4741:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-18 intcodelo CODE >118:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-26 intcodelo CODE >120:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-34 intcodelo CODE >122:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-38 intcodelo CODE >123:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-3C intcodelo CODE >124:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-40 intcodelo CODE >126:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-42 intcodelo CODE >127:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-44 intcodelo CODE >129:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-54 intcodelo CODE >130:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-58 intcodelo CODE >131:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-5A intcodelo CODE >135:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-68 intcodelo CODE >136:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-72 intcodelo CODE >137:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-90 intcodelo CODE >138:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-A8 intcodelo CODE >139:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-B0 intcodelo CODE >140:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-B2 intcodelo CODE >142:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-8 intcode CODE >4919:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-8 intcode CODE >112:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-14BE intcode_body CODE >112:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-14BE intcode_body CODE >115:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+18 intcodelo CODE >5631:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18 intcodelo CODE >177:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+26 intcodelo CODE >179:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+34 intcodelo CODE >181:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+38 intcodelo CODE >182:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+3C intcodelo CODE >183:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+40 intcodelo CODE >185:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+42 intcodelo CODE >186:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+44 intcodelo CODE >188:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+54 intcodelo CODE >189:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+58 intcodelo CODE >190:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+5A intcodelo CODE >194:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+68 intcodelo CODE >195:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+6E intcodelo CODE >196:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+74 intcodelo CODE >197:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+80 intcodelo CODE >198:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+84 intcodelo CODE >199:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+86 intcodelo CODE >201:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+8 intcode CODE >5790:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+8 intcode CODE >171:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+18D0 intcode_body CODE >171:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+18D0 intcode_body CODE >174:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+152C text6 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+152C text6 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1530 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+153E text6 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+154E text6 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1552 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1560 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1570 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1574 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1584 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+159A text6 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+159E text6 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15A2 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15AC text6 CODE >27:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15AE text6 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15BC text6 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15C6 text6 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15E4 text6 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15F4 text6 CODE >33:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+15F6 text6 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1600 text6 CODE >36:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1606 text6 CODE >38:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1616 text6 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1626 text6 CODE >40:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+1636 text6 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+180C text5 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+180C text5 CODE >119:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+181C text5 CODE >121:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+182A text5 CODE >122:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+183A text5 CODE >123:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+1844 text5 CODE >124:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+184E text5 CODE >125:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+1864 text5 CODE >128:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+1874 text5 CODE >129:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
 1002 text4 CODE >14:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
 1002 text4 CODE >15:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
 1006 text4 CODE >17:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-100A text4 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-102A text4 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-102E text4 CODE >21:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-103A text4 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-105E text4 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1062 text4 CODE >24:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1072 text4 CODE >29:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1092 text4 CODE >30:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1096 text4 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10A2 text4 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10C6 text4 CODE >33:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10CA text4 CODE >34:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10DA text4 CODE >39:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10FA text4 CODE >40:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-10FE text4 CODE >41:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-110A text4 CODE >42:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-112E text4 CODE >43:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1132 text4 CODE >44:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1142 text4 CODE >49:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1162 text4 CODE >50:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1166 text4 CODE >51:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1172 text4 CODE >52:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-1196 text4 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-119A text4 CODE >54:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11AA text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11BA text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11C8 text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11D0 text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11D8 text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11E0 text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11EA text4 CODE >60:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11F4 text4 CODE >61:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
-11F6 text3 CODE >15:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-11F6 text3 CODE >17:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-11FA text3 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-11FE text3 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-120E text3 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1212 text3 CODE >24:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1216 text3 CODE >25:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-121E text3 CODE >30:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-122E text3 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1232 text3 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1236 text3 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1246 text3 CODE >39:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-124A text3 CODE >40:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1258 text3 CODE >41:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-125C text3 CODE >47:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-126C text3 CODE >48:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1270 text3 CODE >49:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1274 text3 CODE >56:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1284 text3 CODE >57:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1288 text3 CODE >58:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1294 text3 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-1298 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12A8 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12B6 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12BE text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12C6 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12CE text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12D6 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12E0 text3 CODE >66:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12EA text3 CODE >67:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
-12EC text2 CODE >14:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-12EC text2 CODE >15:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-12F0 text2 CODE >17:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-12F4 text2 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1304 text2 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1308 text2 CODE >21:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-130C text2 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1314 text2 CODE >27:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1324 text2 CODE >28:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1328 text2 CODE >29:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1334 text2 CODE >30:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1338 text2 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1340 text2 CODE >36:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1350 text2 CODE >37:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1354 text2 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1358 text2 CODE >44:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1368 text2 CODE >45:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-136C text2 CODE >46:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-137A text2 CODE >47:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-137E text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-138E text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-139C text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-13A4 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-13AC text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-13B4 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-13BE text2 CODE >54:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-13C8 text2 CODE >55:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
-1468 text1 CODE >16:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1468 text1 CODE >18:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-146C text1 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-146E text1 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1470 text1 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1474 text1 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1478 text1 CODE >25:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-147A text1 CODE >26:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-147C text1 CODE >28:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-147E text1 CODE >29:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1480 text1 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1482 text1 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1486 text1 CODE >33:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-148A text1 CODE >36:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-148C text1 CODE >37:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-148E text1 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1490 text1 CODE >39:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1492 text1 CODE >41:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-1496 text1 CODE >42:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-149A text1 CODE >44:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-149C text1 CODE >45:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-149E text1 CODE >56:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-14A2 text1 CODE >58:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-14A4 text1 CODE >63:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-14A6 text1 CODE >64:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
-13CA text0 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13CA text0 CODE >67:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13CE text0 CODE >68:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13D2 text0 CODE >70:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13D6 text0 CODE >71:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13DA text0 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13DE text0 CODE >74:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13E2 text0 CODE >76:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13E6 text0 CODE >77:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13EA text0 CODE >79:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13EE text0 CODE >80:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13F2 text0 CODE >85:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-13F6 text0 CODE >92:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1406 text0 CODE >95:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1416 text0 CODE >96:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1422 text0 CODE >97:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1432 text0 CODE >98:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1442 text0 CODE >99:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1452 text0 CODE >101:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-1456 text0 CODE >103:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
-14A8 cinit CODE >2971:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14A8 cinit CODE >2973:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14A8 cinit CODE >2976:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14A8 cinit CODE >3015:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14AC cinit CODE >3016:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14AE cinit CODE >3017:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14AE cinit CODE >3018:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B0 cinit CODE >3019:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B2 cinit CODE >3020:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B4 cinit CODE >3026:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B4 cinit CODE >3028:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B6 cinit CODE >3029:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14B8 cinit CODE >3030:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
-14BA cinit CODE >3031:C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_1.s
+1026 text4 CODE >18:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1030 text4 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+104A text4 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+105A text4 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+107A text4 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1084 text4 CODE >24:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+109E text4 CODE >25:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10AE text4 CODE >27:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10AE text4 CODE >28:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10B2 text4 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10D2 text4 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10DC text4 CODE >33:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+10F6 text4 CODE >34:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1106 text4 CODE >36:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1126 text4 CODE >37:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+112E text4 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1148 text4 CODE >39:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1158 text4 CODE >45:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1178 text4 CODE >46:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1182 text4 CODE >47:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+119C text4 CODE >48:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+11AC text4 CODE >50:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+11CC text4 CODE >51:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+11D6 text4 CODE >52:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+11F0 text4 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1200 text4 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1220 text4 CODE >60:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1228 text4 CODE >61:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1242 text4 CODE >62:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1252 text4 CODE >64:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1272 text4 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+127C text4 CODE >66:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1296 text4 CODE >67:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12A6 text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12B6 text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12C4 text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12CC text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12D4 text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12DC text4 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+12E6 text4 CODE >75:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/dekoder.c
+1638 text3 CODE >15:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1638 text3 CODE >17:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+163C text3 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1640 text3 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1650 text3 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1654 text3 CODE >24:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1658 text3 CODE >25:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1660 text3 CODE >30:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1670 text3 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1674 text3 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1678 text3 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1688 text3 CODE >39:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+168C text3 CODE >40:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+169A text3 CODE >41:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+169E text3 CODE >47:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16AE text3 CODE >48:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16B2 text3 CODE >49:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16B6 text3 CODE >56:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16C6 text3 CODE >57:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16CA text3 CODE >58:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16D6 text3 CODE >59:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16DA text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16EA text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+16F8 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1700 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1708 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1710 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1718 text3 CODE >65:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+1722 text3 CODE >66:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+172C text3 CODE >67:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/filter.c
+172E text2 CODE >14:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+172E text2 CODE >15:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1732 text2 CODE >17:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1736 text2 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1746 text2 CODE >20:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+174A text2 CODE >21:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+174E text2 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1756 text2 CODE >27:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1766 text2 CODE >28:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+176A text2 CODE >29:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1776 text2 CODE >30:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+177A text2 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1782 text2 CODE >36:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1792 text2 CODE >37:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1796 text2 CODE >38:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+179A text2 CODE >44:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17AA text2 CODE >45:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17AE text2 CODE >46:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17BC text2 CODE >47:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17C0 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17D0 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17DE text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17E6 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17EE text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+17F6 text2 CODE >53:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1800 text2 CODE >54:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+180A text2 CODE >55:C:\Users\Míra\MPLABXProjects\Projekt1.X\header/pamet.c
+1876 text1 CODE >19:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1876 text1 CODE >21:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+187A text1 CODE >22:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+187C text1 CODE >23:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+187E text1 CODE >25:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1882 text1 CODE >26:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1886 text1 CODE >28:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1888 text1 CODE >29:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+188A text1 CODE >31:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+188C text1 CODE >32:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+188E text1 CODE >34:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1890 text1 CODE >35:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1894 text1 CODE >36:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+1898 text1 CODE >37:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+189C text1 CODE >40:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+189E text1 CODE >41:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18A0 text1 CODE >42:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18A2 text1 CODE >43:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18A4 text1 CODE >45:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18A8 text1 CODE >46:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18AC text1 CODE >48:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18AE text1 CODE >49:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18B0 text1 CODE >72:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18B4 text1 CODE >74:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18B6 text1 CODE >79:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+18B8 text1 CODE >80:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/preambleInitialization.c
+12E8 text0 CODE >70:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12E8 text0 CODE >73:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12EC text0 CODE >74:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12F0 text0 CODE >76:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12F4 text0 CODE >77:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12F8 text0 CODE >79:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+12FC text0 CODE >80:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1300 text0 CODE >82:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1304 text0 CODE >83:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1308 text0 CODE >85:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+130C text0 CODE >86:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1310 text0 CODE >88:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1314 text0 CODE >89:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1318 text0 CODE >91:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+131C text0 CODE >92:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1320 text0 CODE >94:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1324 text0 CODE >98:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1328 text0 CODE >107:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1338 text0 CODE >108:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+134A text0 CODE >109:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+136C text0 CODE >110:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+137C text0 CODE >112:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+139C text0 CODE >113:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+13AC text0 CODE >115:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+13C4 text0 CODE >116:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+13F8 text0 CODE >117:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+142C text0 CODE >119:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1430 text0 CODE >120:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1434 text0 CODE >121:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1434 text0 CODE >123:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1444 text0 CODE >126:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1454 text0 CODE >127:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1464 text0 CODE >128:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1470 text0 CODE >129:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+147C text0 CODE >130:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+148C text0 CODE >131:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+149C text0 CODE >132:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14AC text0 CODE >135:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14B0 text0 CODE >137:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14BA text0 CODE >138:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14C4 text0 CODE >139:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14CE text0 CODE >140:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14D8 text0 CODE >143:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14E8 text0 CODE >144:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14EA text0 CODE >145:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14EE text0 CODE >146:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+14FE text0 CODE >147:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1500 text0 CODE >148:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1504 text0 CODE >149:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1504 text0 CODE >150:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1506 text0 CODE >151:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1508 text0 CODE >155:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1518 text0 CODE >156:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+151C text0 CODE >157:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1520 text0 CODE >159:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+1520 text0 CODE >160:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
+18BA cinit CODE >2982:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18BA cinit CODE >2984:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18BA cinit CODE >2987:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18BA cinit CODE >3039:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18BE cinit CODE >3040:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C0 cinit CODE >3041:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C0 cinit CODE >3042:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C2 cinit CODE >3043:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C4 cinit CODE >3044:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C6 cinit CODE >3050:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C6 cinit CODE >3052:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18C8 cinit CODE >3053:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18CA cinit CODE >3054:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
+18CC cinit CODE >3055:C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -270,63 +351,71 @@ B2 intcodelo CODE >142:C:\Users\Míra\MPLABXProjects\Projekt1.X\source/main.c
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Projekt1.X.debug.o
 _dekoderFce 1002 0 CODE 0 text4 dist/default/debug\Projekt1.X.debug.o
 __Hspace_0 1F800 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-__Hspace_1 22 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
+__Hspace_1 2D 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Hspace_4 3FFF6 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\Projekt1.X.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-_S4 12 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+_S3 17 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_S4 19 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Projekt1.X.debug.o
 __Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/debug\Projekt1.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-_main 13CA 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
-btemp 21 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
-___stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-start C2 0 CODE 0 init C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+_comp 5 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_main 12E8 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
+btemp 2C 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+start 96 0 CODE 0 init C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-__Hpowerup C2 0 CODE 0 powerup dist/default/debug\Projekt1.X.debug.o
+?___lmul 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+__Hpowerup 96 0 CODE 0 powerup dist/default/debug\Projekt1.X.debug.o
 _T0CONbits FD5 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-ttemp5 22 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
-ttemp6 25 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
-ttemp7 29 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
-__accesstop 60 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+ttemp5 2D 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+ttemp6 30 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+ttemp7 34 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+__accesstop 60 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 _WDTCONbits FC0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-__end_of_dekoderFce 11F6 0 CODE 0 text4 dist/default/debug\Projekt1.X.debug.o
+__end_of_dekoderFce 12E8 0 CODE 0 text4 dist/default/debug\Projekt1.X.debug.o
+___aldiv@divisor 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 _OSCCONbits FD3 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Projekt1.X.debug.o
-wtemp8 22 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
-_preambleInitialization 1468 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
+wtemp8 2D 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+_preambleInitialization 1876 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug\Projekt1.X.debug.o
+___aldiv@sign 27 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/debug\Projekt1.X.debug.o
 _ADCON0 FC2 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _ADCON1 FC1 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _ADRESH FC4 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _ADRESL FC3 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\Projekt1.X.debug.o
+__end_of___lmul 1876 0 CODE 0 text5 dist/default/debug\Projekt1.X.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Projekt1.X.debug.o
 _ANCON1bits FC2 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-filterFce@vstup 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+filterFce@vstup 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Projekt1.X.debug.o
-__Hintcodelo C2 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
+__Hintcodelo 96 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
+__end_of___aldiv 1638 0 CODE 0 text6 dist/default/debug\Projekt1.X.debug.o
 _OSCTUNEbits F9B 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
-__end_of_low_isr C2 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
-start_initialization 14A8 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
-pametFce@tlacitko 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+__end_of_low_isr 96 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
+start_initialization 18BA 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
+pametFce@tlacitko 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Projekt1.X.debug.o
+___aldiv@quotient 28 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 _TRISFbits F97 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 ___rparam_used 1 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _IPR1bits F9F 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-isa$xinst 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/debug\Projekt1.X.debug.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/debug\Projekt1.X.debug.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/debug\Projekt1.X.debug.o
@@ -350,6 +439,8 @@ __Htext1 0 0 ABS 0 text1 dist/default/debug\Projekt1.X.debug.o
 __Htext2 0 0 ABS 0 text2 dist/default/debug\Projekt1.X.debug.o
 __Htext3 0 0 ABS 0 text3 dist/default/debug\Projekt1.X.debug.o
 __Htext4 0 0 ABS 0 text4 dist/default/debug\Projekt1.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug\Projekt1.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug\Projekt1.X.debug.o
 __Ljflash_buffer 1F800 0 CODE 0 jflash_buffer dist/default/debug\Projekt1.X.debug.o
 __Hbank10 0 0 ABS 0 bank10 dist/default/debug\Projekt1.X.debug.o
 __Hbank11 0 0 ABS 0 bank11 dist/default/debug\Projekt1.X.debug.o
@@ -360,11 +451,11 @@ __Hbank15 0 0 ABS 0 bank15 dist/default/debug\Projekt1.X.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Projekt1.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\Projekt1.X.debug.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Projekt1.X.debug.o
-__smallconst 1000 0 SMALLCONST 0 smallconst C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+__smallconst 1000 0 SMALLCONST 0 smallconst C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug\Projekt1.X.debug.o
 __Hconfig 1FFFE 0 CONFIG 4 config dist/default/debug\Projekt1.X.debug.o
-filterFce@tlacitko 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-filterFce@dalsiStav 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+filterFce@tlacitko 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+filterFce@dalsiStav 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/debug\Projekt1.X.debug.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/debug\Projekt1.X.debug.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/debug\Projekt1.X.debug.o
@@ -388,55 +479,61 @@ __Ltext1 0 0 ABS 0 text1 dist/default/debug\Projekt1.X.debug.o
 __Ltext2 0 0 ABS 0 text2 dist/default/debug\Projekt1.X.debug.o
 __Ltext3 0 0 ABS 0 text3 dist/default/debug\Projekt1.X.debug.o
 __Ltext4 0 0 ABS 0 text4 dist/default/debug\Projekt1.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\Projekt1.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\Projekt1.X.debug.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\Projekt1.X.debug.o
-__end_of_preambleInitialization 14A8 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
+__end_of_preambleInitialization 18BA 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\Projekt1.X.debug.o
+_PORTFbits F85 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _PORTJbits F88 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _INTCONbits FF2 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Habs1 0 0 ABS 0 abs1 dist/default/debug\Projekt1.X.debug.o
 __Hdata 0 0 ABS 0 data dist/default/debug\Projekt1.X.debug.o
 __Hheap 0 0 HEAP 7 heap dist/default/debug\Projekt1.X.debug.o
-__Hinit C6 0 CODE 0 init dist/default/debug\Projekt1.X.debug.o
+__Hinit 9A 0 CODE 0 init dist/default/debug\Projekt1.X.debug.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/debug\Projekt1.X.debug.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/debug\Projekt1.X.debug.o
-__Htemp 22 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+__Htemp 2D 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
 __Htext 0 0 ABS 0 text dist/default/debug\Projekt1.X.debug.o
 __Labs1 0 0 ABS 0 abs1 dist/default/debug\Projekt1.X.debug.o
 __Ldata 0 0 ABS 0 data dist/default/debug\Projekt1.X.debug.o
 __Lheap 0 0 HEAP 7 heap dist/default/debug\Projekt1.X.debug.o
-__Linit C2 0 CODE 0 init dist/default/debug\Projekt1.X.debug.o
+__Linit 96 0 CODE 0 init dist/default/debug\Projekt1.X.debug.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/debug\Projekt1.X.debug.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/debug\Projekt1.X.debug.o
-__Ltemp 21 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+__Ltemp 2C 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
 __Ltext 0 0 ABS 0 text dist/default/debug\Projekt1.X.debug.o
-pametFce@dalsiStav 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-int$flags 21 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
+pametFce@dalsiStav 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+___lmul 180C 0 CODE 0 text5 dist/default/debug\Projekt1.X.debug.o
+int$flags 2C 0 COMRAM 1 temp dist/default/debug\Projekt1.X.debug.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __Hintret 0 0 ABS 0 intret dist/default/debug\Projekt1.X.debug.o
 __Hirdata 0 0 CODE 0 irdata dist/default/debug\Projekt1.X.debug.o
-_S5A 10 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-_S5B E 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-__S0 14C2 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-__S1 22 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
+_S5A 15 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_S5B 13 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+__S0 18D4 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
+__S1 2D 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __S4 0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Hjflash_buffer 1F800 0 CODE 0 jflash_buffer dist/default/debug\Projekt1.X.debug.o
-dekoderFce@tlacitko 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-__end_of_filterFce 12EC 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
+dekoderFce@tlacitko 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+__end_of_filterFce 172E 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Projekt1.X.debug.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Projekt1.X.debug.o
-pametFce@input 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-_vysledek 1 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-int_func 14BE 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
+pametFce@input 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+_vysledek 7 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+int_func 18D0 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
 __Lintentry 0 0 ABS 0 intentry dist/default/debug\Projekt1.X.debug.o
 __Hramtop 1000 0 RAM 0 ramtop dist/default/debug\Projekt1.X.debug.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/debug\Projekt1.X.debug.o
-_is10ms 7 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_is10ms B 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
 __activetblptr 3 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/debug\Projekt1.X.debug.o
-_filterFce 11F6 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
+_filterFce 1638 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
 _PIE1bits F9D 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-_S4Filtr C 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-__pintcode_body 14BE 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
+_S3Filtr F 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_S4Filtr 11 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+___aldiv 152C 0 CODE 0 text6 dist/default/debug\Projekt1.X.debug.o
+__pintcode_body 18D0 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/debug\Projekt1.X.debug.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/debug\Projekt1.X.debug.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/debug\Projekt1.X.debug.o
@@ -446,19 +543,20 @@ __Lbank15 0 0 ABS 0 bank15 dist/default/debug\Projekt1.X.debug.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Projekt1.X.debug.o
 __Lbigram 0 0 ABS 0 bigram dist/default/debug\Projekt1.X.debug.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Projekt1.X.debug.o
+___lmul@multiplier 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __Lcomram 0 0 ABS 0 comram dist/default/debug\Projekt1.X.debug.o
 __Lconfig 0 0 CONFIG 4 config dist/default/debug\Projekt1.X.debug.o
-_dekoderAB A 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+_dekoderAB D 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
 _LATDbits F8C 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\Projekt1.X.debug.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\Projekt1.X.debug.o
-isa$std 1 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 _low_isr 18 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
-_ADRhotovo 5 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-stackhi 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+_ADRhotovo A 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+stackhi 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Lintcode 8 0 CODE 0 intcode dist/default/debug\Projekt1.X.debug.o
 __Lintret 0 0 ABS 0 intret dist/default/debug\Projekt1.X.debug.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\Projekt1.X.debug.o
@@ -472,46 +570,55 @@ __Lspace_4 0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
 _PIR1bits F9E 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-__end_of_high_isr 14C2 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
-_pametFce 12EC 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
-end_of_initialization 14B4 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
+__end_of_high_isr 18D4 0 CODE 0 intcode_body dist/default/debug\Projekt1.X.debug.o
+_pametFce 172E 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
+end_of_initialization 18C6 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Projekt1.X.debug.o
 __Hintentry 0 0 ABS 0 intentry dist/default/debug\Projekt1.X.debug.o
 _RCONbits FD0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-__end_of_pametFce 13CA 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
-__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\Projekt1.X.debug.o
-dekoderFce@dalsiStav 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+?___aldiv 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+_adKalkulace 1 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+__end_of_pametFce 180C 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
+__Hreset_vec 6 0 CODE 0 reset_vec dist/default/debug\Projekt1.X.debug.o
 __Lramtop 1000 0 RAM 0 ramtop dist/default/debug\Projekt1.X.debug.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/debug\Projekt1.X.debug.o
-__pcinit 14A8 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
-__ptext0 13CA 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
-__ptext1 1468 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
-__ptext2 12EC 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
-__ptext3 11F6 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
+__pcinit 18BA 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
+__ptext0 12E8 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
+__ptext1 1876 0 CODE 0 text1 dist/default/debug\Projekt1.X.debug.o
+__ptext2 172E 0 CODE 0 text2 dist/default/debug\Projekt1.X.debug.o
+__ptext3 1638 0 CODE 0 text3 dist/default/debug\Projekt1.X.debug.o
 __ptext4 1002 0 CODE 0 text4 dist/default/debug\Projekt1.X.debug.o
+__ptext5 180C 0 CODE 0 text5 dist/default/debug\Projekt1.X.debug.o
+__ptext6 152C 0 CODE 0 text6 dist/default/debug\Projekt1.X.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug\Projekt1.X.debug.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-__Lpowerup C2 0 CODE 0 powerup dist/default/debug\Projekt1.X.debug.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___aldiv@dividend 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+__Lpowerup 96 0 CODE 0 powerup dist/default/debug\Projekt1.X.debug.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Projekt1.X.debug.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/debug\Projekt1.X.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\Projekt1.X.debug.o
-___heap_hi 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Projekt1.X.debug.o
-__end_of__initialization 14B4 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
+__end_of__initialization 18C6 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/debug\Projekt1.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/debug\Projekt1.X.debug.o
+___lmul@product 26 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+___lmul@multiplicand 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/debug\Projekt1.X.debug.o
-__pcstackCOMRAM 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-__end_of_main 1468 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
+__pcstackCOMRAM 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+___aldiv@counter 26 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+__end_of_main 152C 0 CODE 0 text0 dist/default/debug\Projekt1.X.debug.o
 __pintcode 8 0 CODE 0 intcode dist/default/debug\Projekt1.X.debug.o
+_PORTH F87 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _T0CON FD5 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _TMR0H FD7 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _TMR0L FD6 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _TRISD F95 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
+_TRISF F97 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _TRISH F99 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 _TRISJ F9A 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __HRAM 0 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
@@ -522,16 +629,16 @@ __LRAM 1 0 ABS 0 - dist/default/debug\Projekt1.X.debug.o
 __Lbss 0 0 RAM 1 bss dist/default/debug\Projekt1.X.debug.o
 __Lram 0 0 ABS 0 ram dist/default/debug\Projekt1.X.debug.o
 __Lsfr 0 0 ABS 0 sfr dist/default/debug\Projekt1.X.debug.o
-_is1ms 8 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
-___extmem_base 20000 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAsja8.\driver_tmp_9.o
-__initialization 14A8 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
+_is1ms C 0 COMRAM 1 bssCOMRAM dist/default/debug\Projekt1.X.debug.o
+___extmem_base 20000 0 ABS 0 - C:\Users\MRA~1\AppData\Local\Temp\xcAseb0.\driver_tmp_9.o
+__initialization 18BA 0 CODE 0 cinit dist/default/debug\Projekt1.X.debug.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/debug\Projekt1.X.debug.o
 __Hsmallconst 1002 0 SMALLCONST 0 smallconst dist/default/debug\Projekt1.X.debug.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/debug\Projekt1.X.debug.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Projekt1.X.debug.o
 __Hintcode E 0 CODE 0 intcode dist/default/debug\Projekt1.X.debug.o
-dekoderFce@A 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
-dekoderFce@B 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+dekoderFce@A 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
+dekoderFce@B 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -556,12 +663,12 @@ dekoderFce@B 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\Projekt1.X.debug.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intcodelo 0 18 18 AE 1
-text4 0 1002 1002 4C0 1
-reset_vec 0 0 0 4 1
+intcodelo 0 18 18 82 1
+text4 0 1002 1002 8D2 1
+reset_vec 0 0 0 6 1
 intcode 0 8 8 6 1
 smallconst 0 1000 1000 2 1
-bssCOMRAM 1 1 1 21 1
+bssCOMRAM 1 1 1 2C 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

@@ -8663,18 +8663,24 @@ unsigned char __t3rd16on(void);
 
 
 
-unsigned char vystup;
+typedef enum
+{
+    FALSE = 0,
+    TRUE = 1
+}AD_BOOL;
 
-enum{TRUE, FALSE};
 
-void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo);
+
+
+
+void ADprevodnikFce(int * vysledek,_Bool *ADRhotovo,unsigned char *vystup);
 # 14 "header/ADprevodnik.c" 2
 
 
-void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo){
+void ADprevodnikFce(int *vysledek,_Bool *ADRhotovo,unsigned char *vystup){
     long adKalkulace;
-    if(ADRhotovo == TRUE){
-        adKalkulace = (long)ABSvysledek;
+    if(*ADRhotovo == TRUE){
+        adKalkulace = (long)vysledek;
         if(adKalkulace >= 1000){
             adKalkulace = 1000;
         }
@@ -8685,8 +8691,8 @@ void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo){
         adKalkulace = adKalkulace * 255;
         adKalkulace = adKalkulace / (1000-50);
 
-        vystup = (unsigned char)ABSvysledek;
-        ADRhotovo = FALSE;
+        *vystup = (unsigned char)adKalkulace;
+        *ADRhotovo = FALSE;
 }
 
 

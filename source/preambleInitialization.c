@@ -13,6 +13,9 @@
 #include "./../header/preambleInitialization.h"
 
 // Definice funkce pro automatickou inicializaci potrebnych registru aby fungovaly zakladni funkce a periferie procesoru
+
+unsigned int comp;
+
 void preambleInitialization(void)
 {
     T0CON = 0b10001000;
@@ -31,6 +34,7 @@ void preambleInitialization(void)
     TRISJ = 0xFF;
     TRISD = 0x00;
     TRISH = 0x00;
+    TRISF = 0x00;
     
     //AD prevodnik
     TRISFbits.RF3 = 1;
@@ -43,6 +47,18 @@ void preambleInitialization(void)
     
     PIE1bits.ADIE = 1;
     IPR1bits.ADIP = 0;
+    
+   //MP2
+    
+  /*  TRISCbits.RC2 = 0;
+    T1CON = 0b10100001;
+    CCP1CON = 0b00001000;
+    comp = 50000;
+    CCPR1H = (comp>>8);
+    CCPR1L = (comp&0x00FF);
+    PIE1bits.CCP1IE = 1;
+    IPR1bits.CCP1IP = 1;
+  */
     
     
     //-------------------------------

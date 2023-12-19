@@ -24,7 +24,7 @@
 #include "./../header/filter.h"
 #include "./../header/pamet.h"
 #include "./../header/dekoder.h"
-#include "./../header/ADprevodnik.h"
+//#include "./../header/ADprevodnik.h"
 
 
 
@@ -52,20 +52,29 @@
 //----------------------------------------------------------------------------
 
 typeFilter S4;
+typeFilter S3;
 typeFilter S5A;
 typeFilter S5B;
 typeFilter S4Filtr;
+typeFilter S3Filtr;
 typeFilter dekoderAB;
+
 char is1ms;
 char is10ms;
-long vysledek;
-unsigned int ADRhotovo;
+int vysledek;
+bool ADRhotovo;
+unsigned char vystup;
+long adKalkulace;
 //----------------------------------------------------------------------------
 // hlavni program
 void main(void)
 {
+   //STAVY A VYSTUPY FILTRU, ARETACE, DEKODERU A AD PREVODNIKU NASTAVENE NA 0 - POCATECNI STAV   
     S4.stav = 0;
     S4.vystup = 0;
+    
+    S3.stav = 0;
+    S3.vystup = 0;
     
     S5A.stav = 0;
     S5A.vystup = 0;
@@ -76,9 +85,13 @@ void main(void)
     S4Filtr.stav = 0;
     S4Filtr.vystup = 0;
     
+    S3Filtr.stav = 0;
+    S3Filtr.vystup = 0;
+    
     dekoderAB.stav = 0;
     dekoderAB.vystup = 0;
     
+    ADRhotovo = 0;
    
     
   // Inizializacni cast pro zakladni funkci programu/procesoru
@@ -89,19 +102,65 @@ void main(void)
   // Zde v nekonecne smycce je beh programu na pozadi
   while (1)
   {
+  //AD prevodnik
+  
+    if(ADRhotovo == 1){
+        adKalkulace = (long)vysledek;
+        if(adKalkulace >= 1000){
+            adKalkulace = 1000;
+        }
+        if(adKalkulace <= 50){
+            adKalkulace = 50;
+        }
+        adKalkulace = adKalkulace - 50; //oriznu ze spoda o 50...kvuli zakmitum, tedy bezpecnosti
+        adKalkulace = adKalkulace * 255;
+        adKalkulace = adKalkulace / (1000-50);
+        
+        vystup = (unsigned char)adKalkulace;
+        ADRhotovo = 0;
+    }
+        
       if(is1ms == 1){
     
       // Piste svuj kod pro program na pozadi
    filterFce(&S4, PORTJbits.RJ7);
+   filterFce(&S3, PORTJbits.RJ6);
   pametFce(&S4Filtr, S4.vystup);
+  pametFce(&S3Filtr, S3.vystup);
   filterFce(&S5A, PORTJbits.RJ0);
   filterFce(&S5B, PORTJbits.RJ1);
   dekoderFce(&dekoderAB, S5A.vystup, S5B.vystup);
+  //ADprevodnikFce(&vysledek,&ADRhotovo,&vystup);
    
    is1ms = 0;
    }
   LATDbits.LATD7 = S4Filtr.vystup;
-
+  LATDbits.LATD4 = S3Filtr.vystup;
+  LATDbits.LATD5 = S5A.vystup;
+  LATDbits.LATD4 = S5B.vystup;
+  
+//Max a Min dekoderu - LED13, LED14
+ if(dekoderAB.vystup == 255){
+     PORTFbits.RF1 = 1;
+ }
+ else if(dekoderAB.vystup == 0){
+     PORTFbits.RF2 = 1;
+ }
+ else{
+     PORTFbits.RF1 = 0;
+     PORTFbits.RF2 = 0;
+ }
+     
+     
+     if(S4Filtr.vystup == 1){
+         PORTH = vystup;
+     }
+ 
+   else{
+         PORTH = dekoderAB.vystup;
+     }
+     
+     
   }
 }
 
@@ -136,7 +195,7 @@ void __interrupt(low_priority) low_isr(void)
         vysledek = ADRESH;
         vysledek = (vysledek << 8);
         vysledek =  vysledek + ADRESL;
-        ADRhotovo = TRUE;
+        ADRhotovo = 1;
         PIR1bits.ADIF = 0;
     }
 }

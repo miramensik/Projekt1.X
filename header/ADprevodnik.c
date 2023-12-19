@@ -13,10 +13,10 @@
 //kdyz jdu z registru do nasobicky tak musim zmenit typ na long aby se mi tam to cislo po vynasobeni veslo (zmenim to z 10bit na 32bit)
 #include "./../header/ADprevodnik.h"
 
-void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo){
+void ADprevodnikFce(int *vysledek,bool *ADRhotovo,unsigned char *vystup){
     long adKalkulace;
-    if(ADRhotovo == TRUE){
-        adKalkulace = (long)ABSvysledek;
+    if(*ADRhotovo == TRUE){
+        adKalkulace = (long)vysledek;
         if(adKalkulace >= 1000){
             adKalkulace = 1000;
         }
@@ -27,8 +27,8 @@ void ADprevodnikFce(vystup *ABSvysledek,unsigned int ADRhotovo){
         adKalkulace = adKalkulace * 255;
         adKalkulace = adKalkulace / (1000-50);
         
-        vystup = (unsigned char)ABSvysledek; 
-        ADRhotovo = FALSE;
+        *vystup = (unsigned char)adKalkulace;
+        *ADRhotovo = FALSE;
 }
     
     

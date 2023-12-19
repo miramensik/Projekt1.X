@@ -1,4 +1,4 @@
-# 1 "source/preambleInitialization.c"
+# 1 "header/pamet.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "source/preambleInitialization.c" 2
-# 13 "source/preambleInitialization.c"
-# 1 "source/./../header/preambleInitialization.h" 1
-# 14 "source/./../header/preambleInitialization.h"
+# 1 "header/pamet.c" 2
+# 12 "header/pamet.c"
+# 1 "header/./../header/pamet.h" 1
+# 14 "header/./../header/pamet.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -8651,116 +8651,74 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\\pic\\include\\xc.h" 2 3
-# 15 "source/./../header/preambleInitialization.h" 2
+# 14 "header/./../header/pamet.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 17 "source/./../header/preambleInitialization.h" 2
+# 16 "header/./../header/pamet.h" 2
 
 
 
 
 
-#pragma config FOSC = HSPLL
+# 1 "header/filter.h" 1
+# 23 "header/filter.h"
+enum{s0,s1,s2,s3,s4};
+
+typedef struct{
+
+    char stav;
+    char vystup;
+
+}typeFilter;
+
+void filterFce(typeFilter*tlacitko, char vstup);
+# 21 "header/./../header/pamet.h" 2
 
 
-#pragma config IESO = OFF
+void pametFce(typeFilter*tlacitko,char input);
+# 12 "header/pamet.c" 2
 
 
-#pragma config FCMEN = OFF
+void pametFce(typeFilter*tlacitko,char input){
+    char dalsiStav = s0;
 
+    switch(tlacitko->stav){
+        case s0:{
+            if(input == 0){
+                dalsiStav = s1;
+            }else{
+                dalsiStav = s0;
+            }
+            break;
+        }
+        case s1:{
+            if(input == 0){
+                dalsiStav = s1;
+               tlacitko->vystup = 0;
+            }else{
+                dalsiStav = s2;
+            }
+            break;
+        }
+         case s2:{
+            if(input == 0){
+                dalsiStav = s3;
+            }else{
+                dalsiStav = s2;
+            }
+            break;
+        }
+         case s3:{
+            if(input == 0){
+                dalsiStav = s3;
+                tlacitko->vystup = 1;
+            }else{
+                dalsiStav = s0;
+            }
+            break;
+        }
 
-#pragma config MODE = MM
-
-
-#pragma config XINST = OFF
-
-
-#pragma config STVREN = ON
-
-
-#pragma config WDTEN = OFF
-
-
-#pragma config WDTPS = 32768
-
-
-#pragma config CP0 = OFF
-
-
-
-
-
-void __attribute__((picinterrupt(("high_priority")))) high_isr(void);
-
-
-void __attribute__((picinterrupt(("low_priority")))) low_isr(void);
-
-
-
-void enableAllInterrupts(void);
-
-
-void disableAllInterrupts(void);
-
-
-void preambleInitialization(void);
-# 14 "source/preambleInitialization.c" 2
-
-
-
-unsigned int comp;
-
-void preambleInitialization(void)
-{
-    T0CON = 0b10001000;
-    T0CONbits.PSA = 1;
-    T0CONbits.TMR0ON = 1;
-
-    TMR0H = 0xB1;
-    TMR0L = 0xDF;
-
-    INTCON2bits.TMR0IP = 0;
-    INTCONbits.TMR0IE = 1;
-
-    INTCONbits.GIEH = 1;
-    INTCONbits.GIEL = 1;
-
-    TRISJ = 0xFF;
-    TRISD = 0x00;
-    TRISH = 0x00;
-    TRISF = 0x00;
-
-
-    TRISFbits.RF3 = 1;
-    WDTCONbits.ADSHR = 1;
-    ANCON1bits.PCFG8 = 0;
-    WDTCONbits.ADSHR = 0;
-
-    ADCON1 = 0b10101010;
-    ADCON0 = 0b00100001;
-
-    PIE1bits.ADIE = 1;
-    IPR1bits.ADIP = 0;
-# 72 "source/preambleInitialization.c"
-    OSCCONbits.SCS = 0;
-
-    OSCTUNEbits.PLLEN = 1;
-
-
-
-
-    RCONbits.IPEN = 1;
-}
-
-
-
-void enableAllInterrupts(void) {
-    INTCONbits.GIEH = 1;
-    INTCONbits.GIEL = 1;
-}
-
-
-void disableAllInterrupts(void) {
-    INTCONbits.GIEH = 0;
-    INTCONbits.GIEL = 0;
+    }
+      tlacitko->stav = dalsiStav;
 }

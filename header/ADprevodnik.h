@@ -26,11 +26,11 @@ typedef enum
     TRUE = 1
 }AD_BOOL;
 
-unsigned char vystup;
+//unsigned char vystup;
 
 
 
-void ADprevodnikFce(vystup *ABSvysledek,AD_BOOL *ADRhotovo);
+void ADprevodnikFce(int * vysledek,bool *ADRhotovo,unsigned char *vystup);
 
 
 #endif /* ADPREVODNIK.H */
