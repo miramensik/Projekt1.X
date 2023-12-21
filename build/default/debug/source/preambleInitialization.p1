@@ -942,10 +942,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WDTPS  =  32768 ]
 "46
 [p x CP0  =  OFF ]
-"17 source/preambleInitialization.c
-[; ;source/preambleInitialization.c: 17: unsigned int comp;
-[v _comp `ui ~T0 @X0 1 e ]
-"19
+"19 source/preambleInitialization.c
 [; ;source/preambleInitialization.c: 19: void preambleInitialization(void)
 [v _preambleInitialization `(v ~T0 @X0 1 ef ]
 "20
@@ -1016,48 +1013,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49
 [; ;source/preambleInitialization.c: 49:     IPR1bits.ADIP = 0;
 [e = . . _IPR1bits 0 6 -> -> 0 `i `uc ]
-"72
-[; ;source/preambleInitialization.c: 72:     OSCCONbits.SCS = 0;
-[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
-"74
-[; ;source/preambleInitialization.c: 74:     OSCTUNEbits.PLLEN = 1;
-[e = . . _OSCTUNEbits 0 1 -> -> 1 `i `uc ]
-"79
-[; ;source/preambleInitialization.c: 79:     RCONbits.IPEN = 1;
-[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
 "80
-[; ;source/preambleInitialization.c: 80: }
+[; ;source/preambleInitialization.c: 80:     OSCCONbits.SCS = 0;
+[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
+"82
+[; ;source/preambleInitialization.c: 82:     OSCTUNEbits.PLLEN = 1;
+[e = . . _OSCTUNEbits 0 1 -> -> 1 `i `uc ]
+"87
+[; ;source/preambleInitialization.c: 87:     RCONbits.IPEN = 1;
+[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
+"88
+[; ;source/preambleInitialization.c: 88: }
 [e :UE 572 ]
 }
-"84
-[; ;source/preambleInitialization.c: 84: void enableAllInterrupts(void) {
+"92
+[; ;source/preambleInitialization.c: 92: void enableAllInterrupts(void) {
 [v _enableAllInterrupts `(v ~T0 @X0 1 ef ]
 {
 [e :U _enableAllInterrupts ]
 [f ]
-"85
-[; ;source/preambleInitialization.c: 85:     INTCONbits.GIEH = 1;
+"93
+[; ;source/preambleInitialization.c: 93:     INTCONbits.GIEH = 1;
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-"86
-[; ;source/preambleInitialization.c: 86:     INTCONbits.GIEL = 1;
+"94
+[; ;source/preambleInitialization.c: 94:     INTCONbits.GIEL = 1;
 [e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-"87
-[; ;source/preambleInitialization.c: 87: }
+"95
+[; ;source/preambleInitialization.c: 95: }
 [e :UE 573 ]
 }
-"90
-[; ;source/preambleInitialization.c: 90: void disableAllInterrupts(void) {
+"98
+[; ;source/preambleInitialization.c: 98: void disableAllInterrupts(void) {
 [v _disableAllInterrupts `(v ~T0 @X0 1 ef ]
 {
 [e :U _disableAllInterrupts ]
 [f ]
-"91
-[; ;source/preambleInitialization.c: 91:     INTCONbits.GIEH = 0;
+"99
+[; ;source/preambleInitialization.c: 99:     INTCONbits.GIEH = 0;
 [e = . . _INTCONbits 2 2 -> -> 0 `i `uc ]
-"92
-[; ;source/preambleInitialization.c: 92:     INTCONbits.GIEL = 0;
+"100
+[; ;source/preambleInitialization.c: 100:     INTCONbits.GIEL = 0;
 [e = . . _INTCONbits 2 1 -> -> 0 `i `uc ]
-"93
-[; ;source/preambleInitialization.c: 93: }
+"101
+[; ;source/preambleInitialization.c: 101: }
 [e :UE 574 ]
 }

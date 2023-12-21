@@ -8708,7 +8708,7 @@ void preambleInitialization(void);
 
 
 
-unsigned int comp;
+
 
 void preambleInitialization(void)
 {
@@ -8741,7 +8741,7 @@ void preambleInitialization(void)
 
     PIE1bits.ADIE = 1;
     IPR1bits.ADIP = 0;
-# 72 "source/preambleInitialization.c"
+# 80 "source/preambleInitialization.c"
     OSCCONbits.SCS = 0;
 
     OSCTUNEbits.PLLEN = 1;

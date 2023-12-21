@@ -8747,8 +8747,14 @@ char is1ms;
 char is10ms;
 int vysledek;
 _Bool ADRhotovo;
+_Bool novyPulz;
 unsigned char vystup;
 long adKalkulace;
+int komparace;
+int pulz;
+int mezera;
+int pulzBack;
+
 
 
 void main(void)
@@ -8790,15 +8796,15 @@ void main(void)
 
     if(ADRhotovo == 1){
         adKalkulace = (long)vysledek;
-        if(adKalkulace >= 1000){
+        if(adKalkulace > 1000){
             adKalkulace = 1000;
         }
-        if(adKalkulace <= 50){
+        if(adKalkulace < 50){
             adKalkulace = 50;
         }
         adKalkulace = adKalkulace - 50;
         adKalkulace = adKalkulace * 255;
-        adKalkulace = adKalkulace / (1000-50);
+        adKalkulace = adKalkulace / (950);
 
         vystup = (unsigned char)adKalkulace;
         ADRhotovo = 0;
@@ -8843,8 +8849,7 @@ void main(void)
    else{
          PORTH = dekoderAB.vystup;
      }
-
-
+# 180 "source/main.c"
   }
 }
 
@@ -8854,7 +8859,7 @@ void main(void)
 
 void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
 {
-
+# 213 "source/main.c"
 }
 
 

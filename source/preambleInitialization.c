@@ -14,7 +14,7 @@
 
 // Definice funkce pro automatickou inicializaci potrebnych registru aby fungovaly zakladni funkce a periferie procesoru
 
-unsigned int comp;
+
 
 void preambleInitialization(void)
 {
@@ -48,16 +48,24 @@ void preambleInitialization(void)
     PIE1bits.ADIE = 1;
     IPR1bits.ADIP = 0;
     
-   //MP2
+   //MP2 - pwmko
     
-  /*  TRISCbits.RC2 = 0;
-    T1CON = 0b10100001;
+  /*   TRISCbits.RC2 = 0;
+    
+    
     CCP1CON = 0b00001000;
-    comp = 50000;
-    CCPR1H = (comp>>8);
-    CCPR1L = (comp&0x00FF);
+   
     PIE1bits.CCP1IE = 1;
     IPR1bits.CCP1IP = 1;
+   
+   //provovnani hodnot s 8bit registrem
+    CCPR1H = (50000 >> 8); 
+    CCPR1L = (50000 & 0x00FF);
+   
+   
+    
+    // inicializace timeru pro pwmko
+    T1CON = 0b10100001; // 16 bit, 1:4 prescale
   */
     
     

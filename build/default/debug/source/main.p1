@@ -912,321 +912,336 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;source/main.c: 65: _Bool ADRhotovo;
 [v _ADRhotovo `a ~T0 @X0 1 e ]
 "66
-[; ;source/main.c: 66: unsigned char vystup;
-[v _vystup `uc ~T0 @X0 1 e ]
+[; ;source/main.c: 66: _Bool novyPulz;
+[v _novyPulz `a ~T0 @X0 1 e ]
 "67
-[; ;source/main.c: 67: long adKalkulace;
+[; ;source/main.c: 67: unsigned char vystup;
+[v _vystup `uc ~T0 @X0 1 e ]
+"68
+[; ;source/main.c: 68: long adKalkulace;
 [v _adKalkulace `l ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
+"69
+[; ;source/main.c: 69: int komparace;
+[v _komparace `i ~T0 @X0 1 e ]
 "70
-[; ;source/main.c: 70: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;source/main.c: 70: int pulz;
+[v _pulz `i ~T0 @X0 1 e ]
 "71
-[; ;source/main.c: 71: {
+[; ;source/main.c: 71: int mezera;
+[v _mezera `i ~T0 @X0 1 e ]
+"72
+[; ;source/main.c: 72: int pulzBack;
+[v _pulzBack `i ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"76
+[; ;source/main.c: 76: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"77
+[; ;source/main.c: 77: {
 {
 [e :U _main ]
 [f ]
-"73
-[; ;source/main.c: 73:     S4.stav = 0;
-[e = . _S4 0 -> -> 0 `i `uc ]
-"74
-[; ;source/main.c: 74:     S4.vystup = 0;
-[e = . _S4 1 -> -> 0 `i `uc ]
-"76
-[; ;source/main.c: 76:     S3.stav = 0;
-[e = . _S3 0 -> -> 0 `i `uc ]
-"77
-[; ;source/main.c: 77:     S3.vystup = 0;
-[e = . _S3 1 -> -> 0 `i `uc ]
 "79
-[; ;source/main.c: 79:     S5A.stav = 0;
-[e = . _S5A 0 -> -> 0 `i `uc ]
+[; ;source/main.c: 79:     S4.stav = 0;
+[e = . _S4 0 -> -> 0 `i `uc ]
 "80
-[; ;source/main.c: 80:     S5A.vystup = 0;
-[e = . _S5A 1 -> -> 0 `i `uc ]
+[; ;source/main.c: 80:     S4.vystup = 0;
+[e = . _S4 1 -> -> 0 `i `uc ]
 "82
-[; ;source/main.c: 82:     S5B.stav = 0;
-[e = . _S5B 0 -> -> 0 `i `uc ]
+[; ;source/main.c: 82:     S3.stav = 0;
+[e = . _S3 0 -> -> 0 `i `uc ]
 "83
-[; ;source/main.c: 83:     S5B.vystup = 0;
-[e = . _S5B 1 -> -> 0 `i `uc ]
+[; ;source/main.c: 83:     S3.vystup = 0;
+[e = . _S3 1 -> -> 0 `i `uc ]
 "85
-[; ;source/main.c: 85:     S4Filtr.stav = 0;
-[e = . _S4Filtr 0 -> -> 0 `i `uc ]
+[; ;source/main.c: 85:     S5A.stav = 0;
+[e = . _S5A 0 -> -> 0 `i `uc ]
 "86
-[; ;source/main.c: 86:     S4Filtr.vystup = 0;
-[e = . _S4Filtr 1 -> -> 0 `i `uc ]
+[; ;source/main.c: 86:     S5A.vystup = 0;
+[e = . _S5A 1 -> -> 0 `i `uc ]
 "88
-[; ;source/main.c: 88:     S3Filtr.stav = 0;
-[e = . _S3Filtr 0 -> -> 0 `i `uc ]
+[; ;source/main.c: 88:     S5B.stav = 0;
+[e = . _S5B 0 -> -> 0 `i `uc ]
 "89
-[; ;source/main.c: 89:     S3Filtr.vystup = 0;
-[e = . _S3Filtr 1 -> -> 0 `i `uc ]
+[; ;source/main.c: 89:     S5B.vystup = 0;
+[e = . _S5B 1 -> -> 0 `i `uc ]
 "91
-[; ;source/main.c: 91:     dekoderAB.stav = 0;
-[e = . _dekoderAB 0 -> -> 0 `i `uc ]
+[; ;source/main.c: 91:     S4Filtr.stav = 0;
+[e = . _S4Filtr 0 -> -> 0 `i `uc ]
 "92
-[; ;source/main.c: 92:     dekoderAB.vystup = 0;
-[e = . _dekoderAB 1 -> -> 0 `i `uc ]
+[; ;source/main.c: 92:     S4Filtr.vystup = 0;
+[e = . _S4Filtr 1 -> -> 0 `i `uc ]
 "94
-[; ;source/main.c: 94:     ADRhotovo = 0;
-[e = _ADRhotovo -> -> 0 `i `a ]
+[; ;source/main.c: 94:     S3Filtr.stav = 0;
+[e = . _S3Filtr 0 -> -> 0 `i `uc ]
+"95
+[; ;source/main.c: 95:     S3Filtr.vystup = 0;
+[e = . _S3Filtr 1 -> -> 0 `i `uc ]
+"97
+[; ;source/main.c: 97:     dekoderAB.stav = 0;
+[e = . _dekoderAB 0 -> -> 0 `i `uc ]
 "98
-[; ;source/main.c: 98:   preambleInitialization();
-[e ( _preambleInitialization ..  ]
-"103
-[; ;source/main.c: 103:   while (1)
-[e :U 575 ]
+[; ;source/main.c: 98:     dekoderAB.vystup = 0;
+[e = . _dekoderAB 1 -> -> 0 `i `uc ]
+"100
+[; ;source/main.c: 100:     ADRhotovo = 0;
+[e = _ADRhotovo -> -> 0 `i `a ]
 "104
-[; ;source/main.c: 104:   {
-{
-"107
-[; ;source/main.c: 107:     if(ADRhotovo == 1){
-[e $ ! == -> _ADRhotovo `i -> 1 `i 577  ]
-{
-"108
-[; ;source/main.c: 108:         adKalkulace = (long)vysledek;
-[e = _adKalkulace -> _vysledek `l ]
+[; ;source/main.c: 104:   preambleInitialization();
+[e ( _preambleInitialization ..  ]
 "109
-[; ;source/main.c: 109:         if(adKalkulace >= 1000){
-[e $ ! >= _adKalkulace -> -> 1000 `i `l 578  ]
-{
+[; ;source/main.c: 109:   while (1)
+[e :U 575 ]
 "110
-[; ;source/main.c: 110:             adKalkulace = 1000;
-[e = _adKalkulace -> -> 1000 `i `l ]
-"111
-[; ;source/main.c: 111:         }
-}
-[e :U 578 ]
-"112
-[; ;source/main.c: 112:         if(adKalkulace <= 50){
-[e $ ! <= _adKalkulace -> -> 50 `i `l 579  ]
+[; ;source/main.c: 110:   {
 {
 "113
-[; ;source/main.c: 113:             adKalkulace = 50;
-[e = _adKalkulace -> -> 50 `i `l ]
+[; ;source/main.c: 113:     if(ADRhotovo == 1){
+[e $ ! == -> _ADRhotovo `i -> 1 `i 577  ]
+{
 "114
-[; ;source/main.c: 114:         }
+[; ;source/main.c: 114:         adKalkulace = (long)vysledek;
+[e = _adKalkulace -> _vysledek `l ]
+"115
+[; ;source/main.c: 115:         if(adKalkulace > 1000){
+[e $ ! > _adKalkulace -> -> 1000 `i `l 578  ]
+{
+"116
+[; ;source/main.c: 116:             adKalkulace = 1000;
+[e = _adKalkulace -> -> 1000 `i `l ]
+"117
+[; ;source/main.c: 117:         }
+}
+[e :U 578 ]
+"118
+[; ;source/main.c: 118:         if(adKalkulace < 50){
+[e $ ! < _adKalkulace -> -> 50 `i `l 579  ]
+{
+"119
+[; ;source/main.c: 119:             adKalkulace = 50;
+[e = _adKalkulace -> -> 50 `i `l ]
+"120
+[; ;source/main.c: 120:         }
 }
 [e :U 579 ]
-"115
-[; ;source/main.c: 115:         adKalkulace = adKalkulace - 50;
-[e = _adKalkulace - _adKalkulace -> -> 50 `i `l ]
-"116
-[; ;source/main.c: 116:         adKalkulace = adKalkulace * 255;
-[e = _adKalkulace * _adKalkulace -> -> 255 `i `l ]
-"117
-[; ;source/main.c: 117:         adKalkulace = adKalkulace / (1000-50);
-[e = _adKalkulace / _adKalkulace -> - -> 1000 `i -> 50 `i `l ]
-"119
-[; ;source/main.c: 119:         vystup = (unsigned char)adKalkulace;
-[e = _vystup -> _adKalkulace `uc ]
-"120
-[; ;source/main.c: 120:         ADRhotovo = 0;
-[e = _ADRhotovo -> -> 0 `i `a ]
 "121
-[; ;source/main.c: 121:     }
+[; ;source/main.c: 121:         adKalkulace = adKalkulace - 50;
+[e = _adKalkulace - _adKalkulace -> -> 50 `i `l ]
+"122
+[; ;source/main.c: 122:         adKalkulace = adKalkulace * 255;
+[e = _adKalkulace * _adKalkulace -> -> 255 `i `l ]
+"123
+[; ;source/main.c: 123:         adKalkulace = adKalkulace / (950);
+[e = _adKalkulace / _adKalkulace -> -> 950 `i `l ]
+"125
+[; ;source/main.c: 125:         vystup = (unsigned char)adKalkulace;
+[e = _vystup -> _adKalkulace `uc ]
+"126
+[; ;source/main.c: 126:         ADRhotovo = 0;
+[e = _ADRhotovo -> -> 0 `i `a ]
+"127
+[; ;source/main.c: 127:     }
 }
 [e :U 577 ]
-"123
-[; ;source/main.c: 123:       if(is1ms == 1){
+"129
+[; ;source/main.c: 129:       if(is1ms == 1){
 [e $ ! == -> _is1ms `i -> 1 `i 580  ]
 {
-"126
-[; ;source/main.c: 126:    filterFce(&S4, PORTJbits.RJ7);
-[e ( _filterFce (2 , &U _S4 -> . . _PORTJbits 0 7 `uc ]
-"127
-[; ;source/main.c: 127:    filterFce(&S3, PORTJbits.RJ6);
-[e ( _filterFce (2 , &U _S3 -> . . _PORTJbits 0 6 `uc ]
-"128
-[; ;source/main.c: 128:   pametFce(&S4Filtr, S4.vystup);
-[e ( _pametFce (2 , &U _S4Filtr . _S4 1 ]
-"129
-[; ;source/main.c: 129:   pametFce(&S3Filtr, S3.vystup);
-[e ( _pametFce (2 , &U _S3Filtr . _S3 1 ]
-"130
-[; ;source/main.c: 130:   filterFce(&S5A, PORTJbits.RJ0);
-[e ( _filterFce (2 , &U _S5A -> . . _PORTJbits 0 0 `uc ]
-"131
-[; ;source/main.c: 131:   filterFce(&S5B, PORTJbits.RJ1);
-[e ( _filterFce (2 , &U _S5B -> . . _PORTJbits 0 1 `uc ]
 "132
-[; ;source/main.c: 132:   dekoderFce(&dekoderAB, S5A.vystup, S5B.vystup);
-[e ( _dekoderFce (3 , , &U _dekoderAB . _S5A 1 . _S5B 1 ]
+[; ;source/main.c: 132:    filterFce(&S4, PORTJbits.RJ7);
+[e ( _filterFce (2 , &U _S4 -> . . _PORTJbits 0 7 `uc ]
+"133
+[; ;source/main.c: 133:    filterFce(&S3, PORTJbits.RJ6);
+[e ( _filterFce (2 , &U _S3 -> . . _PORTJbits 0 6 `uc ]
+"134
+[; ;source/main.c: 134:   pametFce(&S4Filtr, S4.vystup);
+[e ( _pametFce (2 , &U _S4Filtr . _S4 1 ]
 "135
-[; ;source/main.c: 135:    is1ms = 0;
-[e = _is1ms -> -> 0 `i `uc ]
+[; ;source/main.c: 135:   pametFce(&S3Filtr, S3.vystup);
+[e ( _pametFce (2 , &U _S3Filtr . _S3 1 ]
 "136
-[; ;source/main.c: 136:    }
+[; ;source/main.c: 136:   filterFce(&S5A, PORTJbits.RJ0);
+[e ( _filterFce (2 , &U _S5A -> . . _PORTJbits 0 0 `uc ]
+"137
+[; ;source/main.c: 137:   filterFce(&S5B, PORTJbits.RJ1);
+[e ( _filterFce (2 , &U _S5B -> . . _PORTJbits 0 1 `uc ]
+"138
+[; ;source/main.c: 138:   dekoderFce(&dekoderAB, S5A.vystup, S5B.vystup);
+[e ( _dekoderFce (3 , , &U _dekoderAB . _S5A 1 . _S5B 1 ]
+"141
+[; ;source/main.c: 141:    is1ms = 0;
+[e = _is1ms -> -> 0 `i `uc ]
+"142
+[; ;source/main.c: 142:    }
 }
 [e :U 580 ]
-"137
-[; ;source/main.c: 137:   LATDbits.LATD7 = S4Filtr.vystup;
-[e = . . _LATDbits 0 7 -> . _S4Filtr 1 `uc ]
-"138
-[; ;source/main.c: 138:   LATDbits.LATD4 = S3Filtr.vystup;
-[e = . . _LATDbits 0 4 -> . _S3Filtr 1 `uc ]
-"139
-[; ;source/main.c: 139:   LATDbits.LATD5 = S5A.vystup;
-[e = . . _LATDbits 0 5 -> . _S5A 1 `uc ]
-"140
-[; ;source/main.c: 140:   LATDbits.LATD4 = S5B.vystup;
-[e = . . _LATDbits 0 4 -> . _S5B 1 `uc ]
 "143
-[; ;source/main.c: 143:  if(dekoderAB.vystup == 255){
+[; ;source/main.c: 143:   LATDbits.LATD7 = S4Filtr.vystup;
+[e = . . _LATDbits 0 7 -> . _S4Filtr 1 `uc ]
+"144
+[; ;source/main.c: 144:   LATDbits.LATD4 = S3Filtr.vystup;
+[e = . . _LATDbits 0 4 -> . _S3Filtr 1 `uc ]
+"145
+[; ;source/main.c: 145:   LATDbits.LATD5 = S5A.vystup;
+[e = . . _LATDbits 0 5 -> . _S5A 1 `uc ]
+"146
+[; ;source/main.c: 146:   LATDbits.LATD4 = S5B.vystup;
+[e = . . _LATDbits 0 4 -> . _S5B 1 `uc ]
+"149
+[; ;source/main.c: 149:  if(dekoderAB.vystup == 255){
 [e $ ! == -> . _dekoderAB 1 `i -> 255 `i 581  ]
 {
-"144
-[; ;source/main.c: 144:      PORTFbits.RF1 = 1;
+"150
+[; ;source/main.c: 150:      PORTFbits.RF1 = 1;
 [e = . . _PORTFbits 0 1 -> -> 1 `i `uc ]
-"145
-[; ;source/main.c: 145:  }
+"151
+[; ;source/main.c: 151:  }
 }
 [e $U 582  ]
-"146
-[; ;source/main.c: 146:  else if(dekoderAB.vystup == 0){
+"152
+[; ;source/main.c: 152:  else if(dekoderAB.vystup == 0){
 [e :U 581 ]
 [e $ ! == -> . _dekoderAB 1 `i -> 0 `i 583  ]
 {
-"147
-[; ;source/main.c: 147:      PORTFbits.RF2 = 1;
+"153
+[; ;source/main.c: 153:      PORTFbits.RF2 = 1;
 [e = . . _PORTFbits 0 2 -> -> 1 `i `uc ]
-"148
-[; ;source/main.c: 148:  }
+"154
+[; ;source/main.c: 154:  }
 }
 [e $U 584  ]
-"149
-[; ;source/main.c: 149:  else{
+"155
+[; ;source/main.c: 155:  else{
 [e :U 583 ]
 {
-"150
-[; ;source/main.c: 150:      PORTFbits.RF1 = 0;
+"156
+[; ;source/main.c: 156:      PORTFbits.RF1 = 0;
 [e = . . _PORTFbits 0 1 -> -> 0 `i `uc ]
-"151
-[; ;source/main.c: 151:      PORTFbits.RF2 = 0;
+"157
+[; ;source/main.c: 157:      PORTFbits.RF2 = 0;
 [e = . . _PORTFbits 0 2 -> -> 0 `i `uc ]
-"152
-[; ;source/main.c: 152:  }
+"158
+[; ;source/main.c: 158:  }
 }
 [e :U 584 ]
 [e :U 582 ]
-"155
-[; ;source/main.c: 155:      if(S4Filtr.vystup == 1){
+"161
+[; ;source/main.c: 161:      if(S4Filtr.vystup == 1){
 [e $ ! == -> . _S4Filtr 1 `i -> 1 `i 585  ]
 {
-"156
-[; ;source/main.c: 156:          PORTH = vystup;
+"162
+[; ;source/main.c: 162:          PORTH = vystup;
 [e = _PORTH _vystup ]
-"157
-[; ;source/main.c: 157:      }
+"163
+[; ;source/main.c: 163:      }
 }
 [e $U 586  ]
-"159
-[; ;source/main.c: 159:    else{
+"165
+[; ;source/main.c: 165:    else{
 [e :U 585 ]
 {
-"160
-[; ;source/main.c: 160:          PORTH = dekoderAB.vystup;
+"166
+[; ;source/main.c: 166:          PORTH = dekoderAB.vystup;
 [e = _PORTH -> . _dekoderAB 1 `uc ]
-"161
-[; ;source/main.c: 161:      }
+"167
+[; ;source/main.c: 167:      }
 }
 [e :U 586 ]
-"164
-[; ;source/main.c: 164:   }
+"180
+[; ;source/main.c: 180:   }
 }
 [e :U 574 ]
 [e $U 575  ]
 [e :U 576 ]
-"165
-[; ;source/main.c: 165: }
+"181
+[; ;source/main.c: 181: }
 [e :UE 573 ]
 }
 [v $root$_high_isr `(v ~T0 @X0 0 e ]
-"171
-[; ;source/main.c: 171: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
+"187
+[; ;source/main.c: 187: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
 [v _high_isr `(v ~T129 @X0 1 ef ]
-"172
-[; ;source/main.c: 172: {
+"188
+[; ;source/main.c: 188: {
 {
 [e :U _high_isr ]
 [f ]
-"174
-[; ;source/main.c: 174: }
+"213
+[; ;source/main.c: 213: }
 [e :UE 587 ]
 }
 [v $root$_low_isr `(v ~T0 @X0 0 e ]
-"177
-[; ;source/main.c: 177: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
+"216
+[; ;source/main.c: 216: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
 [v _low_isr `(v ~T130 @X0 1 ef ]
-"178
-[; ;source/main.c: 178: {
+"217
+[; ;source/main.c: 217: {
 {
 [e :U _low_isr ]
 [f ]
-"179
-[; ;source/main.c: 179:     if(INTCONbits.TMR0IF == 1)
+"218
+[; ;source/main.c: 218:     if(INTCONbits.TMR0IF == 1)
 [e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 589  ]
-"180
-[; ;source/main.c: 180:     {
+"219
+[; ;source/main.c: 219:     {
 {
-"181
-[; ;source/main.c: 181:         is1ms = 1;
+"220
+[; ;source/main.c: 220:         is1ms = 1;
 [e = _is1ms -> -> 1 `i `uc ]
-"182
-[; ;source/main.c: 182:         TMR0H = 0xD8;
+"221
+[; ;source/main.c: 221:         TMR0H = 0xD8;
 [e = _TMR0H -> -> 216 `i `uc ]
-"183
-[; ;source/main.c: 183:         TMR0L = 0xEF;
+"222
+[; ;source/main.c: 222:         TMR0L = 0xEF;
 [e = _TMR0L -> -> 239 `i `uc ]
-"185
-[; ;source/main.c: 185:         INTCONbits.TMR0IF = 0;
+"224
+[; ;source/main.c: 224:         INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"186
-[; ;source/main.c: 186:         is10ms++;
+"225
+[; ;source/main.c: 225:         is10ms++;
 [e ++ _is10ms -> -> 1 `i `uc ]
-"188
-[; ;source/main.c: 188:     if(is10ms >= 10){
+"227
+[; ;source/main.c: 227:     if(is10ms >= 10){
 [e $ ! >= -> _is10ms `i -> 10 `i 590  ]
 {
-"189
-[; ;source/main.c: 189:         is10ms = 0;
+"228
+[; ;source/main.c: 228:         is10ms = 0;
 [e = _is10ms -> -> 0 `i `uc ]
-"190
-[; ;source/main.c: 190:         ADCON0bits.GO = 1;
+"229
+[; ;source/main.c: 229:         ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-"191
-[; ;source/main.c: 191:         }
+"230
+[; ;source/main.c: 230:         }
 }
 [e :U 590 ]
-"193
-[; ;source/main.c: 193:         }
+"232
+[; ;source/main.c: 232:         }
 }
 [e :U 589 ]
-"194
-[; ;source/main.c: 194:     if(PIR1bits.ADIF == 1){
+"233
+[; ;source/main.c: 233:     if(PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 591  ]
 {
-"195
-[; ;source/main.c: 195:         vysledek = ADRESH;
+"234
+[; ;source/main.c: 234:         vysledek = ADRESH;
 [e = _vysledek -> _ADRESH `i ]
-"196
-[; ;source/main.c: 196:         vysledek = (vysledek << 8);
+"235
+[; ;source/main.c: 235:         vysledek = (vysledek << 8);
 [e = _vysledek << _vysledek -> 8 `i ]
-"197
-[; ;source/main.c: 197:         vysledek = vysledek + ADRESL;
+"236
+[; ;source/main.c: 236:         vysledek = vysledek + ADRESL;
 [e = _vysledek + _vysledek -> _ADRESL `i ]
-"198
-[; ;source/main.c: 198:         ADRhotovo = 1;
+"237
+[; ;source/main.c: 237:         ADRhotovo = 1;
 [e = _ADRhotovo -> -> 1 `i `a ]
-"199
-[; ;source/main.c: 199:         PIR1bits.ADIF = 0;
+"238
+[; ;source/main.c: 238:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"200
-[; ;source/main.c: 200:     }
+"239
+[; ;source/main.c: 239:     }
 }
 [e :U 591 ]
-"201
-[; ;source/main.c: 201: }
+"240
+[; ;source/main.c: 240: }
 [e :UE 588 ]
 }

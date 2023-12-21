@@ -63,8 +63,14 @@ char is1ms;
 char is10ms;
 int vysledek;
 bool ADRhotovo;
+bool novyPulz;
 unsigned char vystup;
 long adKalkulace;
+int komparace;
+int pulz;
+int mezera;
+int pulzBack;
+
 //----------------------------------------------------------------------------
 // hlavni program
 void main(void)
@@ -109,12 +115,12 @@ void main(void)
         if(adKalkulace >= 1000){
             adKalkulace = 1000;
         }
-        if(adKalkulace <= 50){
+        if(adKalkulace =< 50){
             adKalkulace = 50;
         }
         adKalkulace = adKalkulace - 50; //oriznu ze spoda o 50...kvuli zakmitum, tedy bezpecnosti
         adKalkulace = adKalkulace * 255;
-        adKalkulace = adKalkulace / (1000-50);
+        adKalkulace = adKalkulace / (950);
         
         vystup = (unsigned char)adKalkulace;
         ADRhotovo = 0;
@@ -159,8 +165,18 @@ void main(void)
    else{
          PORTH = dekoderAB.vystup;
      }
-     
-     
+//PWMko     
+  /*  if(S3Filtr.vystup == 0){
+        pulzBack = LATH*10;
+        
+        if(pulzBack > 2500){
+            pulzBack = 2500;
+    }        
+        }else{
+        pulzBack = 0;
+        }
+  novyPulz = 1;
+   */
   }
 }
 
@@ -170,7 +186,30 @@ void main(void)
 // Vyssi priorita preruseni
 void __interrupt(high_priority) high_isr(void)
 {
-
+  /*  if(PIR1bits.CCP1IF == 1){
+   
+      if(PORTCbits.RC2 == 1){
+          komparace = 50000;
+          CCP1CON = 0b00001001; //sestupna hrana
+          komparace = komparace + pulz; //sirka pulzu prictena
+          
+          }else{
+              CCP1CON = 0b00001000; //nabezna hrana
+              mezera = mezera + komparace;
+    
+              if(novyPulz == 1){
+                pulz = pulzBack + 2500;
+                mezera = 50000;
+                novyPulz = 0;
+   
+              }else{
+                  mezera = 50000 - pulz;
+              }
+          
+          
+      }  
+    }
+*/
 }
 
 // Nizsi priorita preruseni
