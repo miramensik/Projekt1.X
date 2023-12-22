@@ -50,23 +50,20 @@ void preambleInitialization(void)
     
    //MP2 - pwmko
     
-  /*   TRISCbits.RC2 = 0;
+     
+   TRISCbits.RC2 = 0;
     
     
     CCP1CON = 0b00001000;
-   
+    //provovnani hodnot s 8bit registrem
+    CCPR1H = (50000 >> 8); 
+    CCPR1L = (50000 & 0x00FF);
     PIE1bits.CCP1IE = 1;
     IPR1bits.CCP1IP = 1;
    
-   //provovnani hodnot s 8bit registrem
-    CCPR1H = (50000 >> 8); 
-    CCPR1L = (50000 & 0x00FF);
-   
-   
-    
     // inicializace timeru pro pwmko
     T1CON = 0b10100001; // 16 bit, 1:4 prescale
-  */
+  
     
     
     //-------------------------------

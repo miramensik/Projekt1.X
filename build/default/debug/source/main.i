@@ -8745,15 +8745,16 @@ typeFilter dekoderAB;
 
 char is1ms;
 char is10ms;
-int vysledek;
+unsigned int vysledek;
 _Bool ADRhotovo;
 _Bool novyPulz;
+
 unsigned char vystup;
 long adKalkulace;
-int komparace;
-int pulz;
-int mezera;
-int pulzBack;
+unsigned int komparace;
+unsigned int pulz;
+unsigned int mezera;
+unsigned int pulzBack;
 
 
 
@@ -8825,9 +8826,9 @@ void main(void)
    is1ms = 0;
    }
   LATDbits.LATD7 = S4Filtr.vystup;
-  LATDbits.LATD4 = S3Filtr.vystup;
-  LATDbits.LATD5 = S5A.vystup;
-  LATDbits.LATD4 = S5B.vystup;
+   PORTDbits.RD4 = S3Filtr.vystup;
+  PORTDbits.RD6 = S5A.vystup;
+  PORTDbits.RD5 = S5B.vystup;
 
 
  if(dekoderAB.vystup == 255){
@@ -8849,7 +8850,18 @@ void main(void)
    else{
          PORTH = dekoderAB.vystup;
      }
-# 180 "source/main.c"
+
+   if(S3Filtr.vystup == 0){
+        pulzBack = (unsigned int)LATH*10;
+
+        if(pulzBack > 2500){
+            pulzBack = 2500;
+    }
+        }else{
+        pulzBack = 0;
+        }
+
+   novyPulz = 1;
   }
 }
 
@@ -8859,7 +8871,40 @@ void main(void)
 
 void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
 {
-# 213 "source/main.c"
+    static _Bool pocHodnota = 1;
+
+    if(PIR1bits.CCP1IF == 1){
+   if(pocHodnota == 1){
+       komparace = CCPR1;
+       pocHodnota = 0;
+   }
+      if(PORTCbits.RC2 == 1){
+
+
+
+          CCP1CON = 0b00001001;
+          komparace = komparace + pulz;
+
+          }else{
+              CCP1CON = 0b00001000;
+              mezera = mezera + komparace;
+
+              if(novyPulz == 1){
+                pulz = pulzBack + 2500;
+
+
+                mezera = 50000 - pulz;
+                 novyPulz = 0;
+              }
+
+
+      }
+
+      CCPR1H = (komparace >> 8);
+      CCPR1L = (komparace & 0x00FF);
+      PIR1bits.CCP1IF = 0;
+    }
+
 }
 
 

@@ -8741,7 +8741,23 @@ void preambleInitialization(void)
 
     PIE1bits.ADIE = 1;
     IPR1bits.ADIP = 0;
-# 80 "source/preambleInitialization.c"
+
+
+
+
+   TRISCbits.RC2 = 0;
+
+
+    CCP1CON = 0b00001000;
+
+    CCPR1H = (50000 >> 8);
+    CCPR1L = (50000 & 0x00FF);
+    PIE1bits.CCP1IE = 1;
+    IPR1bits.CCP1IP = 1;
+
+
+    T1CON = 0b10100001;
+# 77 "source/preambleInitialization.c"
     OSCCONbits.SCS = 0;
 
     OSCTUNEbits.PLLEN = 1;
