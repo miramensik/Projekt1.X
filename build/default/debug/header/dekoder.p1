@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"25 header/filter.h
-[; ;header/filter.h: 25: typedef struct{
+"27 header/filter.h
+[; ;header/filter.h: 27: typedef struct{
 [s S572 `uc 1 `uc 1 ]
 [n S572 . stav vystup ]
-"18 header/dekoder.c
-[; ;header/dekoder.c: 18:                 tlacitko->stav = s1;
+"22 header/dekoder.c
+[; ;header/dekoder.c: 22:                 tlacitko->stav = s1;
 [c E5045 0 1 2 3 4 .. ]
 [n E5045 . s0 s1 s2 s3 s4  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
@@ -700,8 +700,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14858
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14858: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"14 header/dekoder.c
-[; ;header/dekoder.c: 14: void dekoderFce(typeFilter*tlacitko,char A, char B){
+"15 header/dekoder.c
+[; ;header/dekoder.c: 15: void dekoderFce(typeFilter*tlacitko,char A, char B){
 [v _dekoderFce `(v ~T0 @X0 1 ef3`*S572`uc`uc ]
 {
 [e :U _dekoderFce ]
@@ -709,228 +709,228 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _A `uc ~T0 @X0 1 r2 ]
 [v _B `uc ~T0 @X0 1 r3 ]
 [f ]
-"15
-[; ;header/dekoder.c: 15:     switch(tlacitko->stav){
+"19
+[; ;header/dekoder.c: 19:     switch(tlacitko->stav){
 [e $U 575  ]
 {
-"16
-[; ;header/dekoder.c: 16:         case s0:{
+"20
+[; ;header/dekoder.c: 20:         case s0:{
 [e :U 576 ]
 {
-"17
-[; ;header/dekoder.c: 17:             if((A == 1) && (B == 0)){
+"21
+[; ;header/dekoder.c: 21:             if((A == 1) && (B == 0)){
 [e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 0 `i 577  ]
 {
-"18
-[; ;header/dekoder.c: 18:                 tlacitko->stav = s1;
+"22
+[; ;header/dekoder.c: 22:                 tlacitko->stav = s1;
 [e = . *U _tlacitko 0 -> . `E5045 1 `uc ]
-"19
-[; ;header/dekoder.c: 19:                 if(tlacitko->vystup < 255){
+"23
+[; ;header/dekoder.c: 23:                 if(tlacitko->vystup < 255){
 [e $ ! < -> . *U _tlacitko 1 `i -> 255 `i 578  ]
 {
-"20
-[; ;header/dekoder.c: 20:                 tlacitko->vystup++;
+"24
+[; ;header/dekoder.c: 24:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
-"21
-[; ;header/dekoder.c: 21:                 }
+"25
+[; ;header/dekoder.c: 25:                 }
 }
 [e :U 578 ]
-"22
-[; ;header/dekoder.c: 22:             }else if((A == 0) && (B == 1)){
+"26
+[; ;header/dekoder.c: 26:             }else if((A == 0) && (B == 1)){
 }
 [e $U 579  ]
 [e :U 577 ]
 [e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 1 `i 580  ]
 {
-"23
-[; ;header/dekoder.c: 23:                 tlacitko->stav = s3;
+"27
+[; ;header/dekoder.c: 27:                 tlacitko->stav = s3;
 [e = . *U _tlacitko 0 -> . `E5045 3 `uc ]
-"24
-[; ;header/dekoder.c: 24:                 if(tlacitko->vystup > 0){
+"28
+[; ;header/dekoder.c: 28:                 if(tlacitko->vystup > 0){
 [e $ ! > -> . *U _tlacitko 1 `i -> 0 `i 581  ]
 {
-"25
-[; ;header/dekoder.c: 25:                 tlacitko->vystup--;
+"29
+[; ;header/dekoder.c: 29:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
-"26
-[; ;header/dekoder.c: 26:                 }
+"30
+[; ;header/dekoder.c: 30:                 }
 }
 [e :U 581 ]
-"27
-[; ;header/dekoder.c: 27:             }
+"31
+[; ;header/dekoder.c: 31:             }
 }
 [e :U 580 ]
 [e :U 579 ]
-"28
-[; ;header/dekoder.c: 28:             break;
+"32
+[; ;header/dekoder.c: 32:             break;
 [e $U 574  ]
-"29
-[; ;header/dekoder.c: 29:         }
+"33
+[; ;header/dekoder.c: 33:         }
 }
-"30
-[; ;header/dekoder.c: 30:         case s1:{
+"34
+[; ;header/dekoder.c: 34:         case s1:{
 [e :U 582 ]
 {
-"31
-[; ;header/dekoder.c: 31:             if((A == 1) && (B == 1)){
+"35
+[; ;header/dekoder.c: 35:             if((A == 1) && (B == 1)){
 [e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 1 `i 583  ]
 {
-"32
-[; ;header/dekoder.c: 32:                 tlacitko->stav = s2;
+"36
+[; ;header/dekoder.c: 36:                 tlacitko->stav = s2;
 [e = . *U _tlacitko 0 -> . `E5045 2 `uc ]
-"33
-[; ;header/dekoder.c: 33:                 if(tlacitko->vystup < 255){
+"37
+[; ;header/dekoder.c: 37:                 if(tlacitko->vystup < 255){
 [e $ ! < -> . *U _tlacitko 1 `i -> 255 `i 584  ]
 {
-"34
-[; ;header/dekoder.c: 34:                tlacitko->vystup++;
+"38
+[; ;header/dekoder.c: 38:                tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
-"35
-[; ;header/dekoder.c: 35:                 }
+"39
+[; ;header/dekoder.c: 39:                 }
 }
 [e :U 584 ]
-"36
-[; ;header/dekoder.c: 36:             }else if((A == 0) && (B == 0)){
+"40
+[; ;header/dekoder.c: 40:             }else if((A == 0) && (B == 0)){
 }
 [e $U 585  ]
 [e :U 583 ]
 [e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 0 `i 586  ]
 {
-"37
-[; ;header/dekoder.c: 37:                 tlacitko->stav = s0;
+"41
+[; ;header/dekoder.c: 41:                 tlacitko->stav = s0;
 [e = . *U _tlacitko 0 -> . `E5045 0 `uc ]
-"38
-[; ;header/dekoder.c: 38:                 if(tlacitko->vystup > 0){
+"42
+[; ;header/dekoder.c: 42:                 if(tlacitko->vystup > 0){
 [e $ ! > -> . *U _tlacitko 1 `i -> 0 `i 587  ]
 {
-"39
-[; ;header/dekoder.c: 39:                 tlacitko->vystup--;
+"43
+[; ;header/dekoder.c: 43:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
-"40
-[; ;header/dekoder.c: 40:                 }
+"44
+[; ;header/dekoder.c: 44:                 }
 }
 [e :U 587 ]
-"41
-[; ;header/dekoder.c: 41:             }
+"45
+[; ;header/dekoder.c: 45:             }
 }
 [e :U 586 ]
 [e :U 585 ]
-"42
-[; ;header/dekoder.c: 42:             break;
+"46
+[; ;header/dekoder.c: 46:             break;
 [e $U 574  ]
-"43
-[; ;header/dekoder.c: 43:         }
+"47
+[; ;header/dekoder.c: 47:         }
 }
-"44
-[; ;header/dekoder.c: 44:          case s2:{
+"48
+[; ;header/dekoder.c: 48:          case s2:{
 [e :U 588 ]
 {
-"45
-[; ;header/dekoder.c: 45:             if((A == 0) && (B == 1)){
+"49
+[; ;header/dekoder.c: 49:             if((A == 0) && (B == 1)){
 [e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 1 `i 589  ]
 {
-"46
-[; ;header/dekoder.c: 46:                 tlacitko->stav = s3;
+"50
+[; ;header/dekoder.c: 50:                 tlacitko->stav = s3;
 [e = . *U _tlacitko 0 -> . `E5045 3 `uc ]
-"47
-[; ;header/dekoder.c: 47:                 if(tlacitko->vystup < 255){
+"51
+[; ;header/dekoder.c: 51:                 if(tlacitko->vystup < 255){
 [e $ ! < -> . *U _tlacitko 1 `i -> 255 `i 590  ]
 {
-"48
-[; ;header/dekoder.c: 48:                 tlacitko->vystup++;
+"52
+[; ;header/dekoder.c: 52:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
-"49
-[; ;header/dekoder.c: 49:                 }
+"53
+[; ;header/dekoder.c: 53:                 }
 }
 [e :U 590 ]
-"50
-[; ;header/dekoder.c: 50:             }else if((A == 1) && (B == 0)){
+"54
+[; ;header/dekoder.c: 54:             }else if((A == 1) && (B == 0)){
 }
 [e $U 591  ]
 [e :U 589 ]
 [e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 0 `i 592  ]
 {
-"51
-[; ;header/dekoder.c: 51:                 tlacitko->stav = s1;
+"55
+[; ;header/dekoder.c: 55:                 tlacitko->stav = s1;
 [e = . *U _tlacitko 0 -> . `E5045 1 `uc ]
-"52
-[; ;header/dekoder.c: 52:                 if(tlacitko->vystup > 0){
+"56
+[; ;header/dekoder.c: 56:                 if(tlacitko->vystup > 0){
 [e $ ! > -> . *U _tlacitko 1 `i -> 0 `i 593  ]
 {
-"53
-[; ;header/dekoder.c: 53:                 tlacitko->vystup--;
+"57
+[; ;header/dekoder.c: 57:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
-"54
-[; ;header/dekoder.c: 54:                 }
+"58
+[; ;header/dekoder.c: 58:                 }
 }
 [e :U 593 ]
-"55
-[; ;header/dekoder.c: 55:             }
+"59
+[; ;header/dekoder.c: 59:             }
 }
 [e :U 592 ]
 [e :U 591 ]
-"56
-[; ;header/dekoder.c: 56:             break;
+"60
+[; ;header/dekoder.c: 60:             break;
 [e $U 574  ]
-"57
-[; ;header/dekoder.c: 57:         }
+"61
+[; ;header/dekoder.c: 61:         }
 }
-"58
-[; ;header/dekoder.c: 58:          case s3:{
+"62
+[; ;header/dekoder.c: 62:          case s3:{
 [e :U 594 ]
 {
-"59
-[; ;header/dekoder.c: 59:             if((A == 0) && (B == 0)){
+"63
+[; ;header/dekoder.c: 63:             if((A == 0) && (B == 0)){
 [e $ ! && == -> _A `i -> 0 `i == -> _B `i -> 0 `i 595  ]
 {
-"60
-[; ;header/dekoder.c: 60:                 tlacitko->stav = s0;
+"64
+[; ;header/dekoder.c: 64:                 tlacitko->stav = s0;
 [e = . *U _tlacitko 0 -> . `E5045 0 `uc ]
-"61
-[; ;header/dekoder.c: 61:                 if(tlacitko->vystup < 255){
+"65
+[; ;header/dekoder.c: 65:                 if(tlacitko->vystup < 255){
 [e $ ! < -> . *U _tlacitko 1 `i -> 255 `i 596  ]
 {
-"62
-[; ;header/dekoder.c: 62:                 tlacitko->vystup++;
+"66
+[; ;header/dekoder.c: 66:                 tlacitko->vystup++;
 [e ++ . *U _tlacitko 1 -> -> 1 `i `uc ]
-"63
-[; ;header/dekoder.c: 63:                 }
+"67
+[; ;header/dekoder.c: 67:                 }
 }
 [e :U 596 ]
-"64
-[; ;header/dekoder.c: 64:             }else if ((A == 1) && (B == 1)){
+"68
+[; ;header/dekoder.c: 68:             }else if ((A == 1) && (B == 1)){
 }
 [e $U 597  ]
 [e :U 595 ]
 [e $ ! && == -> _A `i -> 1 `i == -> _B `i -> 1 `i 598  ]
 {
-"65
-[; ;header/dekoder.c: 65:                 tlacitko->stav = s2;
+"69
+[; ;header/dekoder.c: 69:                 tlacitko->stav = s2;
 [e = . *U _tlacitko 0 -> . `E5045 2 `uc ]
-"66
-[; ;header/dekoder.c: 66:             if(tlacitko->vystup > 0){
+"70
+[; ;header/dekoder.c: 70:             if(tlacitko->vystup > 0){
 [e $ ! > -> . *U _tlacitko 1 `i -> 0 `i 599  ]
 {
-"67
-[; ;header/dekoder.c: 67:                 tlacitko->vystup--;
+"71
+[; ;header/dekoder.c: 71:                 tlacitko->vystup--;
 [e -- . *U _tlacitko 1 -> -> 1 `i `uc ]
-"68
-[; ;header/dekoder.c: 68:             }
+"72
+[; ;header/dekoder.c: 72:             }
 }
 [e :U 599 ]
-"69
-[; ;header/dekoder.c: 69:             }
+"73
+[; ;header/dekoder.c: 73:             }
 }
 [e :U 598 ]
 [e :U 597 ]
-"70
-[; ;header/dekoder.c: 70:             break;
+"74
+[; ;header/dekoder.c: 74:             break;
 [e $U 574  ]
-"71
-[; ;header/dekoder.c: 71:         }
+"75
+[; ;header/dekoder.c: 75:         }
 }
-"73
-[; ;header/dekoder.c: 73:     }
+"77
+[; ;header/dekoder.c: 77:     }
 }
 [e $U 574  ]
 [e :U 575 ]
@@ -940,7 +940,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E5045 3 594
  574 ]
 [e :U 574 ]
-"75
-[; ;header/dekoder.c: 75: }
+"79
+[; ;header/dekoder.c: 79: }
 [e :UE 573 ]
 }

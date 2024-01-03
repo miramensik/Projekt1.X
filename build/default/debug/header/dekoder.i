@@ -8664,7 +8664,7 @@ unsigned char __t3rd16on(void);
 
 
 # 1 "header/filter.h" 1
-# 23 "header/filter.h"
+# 25 "header/filter.h"
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
@@ -8673,6 +8673,7 @@ typedef struct{
     char vystup;
 
 }typeFilter;
+
 
 void filterFce(typeFilter*tlacitko, char vstup);
 # 23 "header/./../header/dekoder.h" 2
@@ -8684,7 +8685,11 @@ void dekoderFce(typeFilter*tlacitko,char A, char B);
 # 12 "header/dekoder.c" 2
 
 
+
 void dekoderFce(typeFilter*tlacitko,char A, char B){
+
+
+
     switch(tlacitko->stav){
         case s0:{
             if((A == 1) && (B == 0)){

@@ -8662,7 +8662,7 @@ unsigned char __t3rd16on(void);
 
 
 # 1 "header/filter.h" 1
-# 23 "header/filter.h"
+# 25 "header/filter.h"
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
@@ -8672,18 +8672,20 @@ typedef struct{
 
 }typeFilter;
 
+
 void filterFce(typeFilter*tlacitko, char vstup);
 # 21 "header/./../header/pamet.h" 2
 
 
 void pametFce(typeFilter*tlacitko,char input);
 # 12 "header/pamet.c" 2
-
-
+# 22 "header/pamet.c"
 void pametFce(typeFilter*tlacitko,char input){
     char dalsiStav = s0;
 
+
     switch(tlacitko->stav){
+
         case s0:{
             if(input == 0){
                 dalsiStav = s1;
@@ -8692,6 +8694,7 @@ void pametFce(typeFilter*tlacitko,char input){
             }
             break;
         }
+
         case s1:{
             if(input == 0){
                 dalsiStav = s1;
@@ -8701,6 +8704,7 @@ void pametFce(typeFilter*tlacitko,char input){
             }
             break;
         }
+
          case s2:{
             if(input == 0){
                 dalsiStav = s3;
@@ -8710,6 +8714,7 @@ void pametFce(typeFilter*tlacitko,char input){
             break;
         }
          case s3:{
+
             if(input == 0){
                 dalsiStav = s3;
                 tlacitko->vystup = 1;
@@ -8720,5 +8725,6 @@ void pametFce(typeFilter*tlacitko,char input){
         }
 
     }
+
       tlacitko->stav = dalsiStav;
 }

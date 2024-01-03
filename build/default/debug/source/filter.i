@@ -8661,6 +8661,8 @@ unsigned char __t3rd16on(void);
 
 
 
+
+
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
@@ -8670,17 +8672,21 @@ typedef struct{
 
 }typeFilter;
 
+
 void filterFce(typeFilter*tlacitko, char vstup);
 # 13 "source/filter.c" 2
 
 
 void filterFce(typeFilter*tlacitko, char vstup)
 {
+
+
 char dalsiStav = s0;
 
 
   switch(tlacitko->stav){
       case s0:{
+
           if(vstup == 1){
               dalsiStav = s1;
           }else{
@@ -8689,6 +8695,7 @@ char dalsiStav = s0;
           break;
   }
       case s1:{
+
           if(vstup == 1){
               dalsiStav = s2;
           }else{
@@ -8697,6 +8704,7 @@ char dalsiStav = s0;
           break;
   }
       case s2:{
+
           if(vstup == 1){
               dalsiStav = s2;
               tlacitko->vystup = 1;
@@ -8706,6 +8714,7 @@ char dalsiStav = s0;
           break;
   }
       case s3:{
+
           if(vstup == 0){
               dalsiStav = s4;
           }else{
@@ -8715,6 +8724,7 @@ char dalsiStav = s0;
   }
 
       case s4:{
+
           if(vstup == 0){
               dalsiStav = s4;
               tlacitko->vystup = 0;
@@ -8725,5 +8735,6 @@ char dalsiStav = s0;
   }
 
 }
+
   tlacitko->stav = dalsiStav;
 }

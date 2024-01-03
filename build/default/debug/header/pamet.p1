@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"25 header/filter.h
-[; ;header/filter.h: 25: typedef struct{
+"27 header/filter.h
+[; ;header/filter.h: 27: typedef struct{
 [s S572 `uc 1 `uc 1 ]
 [n S572 . stav vystup ]
-"15 header/pamet.c
-[; ;header/pamet.c: 15:     char dalsiStav = s0;
+"23 header/pamet.c
+[; ;header/pamet.c: 23:     char dalsiStav = s0;
 [c E5045 0 1 2 3 4 .. ]
 [n E5045 . s0 s1 s2 s3 s4  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
@@ -700,150 +700,150 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14858
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 14858: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"14 header/pamet.c
-[; ;header/pamet.c: 14: void pametFce(typeFilter*tlacitko,char input){
+"22 header/pamet.c
+[; ;header/pamet.c: 22: void pametFce(typeFilter*tlacitko,char input){
 [v _pametFce `(v ~T0 @X0 1 ef2`*S572`uc ]
 {
 [e :U _pametFce ]
 [v _tlacitko `*S572 ~T0 @X0 1 r1 ]
 [v _input `uc ~T0 @X0 1 r2 ]
 [f ]
-"15
-[; ;header/pamet.c: 15:     char dalsiStav = s0;
+"23
+[; ;header/pamet.c: 23:     char dalsiStav = s0;
 [v _dalsiStav `uc ~T0 @X0 1 a ]
 [e = _dalsiStav -> . `E5045 0 `uc ]
-"17
-[; ;header/pamet.c: 17:     switch(tlacitko->stav){
+"26
+[; ;header/pamet.c: 26:     switch(tlacitko->stav){
 [e $U 575  ]
 {
-"18
-[; ;header/pamet.c: 18:         case s0:{
+"28
+[; ;header/pamet.c: 28:         case s0:{
 [e :U 576 ]
 {
-"19
-[; ;header/pamet.c: 19:             if(input == 0){
+"29
+[; ;header/pamet.c: 29:             if(input == 0){
 [e $ ! == -> _input `i -> 0 `i 577  ]
 {
-"20
-[; ;header/pamet.c: 20:                 dalsiStav = s1;
+"30
+[; ;header/pamet.c: 30:                 dalsiStav = s1;
 [e = _dalsiStav -> . `E5045 1 `uc ]
-"21
-[; ;header/pamet.c: 21:             }else{
+"31
+[; ;header/pamet.c: 31:             }else{
 }
 [e $U 578  ]
 [e :U 577 ]
 {
-"22
-[; ;header/pamet.c: 22:                 dalsiStav = s0;
+"32
+[; ;header/pamet.c: 32:                 dalsiStav = s0;
 [e = _dalsiStav -> . `E5045 0 `uc ]
-"23
-[; ;header/pamet.c: 23:             }
+"33
+[; ;header/pamet.c: 33:             }
 }
 [e :U 578 ]
-"24
-[; ;header/pamet.c: 24:             break;
+"34
+[; ;header/pamet.c: 34:             break;
 [e $U 574  ]
-"25
-[; ;header/pamet.c: 25:         }
+"35
+[; ;header/pamet.c: 35:         }
 }
-"26
-[; ;header/pamet.c: 26:         case s1:{
+"37
+[; ;header/pamet.c: 37:         case s1:{
 [e :U 579 ]
 {
-"27
-[; ;header/pamet.c: 27:             if(input == 0){
+"38
+[; ;header/pamet.c: 38:             if(input == 0){
 [e $ ! == -> _input `i -> 0 `i 580  ]
 {
-"28
-[; ;header/pamet.c: 28:                 dalsiStav = s1;
+"39
+[; ;header/pamet.c: 39:                 dalsiStav = s1;
 [e = _dalsiStav -> . `E5045 1 `uc ]
-"29
-[; ;header/pamet.c: 29:                tlacitko->vystup = 0;
+"40
+[; ;header/pamet.c: 40:                tlacitko->vystup = 0;
 [e = . *U _tlacitko 1 -> -> 0 `i `uc ]
-"30
-[; ;header/pamet.c: 30:             }else{
+"41
+[; ;header/pamet.c: 41:             }else{
 }
 [e $U 581  ]
 [e :U 580 ]
 {
-"31
-[; ;header/pamet.c: 31:                 dalsiStav = s2;
+"42
+[; ;header/pamet.c: 42:                 dalsiStav = s2;
 [e = _dalsiStav -> . `E5045 2 `uc ]
-"32
-[; ;header/pamet.c: 32:             }
+"43
+[; ;header/pamet.c: 43:             }
 }
 [e :U 581 ]
-"33
-[; ;header/pamet.c: 33:             break;
+"44
+[; ;header/pamet.c: 44:             break;
 [e $U 574  ]
-"34
-[; ;header/pamet.c: 34:         }
+"45
+[; ;header/pamet.c: 45:         }
 }
-"35
-[; ;header/pamet.c: 35:          case s2:{
+"47
+[; ;header/pamet.c: 47:          case s2:{
 [e :U 582 ]
 {
-"36
-[; ;header/pamet.c: 36:             if(input == 0){
+"48
+[; ;header/pamet.c: 48:             if(input == 0){
 [e $ ! == -> _input `i -> 0 `i 583  ]
 {
-"37
-[; ;header/pamet.c: 37:                 dalsiStav = s3;
+"49
+[; ;header/pamet.c: 49:                 dalsiStav = s3;
 [e = _dalsiStav -> . `E5045 3 `uc ]
-"38
-[; ;header/pamet.c: 38:             }else{
+"50
+[; ;header/pamet.c: 50:             }else{
 }
 [e $U 584  ]
 [e :U 583 ]
 {
-"39
-[; ;header/pamet.c: 39:                 dalsiStav = s2;
+"51
+[; ;header/pamet.c: 51:                 dalsiStav = s2;
 [e = _dalsiStav -> . `E5045 2 `uc ]
-"40
-[; ;header/pamet.c: 40:             }
+"52
+[; ;header/pamet.c: 52:             }
 }
 [e :U 584 ]
-"41
-[; ;header/pamet.c: 41:             break;
+"53
+[; ;header/pamet.c: 53:             break;
 [e $U 574  ]
-"42
-[; ;header/pamet.c: 42:         }
+"54
+[; ;header/pamet.c: 54:         }
 }
-"43
-[; ;header/pamet.c: 43:          case s3:{
+"55
+[; ;header/pamet.c: 55:          case s3:{
 [e :U 585 ]
 {
-"44
-[; ;header/pamet.c: 44:             if(input == 0){
+"57
+[; ;header/pamet.c: 57:             if(input == 0){
 [e $ ! == -> _input `i -> 0 `i 586  ]
 {
-"45
-[; ;header/pamet.c: 45:                 dalsiStav = s3;
+"58
+[; ;header/pamet.c: 58:                 dalsiStav = s3;
 [e = _dalsiStav -> . `E5045 3 `uc ]
-"46
-[; ;header/pamet.c: 46:                 tlacitko->vystup = 1;
+"59
+[; ;header/pamet.c: 59:                 tlacitko->vystup = 1;
 [e = . *U _tlacitko 1 -> -> 1 `i `uc ]
-"47
-[; ;header/pamet.c: 47:             }else{
+"60
+[; ;header/pamet.c: 60:             }else{
 }
 [e $U 587  ]
 [e :U 586 ]
 {
-"48
-[; ;header/pamet.c: 48:                 dalsiStav = s0;
+"61
+[; ;header/pamet.c: 61:                 dalsiStav = s0;
 [e = _dalsiStav -> . `E5045 0 `uc ]
-"49
-[; ;header/pamet.c: 49:             }
+"62
+[; ;header/pamet.c: 62:             }
 }
 [e :U 587 ]
-"50
-[; ;header/pamet.c: 50:             break;
+"63
+[; ;header/pamet.c: 63:             break;
 [e $U 574  ]
-"51
-[; ;header/pamet.c: 51:         }
+"64
+[; ;header/pamet.c: 64:         }
 }
-"53
-[; ;header/pamet.c: 53:     }
+"66
+[; ;header/pamet.c: 66:     }
 }
 [e $U 574  ]
 [e :U 575 ]
@@ -853,10 +853,10 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E5045 3 585
  574 ]
 [e :U 574 ]
-"54
-[; ;header/pamet.c: 54:       tlacitko->stav = dalsiStav;
+"68
+[; ;header/pamet.c: 68:       tlacitko->stav = dalsiStav;
 [e = . *U _tlacitko 0 _dalsiStav ]
-"55
-[; ;header/pamet.c: 55: }
+"69
+[; ;header/pamet.c: 69: }
 [e :UE 573 ]
 }

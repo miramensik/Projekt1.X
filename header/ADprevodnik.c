@@ -13,6 +13,7 @@
 //kdyz jdu z registru do nasobicky tak musim zmenit typ na long aby se mi tam to cislo po vynasobeni veslo (zmenim to z 10bit na 32bit)
 #include "./../header/ADprevodnik.h"
 
+//AD prevodnik jsem nakonec zpracoval do mainu, kvuli casove tisni...takze toto zde je jenom jako takova vzpominka, kdzbych se k tomu chtel vratit :))
 void ADprevodnikFce(int *vysledek,bool *ADRhotovo,unsigned char *vystup){
     long adKalkulace;
     if(*ADRhotovo == TRUE){

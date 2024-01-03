@@ -20,10 +20,10 @@
 #error "Invalid compiler selection"
 #endif
 
-#include "filter.h"
+#include "filter.h" // Vložení hlavičkového souboru filter.h
 
 
-
+// Deklarace funkce dekoderFce s přijímáním tří parametrů: Ukazatele na strukturu typu typeFilter a dvě char proměnné
 void dekoderFce(typeFilter*tlacitko,char A, char B);
 
 

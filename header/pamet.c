@@ -10,12 +10,22 @@
 //----------------------------------------------------------------------------
 /* Hlavickove soubory*/
 #include "./../header/pamet.h"
+/* 
+   Funkce pametFce implementuje paměťovou funkci pro stavový automat.
+   Pomocí switch statementu vyhodnocuje vstupní signál a aktuální stav tlačítka,
+   poté na základě této kombinace přepíná do dalších stavů a nastavuje výstupy.
+   Argumenty:
+     - tlacitko: Ukazatel na strukturu typu typeFilter, obsahuje stav tlačítka a výstup
+     - input: Vstupní signál pro stavový automat
+*/
 
 void pametFce(typeFilter*tlacitko,char input){
-    char dalsiStav = s0;
+    char dalsiStav = s0; // Lokální proměnná pro uchování dalšího stavu tlačítka
     
+    // Switch statement pro vyhodnocení aktuálního stavu tlačítka
     switch(tlacitko->stav){
-        case s0:{
+        // Pokud je vstup 0, přepni do stavu s1, jinak zůstaň v stavu s0
+        case s0:{ 
             if(input == 0){
                 dalsiStav = s1;                
             }else{
@@ -23,6 +33,7 @@ void pametFce(typeFilter*tlacitko,char input){
             }
             break;
         }
+        // Pokud je vstup 0, zůstaň v stavu s1 a nastav výstup na 0, jinak přepni do stavu s2
         case s1:{
             if(input == 0){
                 dalsiStav = s1;
@@ -32,6 +43,7 @@ void pametFce(typeFilter*tlacitko,char input){
             }
             break;
         }
+        // Pokud je vstup 0, přepni do stavu s3, jinak zůstaň v stavu s2
          case s2:{
             if(input == 0){
                 dalsiStav = s3;
@@ -41,6 +53,7 @@ void pametFce(typeFilter*tlacitko,char input){
             break;
         }
          case s3:{
+             // Pokud je vstup 0, zůstaň v stavu s3 a nastav výstup na 1, jinak přepni do stavu s0
             if(input == 0){
                 dalsiStav = s3;
                 tlacitko->vystup = 1;
@@ -51,5 +64,6 @@ void pametFce(typeFilter*tlacitko,char input){
         }
             
     }
+    // Nastavení nového stavu pro tlačítko
       tlacitko->stav = dalsiStav;      
 }

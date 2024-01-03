@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Fri Dec 22 14:44:52 2023
+                                                                                               Wed Jan 03 02:03:10 2024
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	18F87J11
@@ -603,7 +603,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    584   0014A8  6E13               	movwf	_is1ms^0,c
    585   0014AA                     l1610:
    586                           
-   587                           ;source/main.c: 144:   LATDbits.LATD7 = S4Filtr.vystup;
+   587                           ;source/main.c: 146:   LATDbits.LATD7 = S4Filtr.vystup;
    588   0014AA  B019               	btfsc	(_S4Filtr+1)^0,0,c
    589   0014AC  D002               	bra	u1105
    590   0014AE  9E8C               	bcf	140,7,c	;volatile
@@ -612,7 +612,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    593   0014B2  8E8C               	bsf	140,7,c	;volatile
    594   0014B4                     u1106:
    595   0014B4                     
-   596                           ;source/main.c: 145:    PORTDbits.RD4 = S3Filtr.vystup;
+   596                           ;source/main.c: 147:    PORTDbits.RD4 = S3Filtr.vystup;
    597   0014B4  B017               	btfsc	(_S3Filtr+1)^0,0,c
    598   0014B6  D002               	bra	u1115
    599   0014B8  9883               	bcf	131,4,c	;volatile
@@ -621,7 +621,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    602   0014BC  8883               	bsf	131,4,c	;volatile
    603   0014BE                     u1116:
    604   0014BE                     
-   605                           ;source/main.c: 146:   PORTDbits.RD6 = S5A.vystup;
+   605                           ;source/main.c: 148:   PORTDbits.RD6 = S5A.vystup;
    606   0014BE  B01D               	btfsc	(_S5A+1)^0,0,c
    607   0014C0  D002               	bra	u1125
    608   0014C2  9C83               	bcf	131,6,c	;volatile
@@ -630,7 +630,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    611   0014C6  8C83               	bsf	131,6,c	;volatile
    612   0014C8                     u1126:
    613   0014C8                     
-   614                           ;source/main.c: 147:   PORTDbits.RD5 = S5B.vystup;
+   614                           ;source/main.c: 149:   PORTDbits.RD5 = S5B.vystup;
    615   0014C8  B01B               	btfsc	(_S5B+1)^0,0,c
    616   0014CA  D002               	bra	u1135
    617   0014CC  9A83               	bcf	131,5,c	;volatile
@@ -639,7 +639,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    620   0014D0  8A83               	bsf	131,5,c	;volatile
    621   0014D2                     u1136:
    622   0014D2                     
-   623                           ;source/main.c: 150:  if(dekoderAB.vystup == 255){
+   623                           ;source/main.c: 152:  if(dekoderAB.vystup == 255){
    624   0014D2  2815               	incf	(_dekoderAB+1)^0,w,c
    625   0014D4  A4D8               	btfss	status,2,c
    626   0014D6  EF6F  F00A         	goto	u1141
@@ -648,10 +648,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    629   0014DE  EF74  F00A         	goto	l1622
    630   0014E2                     u1140:
    631   0014E2                     
-   632                           ;source/main.c: 151:      PORTFbits.RF1 = 1;
+   632                           ;source/main.c: 153:      PORTFbits.RF1 = 1;
    633   0014E2  8285               	bsf	133,1,c	;volatile
    634                           
-   635                           ;source/main.c: 152:  }
+   635                           ;source/main.c: 154:  }
    636   0014E4  EF81  F00A         	goto	l1626
    637   0014E8                     l1622:
    638   0014E8  5015               	movf	(_dekoderAB+1)^0,w,c
@@ -662,21 +662,21 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    643   0014F4  EF7F  F00A         	goto	l92
    644   0014F8                     u1150:
    645   0014F8                     
-   646                           ;source/main.c: 154:      PORTFbits.RF2 = 1;
+   646                           ;source/main.c: 156:      PORTFbits.RF2 = 1;
    647   0014F8  8485               	bsf	133,2,c	;volatile
    648                           
-   649                           ;source/main.c: 155:  }
+   649                           ;source/main.c: 157:  }
    650   0014FA  EF81  F00A         	goto	l1626
    651   0014FE                     l92:
    652                           
-   653                           ;source/main.c: 157:      PORTFbits.RF1 = 0;
+   653                           ;source/main.c: 159:      PORTFbits.RF1 = 0;
    654   0014FE  9285               	bcf	133,1,c	;volatile
    655                           
-   656                           ;source/main.c: 158:      PORTFbits.RF2 = 0;
+   656                           ;source/main.c: 160:      PORTFbits.RF2 = 0;
    657   001500  9485               	bcf	133,2,c	;volatile
    658   001502                     l1626:
    659                           
-   660                           ;source/main.c: 162:      if(S4Filtr.vystup == 1){
+   660                           ;source/main.c: 164:      if(S4Filtr.vystup == 1){
    661   001502  0419               	decf	(_S4Filtr+1)^0,w,c
    662   001504  A4D8               	btfss	status,2,c
    663   001506  EF87  F00A         	goto	u1161
@@ -685,18 +685,18 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    666   00150E  EF8D  F00A         	goto	l94
    667   001512                     u1160:
    668   001512                     
-   669                           ;source/main.c: 163:          PORTH = vystup;
+   669                           ;source/main.c: 165:          PORTH = vystup;
    670   001512  C00F  FF87         	movff	_vystup,3975	;volatile
    671                           
-   672                           ;source/main.c: 164:      }
+   672                           ;source/main.c: 166:      }
    673   001516  EF8F  F00A         	goto	l1630
    674   00151A                     l94:
    675                           
-   676                           ;source/main.c: 167:          PORTH = dekoderAB.vystup;
+   676                           ;source/main.c: 169:          PORTH = dekoderAB.vystup;
    677   00151A  C015  FF87         	movff	_dekoderAB+1,3975	;volatile
    678   00151E                     l1630:
    679                           
-   680                           ;source/main.c: 170:    if(S3Filtr.vystup == 0){
+   680                           ;source/main.c: 172:    if(S3Filtr.vystup == 0){
    681   00151E  5017               	movf	(_S3Filtr+1)^0,w,c
    682   001520  A4D8               	btfss	status,2,c
    683   001522  EF95  F00A         	goto	u1171
@@ -705,13 +705,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    686   00152A  EFAE  F00A         	goto	l1638
    687   00152E                     u1170:
    688   00152E                     
-   689                           ;source/main.c: 171:         pulzBack = (unsigned int)LATH*10;
+   689                           ;source/main.c: 173:         pulzBack = (unsigned int)LATH*10;
    690   00152E  5090               	movf	144,w,c	;volatile
    691   001530  0D0A               	mullw	10
    692   001532  CFF3 F005          	movff	prodl,_pulzBack
    693   001536  CFF4 F006          	movff	prodh,_pulzBack+1
    694   00153A                     
-   695                           ;source/main.c: 173:         if(pulzBack > 2500){
+   695                           ;source/main.c: 175:         if(pulzBack > 2500){
    696   00153A  0EC5               	movlw	197
    697   00153C  5C05               	subwf	_pulzBack^0,w,c
    698   00153E  0E09               	movlw	9
@@ -723,7 +723,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    704   00154C  EFB2  F00A         	goto	l98
    705   001550                     u1180:
    706   001550                     
-   707                           ;source/main.c: 174:             pulzBack = 2500;
+   707                           ;source/main.c: 176:             pulzBack = 2500;
    708   001550  0E09               	movlw	9
    709   001552  6E06               	movwf	(_pulzBack+1)^0,c
    710   001554  0EC4               	movlw	196
@@ -731,14 +731,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    712   001558  EFB2  F00A         	goto	l98
    713   00155C                     l1638:
    714                           
-   715                           ;source/main.c: 177:         pulzBack = 0;
+   715                           ;source/main.c: 179:         pulzBack = 0;
    716   00155C  0E00               	movlw	0
    717   00155E  6E06               	movwf	(_pulzBack+1)^0,c
    718   001560  0E00               	movlw	0
    719   001562  6E05               	movwf	_pulzBack^0,c
    720   001564                     l98:
    721                           
-   722                           ;source/main.c: 180:    novyPulz = 1;
+   722                           ;source/main.c: 182:    novyPulz = 1;
    723   001564  0E01               	movlw	1
    724   001566  6E10               	movwf	_novyPulz^0,c
    725   001568  EF94  F009         	goto	l1584
@@ -898,7 +898,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    874                           
    875 ;; *************** function _pametFce *****************
    876 ;; Defined at:
-   877 ;;		line 14 in file "header/pamet.c"
+   877 ;;		line 22 in file "header/pamet.c"
    878 ;; Parameters:    Size  Location     Type
    879 ;;  tlacitko        1    3[COMRAM] PTR struct .
    880 ;;		 -> S3Filtr(2), S4Filtr(2), 
@@ -939,15 +939,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    910   001772                     _pametFce:
    911                           	callstack 28
    912   001772                     
-   913                           ;header/pamet.c: 15:     char dalsiStav = s0;
+   913                           ;header/pamet.c: 23:     char dalsiStav = s0;
    914   001772  0E00               	movlw	0
    915   001774  6E29               	movwf	pametFce@dalsiStav^0,c
    916                           
-   917                           ;header/pamet.c: 17:     switch(tlacitko->stav){
+   917                           ;header/pamet.c: 26:     switch(tlacitko->stav){
    918   001776  EF02  F00C         	goto	l1428
    919   00177A                     l1398:
    920                           
-   921                           ;header/pamet.c: 19:             if(input == 0){
+   921                           ;header/pamet.c: 29:             if(input == 0){
    922   00177A  5026               	movf	pametFce@input^0,w,c
    923   00177C  A4D8               	btfss	status,2,c
    924   00177E  EFC3  F00B         	goto	u701
@@ -956,21 +956,21 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    927   001786  EFC9  F00B         	goto	l1402
    928   00178A                     u700:
    929   00178A                     
-   930                           ;header/pamet.c: 20:                 dalsiStav = s1;
+   930                           ;header/pamet.c: 30:                 dalsiStav = s1;
    931   00178A  0E01               	movlw	1
    932   00178C  6E29               	movwf	pametFce@dalsiStav^0,c
    933                           
-   934                           ;header/pamet.c: 21:             }else{
+   934                           ;header/pamet.c: 31:             }else{
    935   00178E  EF22  F00C         	goto	l1430
    936   001792                     l1402:
    937                           
-   938                           ;header/pamet.c: 22:                 dalsiStav = s0;
+   938                           ;header/pamet.c: 32:                 dalsiStav = s0;
    939   001792  0E00               	movlw	0
    940   001794  6E29               	movwf	pametFce@dalsiStav^0,c
    941   001796  EF22  F00C         	goto	l1430
    942   00179A                     l1404:
    943                           
-   944                           ;header/pamet.c: 27:             if(input == 0){
+   944                           ;header/pamet.c: 38:             if(input == 0){
    945   00179A  5026               	movf	pametFce@input^0,w,c
    946   00179C  A4D8               	btfss	status,2,c
    947   00179E  EFD3  F00B         	goto	u711
@@ -979,11 +979,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    950   0017A6  EFDF  F00B         	goto	l1410
    951   0017AA                     u710:
    952   0017AA                     
-   953                           ;header/pamet.c: 28:                 dalsiStav = s1;
+   953                           ;header/pamet.c: 39:                 dalsiStav = s1;
    954   0017AA  0E01               	movlw	1
    955   0017AC  6E29               	movwf	pametFce@dalsiStav^0,c
    956   0017AE                     
-   957                           ;header/pamet.c: 29:                tlacitko->vystup = 0;
+   957                           ;header/pamet.c: 40:                tlacitko->vystup = 0;
    958   0017AE  5025               	movf	pametFce@tlacitko^0,w,c
    959   0017B0  6ED9               	movwf	fsr2l,c
    960   0017B2  6ADA               	clrf	fsr2h,c
@@ -991,17 +991,17 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    962   0017B6  26D9               	addwf	fsr2l,f,c
    963   0017B8  6ADF               	clrf	indf2,c
    964                           
-   965                           ;header/pamet.c: 30:             }else{
+   965                           ;header/pamet.c: 41:             }else{
    966   0017BA  EF22  F00C         	goto	l1430
    967   0017BE                     l1410:
    968                           
-   969                           ;header/pamet.c: 31:                 dalsiStav = s2;
+   969                           ;header/pamet.c: 42:                 dalsiStav = s2;
    970   0017BE  0E02               	movlw	2
    971   0017C0  6E29               	movwf	pametFce@dalsiStav^0,c
    972   0017C2  EF22  F00C         	goto	l1430
    973   0017C6                     l1412:
    974                           
-   975                           ;header/pamet.c: 36:             if(input == 0){
+   975                           ;header/pamet.c: 48:             if(input == 0){
    976   0017C6  5026               	movf	pametFce@input^0,w,c
    977   0017C8  A4D8               	btfss	status,2,c
    978   0017CA  EFE9  F00B         	goto	u721
@@ -1010,15 +1010,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    981   0017D2  EFDF  F00B         	goto	l1410
    982   0017D6                     u720:
    983   0017D6                     
-   984                           ;header/pamet.c: 37:                 dalsiStav = s3;
+   984                           ;header/pamet.c: 49:                 dalsiStav = s3;
    985   0017D6  0E03               	movlw	3
    986   0017D8  6E29               	movwf	pametFce@dalsiStav^0,c
    987                           
-   988                           ;header/pamet.c: 38:             }else{
+   988                           ;header/pamet.c: 50:             }else{
    989   0017DA  EF22  F00C         	goto	l1430
    990   0017DE                     l1418:
    991                           
-   992                           ;header/pamet.c: 44:             if(input == 0){
+   992                           ;header/pamet.c: 57:             if(input == 0){
    993   0017DE  5026               	movf	pametFce@input^0,w,c
    994   0017E0  A4D8               	btfss	status,2,c
    995   0017E2  EFF5  F00B         	goto	u731
@@ -1027,11 +1027,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    998   0017EA  EFC9  F00B         	goto	l1402
    999   0017EE                     u730:
   1000   0017EE                     
-  1001                           ;header/pamet.c: 45:                 dalsiStav = s3;
+  1001                           ;header/pamet.c: 58:                 dalsiStav = s3;
   1002   0017EE  0E03               	movlw	3
   1003   0017F0  6E29               	movwf	pametFce@dalsiStav^0,c
   1004   0017F2                     
-  1005                           ;header/pamet.c: 46:                 tlacitko->vystup = 1;
+  1005                           ;header/pamet.c: 59:                 tlacitko->vystup = 1;
   1006   0017F2  5025               	movf	pametFce@tlacitko^0,w,c
   1007   0017F4  6ED9               	movwf	fsr2l,c
   1008   0017F6  6ADA               	clrf	fsr2h,c
@@ -1040,7 +1040,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1011   0017FC  0E01               	movlw	1
   1012   0017FE  6EDF               	movwf	indf2,c
   1013                           
-  1014                           ;header/pamet.c: 47:             }else{
+  1014                           ;header/pamet.c: 60:             }else{
   1015   001800  EF22  F00C         	goto	l1430
   1016   001804                     l1428:
   1017   001804  5025               	movf	pametFce@tlacitko^0,w,c
@@ -1087,7 +1087,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1057   001840  EF22  F00C         	goto	l1430
   1058   001844                     l1430:
   1059                           
-  1060                           ;header/pamet.c: 54:       tlacitko->stav = dalsiStav;
+  1060                           ;header/pamet.c: 68:       tlacitko->stav = dalsiStav;
   1061   001844  5025               	movf	pametFce@tlacitko^0,w,c
   1062   001846  6ED9               	movwf	fsr2l,c
   1063   001848  6ADA               	clrf	fsr2h,c
@@ -1140,15 +1140,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1105                           	callstack 28
   1106   00167C                     
   1107                           ;source/filter.c: 15: void filterFce(typeFilter*tlacitko, char vstup);source/filter.c: 1
-      +                          6: {;source/filter.c: 17: char dalsiStav = s0;
+      +                          6: {;source/filter.c: 19: char dalsiStav = s0;
   1108   00167C  0E00               	movlw	0
   1109   00167E  6E29               	movwf	filterFce@dalsiStav^0,c
   1110                           
-  1111                           ;source/filter.c: 20:   switch(tlacitko->stav){
+  1111                           ;source/filter.c: 22:   switch(tlacitko->stav){
   1112   001680  EF8F  F00B         	goto	l1388
   1113   001684                     l1352:
   1114                           
-  1115                           ;source/filter.c: 22:           if(vstup == 1){
+  1115                           ;source/filter.c: 25:           if(vstup == 1){
   1116   001684  0426               	decf	filterFce@vstup^0,w,c
   1117   001686  A4D8               	btfss	status,2,c
   1118   001688  EF48  F00B         	goto	u651
@@ -1158,21 +1158,21 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1122   001694                     u650:
   1123   001694                     l1354:
   1124                           
-  1125                           ;source/filter.c: 23:               dalsiStav = s1;
+  1125                           ;source/filter.c: 26:               dalsiStav = s1;
   1126   001694  0E01               	movlw	1
   1127   001696  6E29               	movwf	filterFce@dalsiStav^0,c
   1128                           
-  1129                           ;source/filter.c: 24:           }else{
+  1129                           ;source/filter.c: 27:           }else{
   1130   001698  EFB3  F00B         	goto	l1390
   1131   00169C                     l1356:
   1132                           
-  1133                           ;source/filter.c: 25:               dalsiStav = s3;
+  1133                           ;source/filter.c: 28:               dalsiStav = s3;
   1134   00169C  0E03               	movlw	3
   1135   00169E  6E29               	movwf	filterFce@dalsiStav^0,c
   1136   0016A0  EFB3  F00B         	goto	l1390
   1137   0016A4                     l1358:
   1138                           
-  1139                           ;source/filter.c: 30:           if(vstup == 1){
+  1139                           ;source/filter.c: 34:           if(vstup == 1){
   1140   0016A4  0426               	decf	filterFce@vstup^0,w,c
   1141   0016A6  A4D8               	btfss	status,2,c
   1142   0016A8  EF58  F00B         	goto	u661
@@ -1181,15 +1181,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1145   0016B0  EF4E  F00B         	goto	l1356
   1146   0016B4                     u660:
   1147   0016B4                     
-  1148                           ;source/filter.c: 31:               dalsiStav = s2;
+  1148                           ;source/filter.c: 35:               dalsiStav = s2;
   1149   0016B4  0E02               	movlw	2
   1150   0016B6  6E29               	movwf	filterFce@dalsiStav^0,c
   1151                           
-  1152                           ;source/filter.c: 32:           }else{
+  1152                           ;source/filter.c: 36:           }else{
   1153   0016B8  EFB3  F00B         	goto	l1390
   1154   0016BC                     l1364:
   1155                           
-  1156                           ;source/filter.c: 38:           if(vstup == 1){
+  1156                           ;source/filter.c: 43:           if(vstup == 1){
   1157   0016BC  0426               	decf	filterFce@vstup^0,w,c
   1158   0016BE  A4D8               	btfss	status,2,c
   1159   0016C0  EF64  F00B         	goto	u671
@@ -1198,11 +1198,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1162   0016C8  EF4E  F00B         	goto	l1356
   1163   0016CC                     u670:
   1164   0016CC                     
-  1165                           ;source/filter.c: 39:               dalsiStav = s2;
+  1165                           ;source/filter.c: 44:               dalsiStav = s2;
   1166   0016CC  0E02               	movlw	2
   1167   0016CE  6E29               	movwf	filterFce@dalsiStav^0,c
   1168   0016D0                     
-  1169                           ;source/filter.c: 40:               tlacitko->vystup = 1;
+  1169                           ;source/filter.c: 45:               tlacitko->vystup = 1;
   1170   0016D0  5025               	movf	filterFce@tlacitko^0,w,c
   1171   0016D2  6ED9               	movwf	fsr2l,c
   1172   0016D4  6ADA               	clrf	fsr2h,c
@@ -1211,11 +1211,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1175   0016DA  0E01               	movlw	1
   1176   0016DC  6EDF               	movwf	indf2,c
   1177                           
-  1178                           ;source/filter.c: 41:           }else{
+  1178                           ;source/filter.c: 46:           }else{
   1179   0016DE  EFB3  F00B         	goto	l1390
   1180   0016E2                     l1372:
   1181                           
-  1182                           ;source/filter.c: 47:           if(vstup == 0){
+  1182                           ;source/filter.c: 53:           if(vstup == 0){
   1183   0016E2  5026               	movf	filterFce@vstup^0,w,c
   1184   0016E4  A4D8               	btfss	status,2,c
   1185   0016E6  EF77  F00B         	goto	u681
@@ -1224,15 +1224,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1188   0016EE  EF4A  F00B         	goto	l1354
   1189   0016F2                     u680:
   1190   0016F2                     
-  1191                           ;source/filter.c: 48:               dalsiStav = s4;
+  1191                           ;source/filter.c: 54:               dalsiStav = s4;
   1192   0016F2  0E04               	movlw	4
   1193   0016F4  6E29               	movwf	filterFce@dalsiStav^0,c
   1194                           
-  1195                           ;source/filter.c: 49:           }else{
+  1195                           ;source/filter.c: 55:           }else{
   1196   0016F6  EFB3  F00B         	goto	l1390
   1197   0016FA                     l1378:
   1198                           
-  1199                           ;source/filter.c: 56:           if(vstup == 0){
+  1199                           ;source/filter.c: 63:           if(vstup == 0){
   1200   0016FA  5026               	movf	filterFce@vstup^0,w,c
   1201   0016FC  A4D8               	btfss	status,2,c
   1202   0016FE  EF83  F00B         	goto	u691
@@ -1241,11 +1241,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1205   001706  EF4A  F00B         	goto	l1354
   1206   00170A                     u690:
   1207   00170A                     
-  1208                           ;source/filter.c: 57:               dalsiStav = s4;
+  1208                           ;source/filter.c: 64:               dalsiStav = s4;
   1209   00170A  0E04               	movlw	4
   1210   00170C  6E29               	movwf	filterFce@dalsiStav^0,c
   1211   00170E                     
-  1212                           ;source/filter.c: 58:               tlacitko->vystup = 0;
+  1212                           ;source/filter.c: 65:               tlacitko->vystup = 0;
   1213   00170E  5025               	movf	filterFce@tlacitko^0,w,c
   1214   001710  6ED9               	movwf	fsr2l,c
   1215   001712  6ADA               	clrf	fsr2h,c
@@ -1253,7 +1253,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1217   001716  26D9               	addwf	fsr2l,f,c
   1218   001718  6ADF               	clrf	indf2,c
   1219                           
-  1220                           ;source/filter.c: 59:           }else{
+  1220                           ;source/filter.c: 66:           }else{
   1221   00171A  EFB3  F00B         	goto	l1390
   1222   00171E                     l1388:
   1223   00171E  5025               	movf	filterFce@tlacitko^0,w,c
@@ -1303,7 +1303,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1266   001762  EFB3  F00B         	goto	l1390
   1267   001766                     l1390:
   1268                           
-  1269                           ;source/filter.c: 66:   tlacitko->stav = dalsiStav;
+  1269                           ;source/filter.c: 74:   tlacitko->stav = dalsiStav;
   1270   001766  5025               	movf	filterFce@tlacitko^0,w,c
   1271   001768  6ED9               	movwf	fsr2l,c
   1272   00176A  6ADA               	clrf	fsr2h,c
@@ -1314,7 +1314,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1277                           
   1278 ;; *************** function _dekoderFce *****************
   1279 ;; Defined at:
-  1280 ;;		line 14 in file "header/dekoder.c"
+  1280 ;;		line 15 in file "header/dekoder.c"
   1281 ;; Parameters:    Size  Location     Type
   1282 ;;  tlacitko        1    3[COMRAM] PTR struct .
   1283 ;;		 -> dekoderAB(2), 
@@ -1356,11 +1356,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1314   001002                     _dekoderFce:
   1315                           	callstack 28
   1316   001002                     
-  1317                           ;header/dekoder.c: 15:     switch(tlacitko->stav){
+  1317                           ;header/dekoder.c: 19:     switch(tlacitko->stav){
   1318   001002  EF53  F009         	goto	l1520
   1319   001006                     l1438:
   1320                           
-  1321                           ;header/dekoder.c: 17:             if((A == 1) && (B == 0)){
+  1321                           ;header/dekoder.c: 21:             if((A == 1) && (B == 0)){
   1322   001006  0426               	decf	dekoderFce@A^0,w,c
   1323   001008  A4D8               	btfss	status,2,c
   1324   00100A  EF09  F008         	goto	u741
@@ -1376,14 +1376,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1334   001022  EF2D  F008         	goto	l1448
   1335   001026                     u750:
   1336   001026                     
-  1337                           ;header/dekoder.c: 18:                 tlacitko->stav = s1;
+  1337                           ;header/dekoder.c: 22:                 tlacitko->stav = s1;
   1338   001026  5025               	movf	dekoderFce@tlacitko^0,w,c
   1339   001028  6ED9               	movwf	fsr2l,c
   1340   00102A  6ADA               	clrf	fsr2h,c
   1341   00102C  0E01               	movlw	1
   1342   00102E  6EDF               	movwf	indf2,c
   1343   001030                     
-  1344                           ;header/dekoder.c: 19:                 if(tlacitko->vystup < 255){
+  1344                           ;header/dekoder.c: 23:                 if(tlacitko->vystup < 255){
   1345   001030  5025               	movf	dekoderFce@tlacitko^0,w,c
   1346   001032  6ED9               	movwf	fsr2l,c
   1347   001034  6ADA               	clrf	fsr2h,c
@@ -1397,7 +1397,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1355   001046  EF73  F009         	goto	l246
   1356   00104A                     u760:
   1357   00104A                     
-  1358                           ;header/dekoder.c: 20:                 tlacitko->vystup++;
+  1358                           ;header/dekoder.c: 24:                 tlacitko->vystup++;
   1359   00104A  5025               	movf	dekoderFce@tlacitko^0,w,c
   1360   00104C  6ED9               	movwf	fsr2l,c
   1361   00104E  6ADA               	clrf	fsr2h,c
@@ -1421,14 +1421,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1379   001076  EF73  F009         	goto	l246
   1380   00107A                     u780:
   1381   00107A                     
-  1382                           ;header/dekoder.c: 23:                 tlacitko->stav = s3;
+  1382                           ;header/dekoder.c: 27:                 tlacitko->stav = s3;
   1383   00107A  5025               	movf	dekoderFce@tlacitko^0,w,c
   1384   00107C  6ED9               	movwf	fsr2l,c
   1385   00107E  6ADA               	clrf	fsr2h,c
   1386   001080  0E03               	movlw	3
   1387   001082  6EDF               	movwf	indf2,c
   1388   001084                     
-  1389                           ;header/dekoder.c: 24:                 if(tlacitko->vystup > 0){
+  1389                           ;header/dekoder.c: 28:                 if(tlacitko->vystup > 0){
   1390   001084  5025               	movf	dekoderFce@tlacitko^0,w,c
   1391   001086  6ED9               	movwf	fsr2l,c
   1392   001088  6ADA               	clrf	fsr2h,c
@@ -1442,7 +1442,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1400   00109A  EF57  F008         	goto	l224
   1401   00109E                     u790:
   1402   00109E                     
-  1403                           ;header/dekoder.c: 25:                 tlacitko->vystup--;
+  1403                           ;header/dekoder.c: 29:                 tlacitko->vystup--;
   1404   00109E  5025               	movf	dekoderFce@tlacitko^0,w,c
   1405   0010A0  6ED9               	movwf	fsr2l,c
   1406   0010A2  6ADA               	clrf	fsr2h,c
@@ -1452,11 +1452,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1410   0010AA  EF73  F009         	goto	l246
   1411   0010AE                     l224:
   1412                           
-  1413                           ;header/dekoder.c: 28:             break;
+  1413                           ;header/dekoder.c: 32:             break;
   1414   0010AE  EF73  F009         	goto	l246
   1415   0010B2                     l1458:
   1416                           
-  1417                           ;header/dekoder.c: 31:             if((A == 1) && (B == 1)){
+  1417                           ;header/dekoder.c: 35:             if((A == 1) && (B == 1)){
   1418   0010B2  0426               	decf	dekoderFce@A^0,w,c
   1419   0010B4  A4D8               	btfss	status,2,c
   1420   0010B6  EF5F  F008         	goto	u801
@@ -1472,14 +1472,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1430   0010CE  EF83  F008         	goto	l1468
   1431   0010D2                     u810:
   1432   0010D2                     
-  1433                           ;header/dekoder.c: 32:                 tlacitko->stav = s2;
+  1433                           ;header/dekoder.c: 36:                 tlacitko->stav = s2;
   1434   0010D2  5025               	movf	dekoderFce@tlacitko^0,w,c
   1435   0010D4  6ED9               	movwf	fsr2l,c
   1436   0010D6  6ADA               	clrf	fsr2h,c
   1437   0010D8  0E02               	movlw	2
   1438   0010DA  6EDF               	movwf	indf2,c
   1439   0010DC                     
-  1440                           ;header/dekoder.c: 33:                 if(tlacitko->vystup < 255){
+  1440                           ;header/dekoder.c: 37:                 if(tlacitko->vystup < 255){
   1441   0010DC  5025               	movf	dekoderFce@tlacitko^0,w,c
   1442   0010DE  6ED9               	movwf	fsr2l,c
   1443   0010E0  6ADA               	clrf	fsr2h,c
@@ -1493,7 +1493,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1451   0010F2  EF73  F009         	goto	l246
   1452   0010F6                     u820:
   1453   0010F6                     
-  1454                           ;header/dekoder.c: 34:                tlacitko->vystup++;
+  1454                           ;header/dekoder.c: 38:                tlacitko->vystup++;
   1455   0010F6  5025               	movf	dekoderFce@tlacitko^0,w,c
   1456   0010F8  6ED9               	movwf	fsr2l,c
   1457   0010FA  6ADA               	clrf	fsr2h,c
@@ -1517,13 +1517,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1475   001122  EF73  F009         	goto	l246
   1476   001126                     u840:
   1477   001126                     
-  1478                           ;header/dekoder.c: 37:                 tlacitko->stav = s0;
+  1478                           ;header/dekoder.c: 41:                 tlacitko->stav = s0;
   1479   001126  5025               	movf	dekoderFce@tlacitko^0,w,c
   1480   001128  6ED9               	movwf	fsr2l,c
   1481   00112A  6ADA               	clrf	fsr2h,c
   1482   00112C  6ADF               	clrf	indf2,c
   1483   00112E                     
-  1484                           ;header/dekoder.c: 38:                 if(tlacitko->vystup > 0){
+  1484                           ;header/dekoder.c: 42:                 if(tlacitko->vystup > 0){
   1485   00112E  5025               	movf	dekoderFce@tlacitko^0,w,c
   1486   001130  6ED9               	movwf	fsr2l,c
   1487   001132  6ADA               	clrf	fsr2h,c
@@ -1537,7 +1537,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1495   001144  EF73  F009         	goto	l246
   1496   001148                     u850:
   1497   001148                     
-  1498                           ;header/dekoder.c: 39:                 tlacitko->vystup--;
+  1498                           ;header/dekoder.c: 43:                 tlacitko->vystup--;
   1499   001148  5025               	movf	dekoderFce@tlacitko^0,w,c
   1500   00114A  6ED9               	movwf	fsr2l,c
   1501   00114C  6ADA               	clrf	fsr2h,c
@@ -1547,7 +1547,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1505   001154  EF73  F009         	goto	l246
   1506   001158                     l1478:
   1507                           
-  1508                           ;header/dekoder.c: 45:             if((A == 0) && (B == 1)){
+  1508                           ;header/dekoder.c: 49:             if((A == 0) && (B == 1)){
   1509   001158  5026               	movf	dekoderFce@A^0,w,c
   1510   00115A  A4D8               	btfss	status,2,c
   1511   00115C  EFB2  F008         	goto	u861
@@ -1563,14 +1563,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1521   001174  EFD6  F008         	goto	l1488
   1522   001178                     u870:
   1523   001178                     
-  1524                           ;header/dekoder.c: 46:                 tlacitko->stav = s3;
+  1524                           ;header/dekoder.c: 50:                 tlacitko->stav = s3;
   1525   001178  5025               	movf	dekoderFce@tlacitko^0,w,c
   1526   00117A  6ED9               	movwf	fsr2l,c
   1527   00117C  6ADA               	clrf	fsr2h,c
   1528   00117E  0E03               	movlw	3
   1529   001180  6EDF               	movwf	indf2,c
   1530   001182                     
-  1531                           ;header/dekoder.c: 47:                 if(tlacitko->vystup < 255){
+  1531                           ;header/dekoder.c: 51:                 if(tlacitko->vystup < 255){
   1532   001182  5025               	movf	dekoderFce@tlacitko^0,w,c
   1533   001184  6ED9               	movwf	fsr2l,c
   1534   001186  6ADA               	clrf	fsr2h,c
@@ -1584,7 +1584,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1542   001198  EF73  F009         	goto	l246
   1543   00119C                     u880:
   1544   00119C                     
-  1545                           ;header/dekoder.c: 48:                 tlacitko->vystup++;
+  1545                           ;header/dekoder.c: 52:                 tlacitko->vystup++;
   1546   00119C  5025               	movf	dekoderFce@tlacitko^0,w,c
   1547   00119E  6ED9               	movwf	fsr2l,c
   1548   0011A0  6ADA               	clrf	fsr2h,c
@@ -1608,14 +1608,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1566   0011C8  EF73  F009         	goto	l246
   1567   0011CC                     u900:
   1568   0011CC                     
-  1569                           ;header/dekoder.c: 51:                 tlacitko->stav = s1;
+  1569                           ;header/dekoder.c: 55:                 tlacitko->stav = s1;
   1570   0011CC  5025               	movf	dekoderFce@tlacitko^0,w,c
   1571   0011CE  6ED9               	movwf	fsr2l,c
   1572   0011D0  6ADA               	clrf	fsr2h,c
   1573   0011D2  0E01               	movlw	1
   1574   0011D4  6EDF               	movwf	indf2,c
   1575   0011D6                     
-  1576                           ;header/dekoder.c: 52:                 if(tlacitko->vystup > 0){
+  1576                           ;header/dekoder.c: 56:                 if(tlacitko->vystup > 0){
   1577   0011D6  5025               	movf	dekoderFce@tlacitko^0,w,c
   1578   0011D8  6ED9               	movwf	fsr2l,c
   1579   0011DA  6ADA               	clrf	fsr2h,c
@@ -1629,7 +1629,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1587   0011EC  EF73  F009         	goto	l246
   1588   0011F0                     u910:
   1589   0011F0                     
-  1590                           ;header/dekoder.c: 53:                 tlacitko->vystup--;
+  1590                           ;header/dekoder.c: 57:                 tlacitko->vystup--;
   1591   0011F0  5025               	movf	dekoderFce@tlacitko^0,w,c
   1592   0011F2  6ED9               	movwf	fsr2l,c
   1593   0011F4  6ADA               	clrf	fsr2h,c
@@ -1639,7 +1639,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1597   0011FC  EF73  F009         	goto	l246
   1598   001200                     l1498:
   1599                           
-  1600                           ;header/dekoder.c: 59:             if((A == 0) && (B == 0)){
+  1600                           ;header/dekoder.c: 63:             if((A == 0) && (B == 0)){
   1601   001200  5026               	movf	dekoderFce@A^0,w,c
   1602   001202  A4D8               	btfss	status,2,c
   1603   001204  EF06  F009         	goto	u921
@@ -1655,13 +1655,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1613   00121C  EF29  F009         	goto	l1508
   1614   001220                     u930:
   1615   001220                     
-  1616                           ;header/dekoder.c: 60:                 tlacitko->stav = s0;
+  1616                           ;header/dekoder.c: 64:                 tlacitko->stav = s0;
   1617   001220  5025               	movf	dekoderFce@tlacitko^0,w,c
   1618   001222  6ED9               	movwf	fsr2l,c
   1619   001224  6ADA               	clrf	fsr2h,c
   1620   001226  6ADF               	clrf	indf2,c
   1621   001228                     
-  1622                           ;header/dekoder.c: 61:                 if(tlacitko->vystup < 255){
+  1622                           ;header/dekoder.c: 65:                 if(tlacitko->vystup < 255){
   1623   001228  5025               	movf	dekoderFce@tlacitko^0,w,c
   1624   00122A  6ED9               	movwf	fsr2l,c
   1625   00122C  6ADA               	clrf	fsr2h,c
@@ -1675,7 +1675,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1633   00123E  EF73  F009         	goto	l246
   1634   001242                     u940:
   1635   001242                     
-  1636                           ;header/dekoder.c: 62:                 tlacitko->vystup++;
+  1636                           ;header/dekoder.c: 66:                 tlacitko->vystup++;
   1637   001242  5025               	movf	dekoderFce@tlacitko^0,w,c
   1638   001244  6ED9               	movwf	fsr2l,c
   1639   001246  6ADA               	clrf	fsr2h,c
@@ -1699,14 +1699,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1657   00126E  EF73  F009         	goto	l246
   1658   001272                     u960:
   1659   001272                     
-  1660                           ;header/dekoder.c: 65:                 tlacitko->stav = s2;
+  1660                           ;header/dekoder.c: 69:                 tlacitko->stav = s2;
   1661   001272  5025               	movf	dekoderFce@tlacitko^0,w,c
   1662   001274  6ED9               	movwf	fsr2l,c
   1663   001276  6ADA               	clrf	fsr2h,c
   1664   001278  0E02               	movlw	2
   1665   00127A  6EDF               	movwf	indf2,c
   1666   00127C                     
-  1667                           ;header/dekoder.c: 66:             if(tlacitko->vystup > 0){
+  1667                           ;header/dekoder.c: 70:             if(tlacitko->vystup > 0){
   1668   00127C  5025               	movf	dekoderFce@tlacitko^0,w,c
   1669   00127E  6ED9               	movwf	fsr2l,c
   1670   001280  6ADA               	clrf	fsr2h,c
@@ -1720,7 +1720,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1678   001292  EF73  F009         	goto	l246
   1679   001296                     u970:
   1680   001296                     
-  1681                           ;header/dekoder.c: 67:                 tlacitko->vystup--;
+  1681                           ;header/dekoder.c: 71:                 tlacitko->vystup--;
   1682   001296  5025               	movf	dekoderFce@tlacitko^0,w,c
   1683   001298  6ED9               	movwf	fsr2l,c
   1684   00129A  6ADA               	clrf	fsr2h,c
@@ -2049,7 +2049,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1996                           
   1997 ;; *************** function _low_isr *****************
   1998 ;; Defined at:
-  1999 ;;		line 227 in file "source/main.c"
+  1999 ;;		line 229 in file "source/main.c"
   2000 ;; Parameters:    Size  Location     Type
   2001 ;;		None
   2002 ;; Auto vars:     Size  Location     Type
@@ -2094,7 +2094,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2036   00001E  CFE8 F023          	movff	wreg,??_low_isr+1
   2037   000022  CFE0 F024          	movff	bsr,??_low_isr+2
   2038   000026                     
-  2039                           ;source/main.c: 229:     if(INTCONbits.TMR0IF == 1)
+  2039                           ;source/main.c: 231:     if(INTCONbits.TMR0IF == 1)
   2040   000026  A4F2               	btfss	242,2,c	;volatile
   2041   000028  EF18  F000         	goto	i1u59_21
   2042   00002C  EF1A  F000         	goto	i1u59_20
@@ -2102,25 +2102,25 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2044   000030  EF2D  F000         	goto	i1l1300
   2045   000034                     i1u59_20:
   2046   000034                     
-  2047                           ;source/main.c: 230:     {;source/main.c: 231:         is1ms = 1;
+  2047                           ;source/main.c: 232:     {;source/main.c: 233:         is1ms = 1;
   2048   000034  0E01               	movlw	1
   2049   000036  6E13               	movwf	_is1ms^0,c
   2050                           
-  2051                           ;source/main.c: 232:         TMR0H = 0xD8;
+  2051                           ;source/main.c: 234:         TMR0H = 0xD8;
   2052   000038  0ED8               	movlw	216
   2053   00003A  6ED7               	movwf	215,c	;volatile
   2054                           
-  2055                           ;source/main.c: 233:         TMR0L = 0xEF;
+  2055                           ;source/main.c: 235:         TMR0L = 0xEF;
   2056   00003C  0EEF               	movlw	239
   2057   00003E  6ED6               	movwf	214,c	;volatile
   2058   000040                     
-  2059                           ;source/main.c: 235:         INTCONbits.TMR0IF = 0;
+  2059                           ;source/main.c: 237:         INTCONbits.TMR0IF = 0;
   2060   000040  94F2               	bcf	242,2,c	;volatile
   2061   000042                     
-  2062                           ;source/main.c: 236:         is10ms++;
+  2062                           ;source/main.c: 238:         is10ms++;
   2063   000042  2A12               	incf	_is10ms^0,f,c
   2064   000044                     
-  2065                           ;source/main.c: 238:     if(is10ms >= 10){
+  2065                           ;source/main.c: 240:     if(is10ms >= 10){
   2066   000044  0E09               	movlw	9
   2067   000046  6412               	cpfsgt	_is10ms^0,c
   2068   000048  EF28  F000         	goto	i1u60_21
@@ -2129,15 +2129,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2071   000050  EF2D  F000         	goto	i1l1300
   2072   000054                     i1u60_20:
   2073   000054                     
-  2074                           ;source/main.c: 239:         is10ms = 0;
+  2074                           ;source/main.c: 241:         is10ms = 0;
   2075   000054  0E00               	movlw	0
   2076   000056  6E12               	movwf	_is10ms^0,c
   2077   000058                     
-  2078                           ;source/main.c: 240:         ADCON0bits.GO = 1;
+  2078                           ;source/main.c: 242:         ADCON0bits.GO = 1;
   2079   000058  82C2               	bsf	194,1,c	;volatile
   2080   00005A                     i1l1300:
   2081                           
-  2082                           ;source/main.c: 244:     if(PIR1bits.ADIF == 1){
+  2082                           ;source/main.c: 246:     if(PIR1bits.ADIF == 1){
   2083   00005A  AC9E               	btfss	158,6,c	;volatile
   2084   00005C  EF32  F000         	goto	i1u61_21
   2085   000060  EF34  F000         	goto	i1u61_20
@@ -2145,16 +2145,16 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2087   000064  EF43  F000         	goto	i1l121
   2088   000068                     i1u61_20:
   2089   000068                     
-  2090                           ;source/main.c: 245:         vysledek = ADRESH;
+  2090                           ;source/main.c: 247:         vysledek = ADRESH;
   2091   000068  CFC4 F00D          	movff	4036,_vysledek	;volatile
   2092   00006C  6A0E               	clrf	(_vysledek+1)^0,c
   2093   00006E                     
-  2094                           ;source/main.c: 246:         vysledek = (vysledek << 8);
+  2094                           ;source/main.c: 248:         vysledek = (vysledek << 8);
   2095   00006E  500D               	movf	_vysledek^0,w,c
   2096   000070  6E0E               	movwf	(_vysledek+1)^0,c
   2097   000072  6A0D               	clrf	_vysledek^0,c
   2098   000074                     
-  2099                           ;source/main.c: 247:         vysledek = vysledek + ADRESL;
+  2099                           ;source/main.c: 249:         vysledek = vysledek + ADRESL;
   2100   000074  50C3               	movf	195,w,c	;volatile
   2101   000076  240D               	addwf	_vysledek^0,w,c
   2102   000078  6E0D               	movwf	_vysledek^0,c
@@ -2162,11 +2162,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2104   00007C  200E               	addwfc	(_vysledek+1)^0,w,c
   2105   00007E  6E0E               	movwf	(_vysledek+1)^0,c
   2106   000080                     
-  2107                           ;source/main.c: 248:         ADRhotovo = 1;
+  2107                           ;source/main.c: 250:         ADRhotovo = 1;
   2108   000080  0E01               	movlw	1
   2109   000082  6E11               	movwf	_ADRhotovo^0,c
   2110   000084                     
-  2111                           ;source/main.c: 249:         PIR1bits.ADIF = 0;
+  2111                           ;source/main.c: 251:         PIR1bits.ADIF = 0;
   2112   000084  9C9E               	bcf	158,6,c	;volatile
   2113   000086                     i1l121:
   2114   000086  C024  FFE0         	movff	??_low_isr+2,bsr
@@ -2179,7 +2179,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2121                           
   2122 ;; *************** function _high_isr *****************
   2123 ;; Defined at:
-  2124 ;;		line 188 in file "source/main.c"
+  2124 ;;		line 190 in file "source/main.c"
   2125 ;; Parameters:    Size  Location     Type
   2126 ;;		None
   2127 ;; Auto vars:     Size  Location     Type
@@ -2227,7 +2227,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2164   001850                     int_func:
   2165                           	callstack 28
   2166   001850                     
-  2167                           ;source/main.c: 190:     static _Bool pocHodnota = 1;;source/main.c: 192:     if(PIR1bit
+  2167                           ;source/main.c: 192:     static _Bool pocHodnota = 1;;source/main.c: 194:     if(PIR1bit
       +                          s.CCP1IF == 1){
   2168   001850  A49E               	btfss	158,2,c	;volatile
   2169   001852  EF2D  F00C         	goto	i2u55_41
@@ -2236,7 +2236,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2172   00185A  EF73  F00C         	goto	i2l113
   2173   00185E                     i2u55_40:
   2174   00185E                     
-  2175                           ;source/main.c: 193:    if(pocHodnota == 1){
+  2175                           ;source/main.c: 195:    if(pocHodnota == 1){
   2176   00185E  0433               	decf	high_isr@pocHodnota^0,w,c
   2177   001860  A4D8               	btfss	status,2,c
   2178   001862  EF35  F00C         	goto	i2u56_41
@@ -2245,16 +2245,16 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2181   00186A  EF3D  F00C         	goto	i2l1264
   2182   00186E                     i2u56_40:
   2183   00186E                     
-  2184                           ;source/main.c: 194:        komparace = CCPR1;
+  2184                           ;source/main.c: 196:        komparace = CCPR1;
   2185   00186E  CFBC F00B          	movff	4028,_komparace	;volatile
   2186   001872  CFBD F00C          	movff	4029,_komparace+1	;volatile
   2187   001876                     
-  2188                           ;source/main.c: 195:        pocHodnota = 0;
+  2188                           ;source/main.c: 197:        pocHodnota = 0;
   2189   001876  0E00               	movlw	0
   2190   001878  6E33               	movwf	high_isr@pocHodnota^0,c
   2191   00187A                     i2l1264:
   2192                           
-  2193                           ;source/main.c: 197:       if(PORTCbits.RC2 == 1){
+  2193                           ;source/main.c: 199:       if(PORTCbits.RC2 == 1){
   2194   00187A  A482               	btfss	130,2,c	;volatile
   2195   00187C  EF42  F00C         	goto	i2u57_41
   2196   001880  EF44  F00C         	goto	i2u57_40
@@ -2262,11 +2262,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2198   001884  EF4E  F00C         	goto	i2l1270
   2199   001888                     i2u57_40:
   2200   001888                     
-  2201                           ;source/main.c: 201:           CCP1CON = 0b00001001;
+  2201                           ;source/main.c: 203:           CCP1CON = 0b00001001;
   2202   001888  0E09               	movlw	9
   2203   00188A  6EBB               	movwf	187,c	;volatile
   2204   00188C                     
-  2205                           ;source/main.c: 202:           komparace = komparace + pulz;
+  2205                           ;source/main.c: 204:           komparace = komparace + pulz;
   2206   00188C  5009               	movf	_pulz^0,w,c
   2207   00188E  240B               	addwf	_komparace^0,w,c
   2208   001890  6E0B               	movwf	_komparace^0,c
@@ -2274,15 +2274,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2210   001894  200C               	addwfc	(_komparace+1)^0,w,c
   2211   001896  6E0C               	movwf	(_komparace+1)^0,c
   2212                           
-  2213                           ;source/main.c: 204:           }else{
+  2213                           ;source/main.c: 206:           }else{
   2214   001898  EF6E  F00C         	goto	i2l1280
   2215   00189C                     i2l1270:
   2216                           
-  2217                           ;source/main.c: 205:               CCP1CON = 0b00001000;
+  2217                           ;source/main.c: 207:               CCP1CON = 0b00001000;
   2218   00189C  0E08               	movlw	8
   2219   00189E  6EBB               	movwf	187,c	;volatile
   2220   0018A0                     
-  2221                           ;source/main.c: 206:               mezera = mezera + komparace;
+  2221                           ;source/main.c: 208:               mezera = mezera + komparace;
   2222   0018A0  500B               	movf	_komparace^0,w,c
   2223   0018A2  2407               	addwf	_mezera^0,w,c
   2224   0018A4  6E07               	movwf	_mezera^0,c
@@ -2290,7 +2290,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2226   0018A8  2008               	addwfc	(_mezera+1)^0,w,c
   2227   0018AA  6E08               	movwf	(_mezera+1)^0,c
   2228   0018AC                     
-  2229                           ;source/main.c: 208:               if(novyPulz == 1){
+  2229                           ;source/main.c: 210:               if(novyPulz == 1){
   2230   0018AC  0410               	decf	_novyPulz^0,w,c
   2231   0018AE  A4D8               	btfss	status,2,c
   2232   0018B0  EF5C  F00C         	goto	i2u58_41
@@ -2299,7 +2299,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2235   0018B8  EF6E  F00C         	goto	i2l1280
   2236   0018BC                     i2u58_40:
   2237   0018BC                     
-  2238                           ;source/main.c: 209:                 pulz = pulzBack + 2500;
+  2238                           ;source/main.c: 211:                 pulz = pulzBack + 2500;
   2239   0018BC  0EC4               	movlw	196
   2240   0018BE  2405               	addwf	_pulzBack^0,w,c
   2241   0018C0  6E09               	movwf	_pulz^0,c
@@ -2307,7 +2307,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2243   0018C4  2006               	addwfc	(_pulzBack+1)^0,w,c
   2244   0018C6  6E0A               	movwf	(_pulz+1)^0,c
   2245                           
-  2246                           ;source/main.c: 212:                 mezera = 50000 - pulz;
+  2246                           ;source/main.c: 214:                 mezera = 50000 - pulz;
   2247   0018C8  5009               	movf	_pulz^0,w,c
   2248   0018CA  0850               	sublw	80
   2249   0018CC  6E07               	movwf	_mezera^0,c
@@ -2317,19 +2317,19 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   2253   0018D4  08C3               	sublw	195
   2254   0018D6  6E08               	movwf	(_mezera+1)^0,c
   2255   0018D8                     
-  2256                           ;source/main.c: 213:                  novyPulz = 0;
+  2256                           ;source/main.c: 215:                  novyPulz = 0;
   2257   0018D8  0E00               	movlw	0
   2258   0018DA  6E10               	movwf	_novyPulz^0,c
   2259   0018DC                     i2l1280:
   2260                           
-  2261                           ;source/main.c: 219:       CCPR1H = (komparace >> 8);
+  2261                           ;source/main.c: 221:       CCPR1H = (komparace >> 8);
   2262   0018DC  500C               	movf	(_komparace+1)^0,w,c
   2263   0018DE  6EBD               	movwf	189,c	;volatile
   2264   0018E0                     
-  2265                           ;source/main.c: 220:       CCPR1L = (komparace & 0x00FF);
+  2265                           ;source/main.c: 222:       CCPR1L = (komparace & 0x00FF);
   2266   0018E0  C00B  FFBC         	movff	_komparace,4028	;volatile
   2267   0018E4                     
-  2268                           ;source/main.c: 221:       PIR1bits.CCP1IF = 0;
+  2268                           ;source/main.c: 223:       PIR1bits.CCP1IF = 0;
   2269   0018E4  949E               	bcf	158,2,c	;volatile
   2270   0018E6                     i2l113:
   2271   0018E6  9234               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
@@ -2825,7 +2825,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Fri Dec 22 14:44:52 2023
+Symbol Table                                                                                   Wed Jan 03 02:03:10 2024
 
                             l92 14FE                              _S3 001E                              l94 151A  
                             l86 142E                              _S4 0020                              l98 1564  

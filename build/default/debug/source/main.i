@@ -8714,7 +8714,7 @@ void disableAllInterrupts(void);
 void preambleInitialization(void);
 # 24 "source/main.c" 2
 # 1 "source/./../header/filter.h" 1
-# 23 "source/./../header/filter.h"
+# 25 "source/./../header/filter.h"
 enum{s0,s1,s2,s3,s4};
 
 typedef struct{
@@ -8723,6 +8723,7 @@ typedef struct{
     char vystup;
 
 }typeFilter;
+
 
 void filterFce(typeFilter*tlacitko, char vstup);
 # 25 "source/main.c" 2
@@ -8825,6 +8826,8 @@ void main(void)
 
    is1ms = 0;
    }
+
+
   LATDbits.LATD7 = S4Filtr.vystup;
    PORTDbits.RD4 = S3Filtr.vystup;
   PORTDbits.RD6 = S5A.vystup;

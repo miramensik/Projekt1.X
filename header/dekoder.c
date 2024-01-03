@@ -11,8 +11,12 @@
 /* Hlavickove soubory*/
 #include "./../header/dekoder.h"
 
+// Funkce dekoderFce řídí chování dekodéru podle vstupních hodnot A a B
 void dekoderFce(typeFilter*tlacitko,char A, char B){
-    switch(tlacitko->stav){
+    /*nyni se bude prechazet do stavu dle splnene podminky a tim se bude hodnota pricitat nebo odcitat
+     lze take videt, ze hodnoty ktere dekoder muze citat jsou v rozmezi 0 az 255 a pokud by hodnota byla prekrocena, tak se serizne na zminenou krajni hodnotu horni nebo dolni
+     */
+    switch(tlacitko->stav){ //pristup do struktury pomoci ukazatele
         case s0:{
             if((A == 1) && (B == 0)){
                 tlacitko->stav = s1;

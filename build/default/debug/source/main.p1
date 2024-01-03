@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"25 source/./../header/filter.h
-[; ;source/./../header/filter.h: 25: typedef struct{
+"27 source/./../header/filter.h
+[; ;source/./../header/filter.h: 27: typedef struct{
 [s S572 `uc 1 `uc 1 ]
 [n S572 . stav vystup ]
 [p mainexit ]
 "65 source/./../header/preambleInitialization.h
 [v _preambleInitialization `(v ~T0 @X0 0 ef ]
-"32 source/./../header/filter.h
-[; ;source/./../header/filter.h: 32: void filterFce(typeFilter*tlacitko, char vstup);
+"35 source/./../header/filter.h
+[; ;source/./../header/filter.h: 35: void filterFce(typeFilter*tlacitko, char vstup);
 [v _filterFce `(v ~T0 @X0 0 ef2`*S572`uc ]
 "4406 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-J_DFP/1.6.157/xc8\pic\include\proc\pic18f87j11.h: 4406:     struct {
@@ -1140,287 +1140,287 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;source/main.c: 143:    }
 }
 [e :U 580 ]
-"144
-[; ;source/main.c: 144:   LATDbits.LATD7 = S4Filtr.vystup;
-[e = . . _LATDbits 0 7 -> . _S4Filtr 1 `uc ]
-"145
-[; ;source/main.c: 145:    PORTDbits.RD4 = S3Filtr.vystup;
-[e = . . _PORTDbits 0 4 -> . _S3Filtr 1 `uc ]
 "146
-[; ;source/main.c: 146:   PORTDbits.RD6 = S5A.vystup;
-[e = . . _PORTDbits 0 6 -> . _S5A 1 `uc ]
+[; ;source/main.c: 146:   LATDbits.LATD7 = S4Filtr.vystup;
+[e = . . _LATDbits 0 7 -> . _S4Filtr 1 `uc ]
 "147
-[; ;source/main.c: 147:   PORTDbits.RD5 = S5B.vystup;
+[; ;source/main.c: 147:    PORTDbits.RD4 = S3Filtr.vystup;
+[e = . . _PORTDbits 0 4 -> . _S3Filtr 1 `uc ]
+"148
+[; ;source/main.c: 148:   PORTDbits.RD6 = S5A.vystup;
+[e = . . _PORTDbits 0 6 -> . _S5A 1 `uc ]
+"149
+[; ;source/main.c: 149:   PORTDbits.RD5 = S5B.vystup;
 [e = . . _PORTDbits 0 5 -> . _S5B 1 `uc ]
-"150
-[; ;source/main.c: 150:  if(dekoderAB.vystup == 255){
+"152
+[; ;source/main.c: 152:  if(dekoderAB.vystup == 255){
 [e $ ! == -> . _dekoderAB 1 `i -> 255 `i 581  ]
 {
-"151
-[; ;source/main.c: 151:      PORTFbits.RF1 = 1;
+"153
+[; ;source/main.c: 153:      PORTFbits.RF1 = 1;
 [e = . . _PORTFbits 0 1 -> -> 1 `i `uc ]
-"152
-[; ;source/main.c: 152:  }
+"154
+[; ;source/main.c: 154:  }
 }
 [e $U 582  ]
-"153
-[; ;source/main.c: 153:  else if(dekoderAB.vystup == 0){
+"155
+[; ;source/main.c: 155:  else if(dekoderAB.vystup == 0){
 [e :U 581 ]
 [e $ ! == -> . _dekoderAB 1 `i -> 0 `i 583  ]
 {
-"154
-[; ;source/main.c: 154:      PORTFbits.RF2 = 1;
+"156
+[; ;source/main.c: 156:      PORTFbits.RF2 = 1;
 [e = . . _PORTFbits 0 2 -> -> 1 `i `uc ]
-"155
-[; ;source/main.c: 155:  }
+"157
+[; ;source/main.c: 157:  }
 }
 [e $U 584  ]
-"156
-[; ;source/main.c: 156:  else{
+"158
+[; ;source/main.c: 158:  else{
 [e :U 583 ]
 {
-"157
-[; ;source/main.c: 157:      PORTFbits.RF1 = 0;
-[e = . . _PORTFbits 0 1 -> -> 0 `i `uc ]
-"158
-[; ;source/main.c: 158:      PORTFbits.RF2 = 0;
-[e = . . _PORTFbits 0 2 -> -> 0 `i `uc ]
 "159
-[; ;source/main.c: 159:  }
+[; ;source/main.c: 159:      PORTFbits.RF1 = 0;
+[e = . . _PORTFbits 0 1 -> -> 0 `i `uc ]
+"160
+[; ;source/main.c: 160:      PORTFbits.RF2 = 0;
+[e = . . _PORTFbits 0 2 -> -> 0 `i `uc ]
+"161
+[; ;source/main.c: 161:  }
 }
 [e :U 584 ]
 [e :U 582 ]
-"162
-[; ;source/main.c: 162:      if(S4Filtr.vystup == 1){
+"164
+[; ;source/main.c: 164:      if(S4Filtr.vystup == 1){
 [e $ ! == -> . _S4Filtr 1 `i -> 1 `i 585  ]
 {
-"163
-[; ;source/main.c: 163:          PORTH = vystup;
+"165
+[; ;source/main.c: 165:          PORTH = vystup;
 [e = _PORTH _vystup ]
-"164
-[; ;source/main.c: 164:      }
+"166
+[; ;source/main.c: 166:      }
 }
 [e $U 586  ]
-"166
-[; ;source/main.c: 166:    else{
+"168
+[; ;source/main.c: 168:    else{
 [e :U 585 ]
 {
-"167
-[; ;source/main.c: 167:          PORTH = dekoderAB.vystup;
+"169
+[; ;source/main.c: 169:          PORTH = dekoderAB.vystup;
 [e = _PORTH -> . _dekoderAB 1 `uc ]
-"168
-[; ;source/main.c: 168:      }
+"170
+[; ;source/main.c: 170:      }
 }
 [e :U 586 ]
-"170
-[; ;source/main.c: 170:    if(S3Filtr.vystup == 0){
+"172
+[; ;source/main.c: 172:    if(S3Filtr.vystup == 0){
 [e $ ! == -> . _S3Filtr 1 `i -> 0 `i 587  ]
 {
-"171
-[; ;source/main.c: 171:         pulzBack = (unsigned int)LATH*10;
-[e = _pulzBack * -> _LATH `ui -> -> 10 `i `ui ]
 "173
-[; ;source/main.c: 173:         if(pulzBack > 2500){
+[; ;source/main.c: 173:         pulzBack = (unsigned int)LATH*10;
+[e = _pulzBack * -> _LATH `ui -> -> 10 `i `ui ]
+"175
+[; ;source/main.c: 175:         if(pulzBack > 2500){
 [e $ ! > _pulzBack -> -> 2500 `i `ui 588  ]
 {
-"174
-[; ;source/main.c: 174:             pulzBack = 2500;
+"176
+[; ;source/main.c: 176:             pulzBack = 2500;
 [e = _pulzBack -> -> 2500 `i `ui ]
-"175
-[; ;source/main.c: 175:     }
+"177
+[; ;source/main.c: 177:     }
 }
 [e :U 588 ]
-"176
-[; ;source/main.c: 176:         }else{
+"178
+[; ;source/main.c: 178:         }else{
 }
 [e $U 589  ]
 [e :U 587 ]
 {
-"177
-[; ;source/main.c: 177:         pulzBack = 0;
+"179
+[; ;source/main.c: 179:         pulzBack = 0;
 [e = _pulzBack -> -> 0 `i `ui ]
-"178
-[; ;source/main.c: 178:         }
+"180
+[; ;source/main.c: 180:         }
 }
 [e :U 589 ]
-"180
-[; ;source/main.c: 180:    novyPulz = 1;
+"182
+[; ;source/main.c: 182:    novyPulz = 1;
 [e = _novyPulz -> -> 1 `i `a ]
-"181
-[; ;source/main.c: 181:   }
+"183
+[; ;source/main.c: 183:   }
 }
 [e :U 574 ]
 [e $U 575  ]
 [e :U 576 ]
-"182
-[; ;source/main.c: 182: }
+"184
+[; ;source/main.c: 184: }
 [e :UE 573 ]
 }
 [v $root$_high_isr `(v ~T0 @X0 0 e ]
-"188
-[; ;source/main.c: 188: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
+"190
+[; ;source/main.c: 190: void __attribute__((picinterrupt(("high_priority")))) high_isr(void)
 [v _high_isr `(v ~T129 @X0 1 ef ]
-"189
-[; ;source/main.c: 189: {
+"191
+[; ;source/main.c: 191: {
 {
 [e :U _high_isr ]
 [f ]
-"190
-[; ;source/main.c: 190:     static _Bool pocHodnota = 1;
+"192
+[; ;source/main.c: 192:     static _Bool pocHodnota = 1;
 [v F5090 `a ~T0 @X0 1 s pocHodnota ]
 [i F5090
 -> -> 1 `i `a
 ]
-"192
-[; ;source/main.c: 192:     if(PIR1bits.CCP1IF == 1){
+"194
+[; ;source/main.c: 194:     if(PIR1bits.CCP1IF == 1){
 [e $ ! == -> . . _PIR1bits 0 2 `i -> 1 `i 591  ]
 {
-"193
-[; ;source/main.c: 193:    if(pocHodnota == 1){
+"195
+[; ;source/main.c: 195:    if(pocHodnota == 1){
 [e $ ! == -> F5090 `i -> 1 `i 592  ]
 {
-"194
-[; ;source/main.c: 194:        komparace = CCPR1;
-[e = _komparace -> _CCPR1 `ui ]
-"195
-[; ;source/main.c: 195:        pocHodnota = 0;
-[e = F5090 -> -> 0 `i `a ]
 "196
-[; ;source/main.c: 196:    }
+[; ;source/main.c: 196:        komparace = CCPR1;
+[e = _komparace -> _CCPR1 `ui ]
+"197
+[; ;source/main.c: 197:        pocHodnota = 0;
+[e = F5090 -> -> 0 `i `a ]
+"198
+[; ;source/main.c: 198:    }
 }
 [e :U 592 ]
-"197
-[; ;source/main.c: 197:       if(PORTCbits.RC2 == 1){
+"199
+[; ;source/main.c: 199:       if(PORTCbits.RC2 == 1){
 [e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 593  ]
 {
-"201
-[; ;source/main.c: 201:           CCP1CON = 0b00001001;
+"203
+[; ;source/main.c: 203:           CCP1CON = 0b00001001;
 [e = _CCP1CON -> -> 9 `i `uc ]
-"202
-[; ;source/main.c: 202:           komparace = komparace + pulz;
-[e = _komparace + _komparace _pulz ]
 "204
-[; ;source/main.c: 204:           }else{
+[; ;source/main.c: 204:           komparace = komparace + pulz;
+[e = _komparace + _komparace _pulz ]
+"206
+[; ;source/main.c: 206:           }else{
 }
 [e $U 594  ]
 [e :U 593 ]
 {
-"205
-[; ;source/main.c: 205:               CCP1CON = 0b00001000;
+"207
+[; ;source/main.c: 207:               CCP1CON = 0b00001000;
 [e = _CCP1CON -> -> 8 `i `uc ]
-"206
-[; ;source/main.c: 206:               mezera = mezera + komparace;
-[e = _mezera + _mezera _komparace ]
 "208
-[; ;source/main.c: 208:               if(novyPulz == 1){
+[; ;source/main.c: 208:               mezera = mezera + komparace;
+[e = _mezera + _mezera _komparace ]
+"210
+[; ;source/main.c: 210:               if(novyPulz == 1){
 [e $ ! == -> _novyPulz `i -> 1 `i 595  ]
 {
-"209
-[; ;source/main.c: 209:                 pulz = pulzBack + 2500;
+"211
+[; ;source/main.c: 211:                 pulz = pulzBack + 2500;
 [e = _pulz + _pulzBack -> -> 2500 `i `ui ]
-"212
-[; ;source/main.c: 212:                 mezera = 50000 - pulz;
-[e = _mezera -> - -> 50000 `l -> _pulz `l `ui ]
-"213
-[; ;source/main.c: 213:                  novyPulz = 0;
-[e = _novyPulz -> -> 0 `i `a ]
 "214
-[; ;source/main.c: 214:               }
+[; ;source/main.c: 214:                 mezera = 50000 - pulz;
+[e = _mezera -> - -> 50000 `l -> _pulz `l `ui ]
+"215
+[; ;source/main.c: 215:                  novyPulz = 0;
+[e = _novyPulz -> -> 0 `i `a ]
+"216
+[; ;source/main.c: 216:               }
 }
 [e :U 595 ]
-"217
-[; ;source/main.c: 217:       }
+"219
+[; ;source/main.c: 219:       }
 }
 [e :U 594 ]
-"219
-[; ;source/main.c: 219:       CCPR1H = (komparace >> 8);
-[e = _CCPR1H -> >> _komparace -> 8 `i `uc ]
-"220
-[; ;source/main.c: 220:       CCPR1L = (komparace & 0x00FF);
-[e = _CCPR1L -> & _komparace -> -> 255 `i `ui `uc ]
 "221
-[; ;source/main.c: 221:       PIR1bits.CCP1IF = 0;
-[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+[; ;source/main.c: 221:       CCPR1H = (komparace >> 8);
+[e = _CCPR1H -> >> _komparace -> 8 `i `uc ]
 "222
-[; ;source/main.c: 222:     }
+[; ;source/main.c: 222:       CCPR1L = (komparace & 0x00FF);
+[e = _CCPR1L -> & _komparace -> -> 255 `i `ui `uc ]
+"223
+[; ;source/main.c: 223:       PIR1bits.CCP1IF = 0;
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+"224
+[; ;source/main.c: 224:     }
 }
 [e :U 591 ]
-"224
-[; ;source/main.c: 224: }
+"226
+[; ;source/main.c: 226: }
 [e :UE 590 ]
 }
 [v $root$_low_isr `(v ~T0 @X0 0 e ]
-"227
-[; ;source/main.c: 227: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
+"229
+[; ;source/main.c: 229: void __attribute__((picinterrupt(("low_priority")))) low_isr(void)
 [v _low_isr `(v ~T130 @X0 1 ef ]
-"228
-[; ;source/main.c: 228: {
+"230
+[; ;source/main.c: 230: {
 {
 [e :U _low_isr ]
 [f ]
-"229
-[; ;source/main.c: 229:     if(INTCONbits.TMR0IF == 1)
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 597  ]
-"230
-[; ;source/main.c: 230:     {
-{
 "231
-[; ;source/main.c: 231:         is1ms = 1;
-[e = _is1ms -> -> 1 `i `uc ]
+[; ;source/main.c: 231:     if(INTCONbits.TMR0IF == 1)
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 597  ]
 "232
-[; ;source/main.c: 232:         TMR0H = 0xD8;
-[e = _TMR0H -> -> 216 `i `uc ]
+[; ;source/main.c: 232:     {
+{
 "233
-[; ;source/main.c: 233:         TMR0L = 0xEF;
-[e = _TMR0L -> -> 239 `i `uc ]
+[; ;source/main.c: 233:         is1ms = 1;
+[e = _is1ms -> -> 1 `i `uc ]
+"234
+[; ;source/main.c: 234:         TMR0H = 0xD8;
+[e = _TMR0H -> -> 216 `i `uc ]
 "235
-[; ;source/main.c: 235:         INTCONbits.TMR0IF = 0;
+[; ;source/main.c: 235:         TMR0L = 0xEF;
+[e = _TMR0L -> -> 239 `i `uc ]
+"237
+[; ;source/main.c: 237:         INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"236
-[; ;source/main.c: 236:         is10ms++;
-[e ++ _is10ms -> -> 1 `i `uc ]
 "238
-[; ;source/main.c: 238:     if(is10ms >= 10){
+[; ;source/main.c: 238:         is10ms++;
+[e ++ _is10ms -> -> 1 `i `uc ]
+"240
+[; ;source/main.c: 240:     if(is10ms >= 10){
 [e $ ! >= -> _is10ms `i -> 10 `i 598  ]
 {
-"239
-[; ;source/main.c: 239:         is10ms = 0;
-[e = _is10ms -> -> 0 `i `uc ]
-"240
-[; ;source/main.c: 240:         ADCON0bits.GO = 1;
-[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
 "241
-[; ;source/main.c: 241:         }
-}
-[e :U 598 ]
+[; ;source/main.c: 241:         is10ms = 0;
+[e = _is10ms -> -> 0 `i `uc ]
+"242
+[; ;source/main.c: 242:         ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
 "243
 [; ;source/main.c: 243:         }
 }
+[e :U 598 ]
+"245
+[; ;source/main.c: 245:         }
+}
 [e :U 597 ]
-"244
-[; ;source/main.c: 244:     if(PIR1bits.ADIF == 1){
+"246
+[; ;source/main.c: 246:     if(PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 599  ]
 {
-"245
-[; ;source/main.c: 245:         vysledek = ADRESH;
-[e = _vysledek -> _ADRESH `ui ]
-"246
-[; ;source/main.c: 246:         vysledek = (vysledek << 8);
-[e = _vysledek << _vysledek -> 8 `i ]
 "247
-[; ;source/main.c: 247:         vysledek = vysledek + ADRESL;
-[e = _vysledek + _vysledek -> _ADRESL `ui ]
+[; ;source/main.c: 247:         vysledek = ADRESH;
+[e = _vysledek -> _ADRESH `ui ]
 "248
-[; ;source/main.c: 248:         ADRhotovo = 1;
-[e = _ADRhotovo -> -> 1 `i `a ]
+[; ;source/main.c: 248:         vysledek = (vysledek << 8);
+[e = _vysledek << _vysledek -> 8 `i ]
 "249
-[; ;source/main.c: 249:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;source/main.c: 249:         vysledek = vysledek + ADRESL;
+[e = _vysledek + _vysledek -> _ADRESL `ui ]
 "250
-[; ;source/main.c: 250:     }
+[; ;source/main.c: 250:         ADRhotovo = 1;
+[e = _ADRhotovo -> -> 1 `i `a ]
+"251
+[; ;source/main.c: 251:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"252
+[; ;source/main.c: 252:     }
 }
 [e :U 599 ]
-"251
-[; ;source/main.c: 251: }
+"253
+[; ;source/main.c: 253: }
 [e :UE 596 ]
 }
